@@ -228,6 +228,8 @@
         {
             "type": "memory",
             "key": "│ MEMORY     │{$1}",
+
+Create post
             "format": "{used} / {total} [{percentage}]",
             "percent": {
                 "type": ["num"]
@@ -287,7 +289,7 @@
 
 
 
-//22.jsonc
+
 {
     "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
     "logo": {
