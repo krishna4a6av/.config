@@ -320,7 +320,7 @@ fastfetch --config hyde/*.jsonc
     "modules": [
         {
             "type": "custom",
-            "format": "\n\n\n\n",  // <-- adds vertical padding above info
+            "format": "\n\n\n",  // <-- adds vertical padding above info
             "outputColor": "separator"
         },
         {

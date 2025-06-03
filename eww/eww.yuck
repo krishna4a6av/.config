@@ -1,0 +1,76 @@
+
+;;date and time
+(defpoll TIME :interval "1s" `date +"%H:%M"`)
+(defpoll DATE :interval "60s" `date +"%d %B, %Y"`)
+(defpoll DAY :interval "60s" `date +"%A"`)
+;; spotify stuff
+(defpoll spotify-title :interval "1s" `scripts/spotify-watcher --title`)
+(defpoll spotify-artist :interval "1s" `scripts/spotify-watcher --artist`)
+(defpoll spotify-art :interval "1s" `scripts/spotify-watcher --get-art`)
+
+
+;;widgets
+(defwidget clock []
+  (box
+    :orientation "vertical"
+    :spacing 2
+    :class "clock-box"
+    (box
+      :class DAY
+      :halign "start"
+      (label 
+        :text TIME 
+        :class "time")
+    )
+    (box
+      :orinetation "h"
+      (label 
+        :halign "start"
+        :text  DAY
+        :class "day")
+
+      (label
+        :halign "end"
+        :text DATE 
+        :class "date")
+    )
+  )
+)
+
+(defwidget spotify []
+  (box 
+    :orientation "horizontal" 
+    :class "spotify-main"
+    :halign "end"
+    :spacing 20 
+    (box 
+      :class "spotify-art"
+      :style "background-image: url('${spotify-art}');") ;;put ", url('scripts/spotify-art-default.png')" to add a default image and add the image in ~/.config/eww/scripts 
+    (box 
+      :orientation "vertical"
+      (label :class "spotify-title" :halign "start" :text "${spotify-title}")
+      (label :class "spotify-artist" :halign "start" :text "${spotify-artist}")
+    )
+  )
+)
+
+
+;;windows
+(defwindow clock
+  :monitor 0
+  :stacking "bg"
+  :focusable false
+  :visible true
+  :geometry (geometry :x "4%" :y "7%" :width 420 :height 180)
+  (clock)
+)
+
+(defwindow spotify
+  :monitor 0
+  :anchor "center"
+  :stacking "bg"
+  :geometry (geometry :x "70%" :y "70%" :width 350 :height 100)
+  :focusable false
+  :visible true
+  (spotify)
+)

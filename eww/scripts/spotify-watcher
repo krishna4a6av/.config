@@ -1,0 +1,32 @@
+#!/bin/bash
+
+# Get metadata
+META=$(dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify \
+        /org/mpris/MediaPlayer2 org.freedesktop.DBus.Properties.Get \
+        string:org.mpris.MediaPlayer2.Player string:Metadata)
+
+text_overflow_handle() {
+    TEXT="$1"
+    if [ ${#TEXT} -gt 15 ]; then
+        echo "${TEXT:0:15}..."
+    else
+        echo "$TEXT"
+    fi
+}
+
+if [[ "$1" == "--title" ]]; then
+    text_overflow_handle "$(echo "$META" | sed -n '/title/{n;p}' | cut -d '"' -f 2)"
+
+elif [[ "$1" == "--artist" ]]; then
+    text_overflow_handle "$(echo "$META" | sed -n '/artist/{n;n;p}' | cut -d '"' -f 2)"
+
+elif [[ "$1" == "--get-art" ]]; then
+    URL=$(echo "$META" | grep -A 1 "artUrl" | tail -n 1 | cut -d '"' -f 2)
+    FILE="/tmp/spotify_cover.jpg"
+    if [[ "$URL" =~ ^https?:// ]]; then
+        curl -sL "$URL" -o "$FILE" && echo "$FILE"
+    else
+        echo "images/spotify-art-default.png"
+    fi
+fi
+
