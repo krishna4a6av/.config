@@ -1,6 +1,7 @@
 
 ;;date and time
 (defpoll TIME :interval "1s" `date +"%H:%M"`)
+;;(defpoll TIME :interval "1s" `date +"%I:%M %p"`);;for 12 hour format
 (defpoll DATE :interval "60s" `date +"%d %B, %Y"`)
 (defpoll DAY :interval "60s" `date +"%A"`)
 ;; spotify stuff
