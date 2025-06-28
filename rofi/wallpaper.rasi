@@ -1,0 +1,97 @@
+@import "theme.rasi"
+
+* {
+  font: "CascadiaCove Mono Nerd 12";
+  spacing: 0.5em;
+  text-color: @main-fg;
+}
+
+window {
+  width: 59em;
+  height: 24em;
+  padding: 1.5em;
+  border-radius: 16;
+  background-color: @main-bg;
+  border-color: @main-br;
+  border: 2px;
+  anchor: center;
+  location: center;
+}
+
+mainbox {
+  orientation: vertical;
+  spacing: 1em;
+  background-color: transparent;
+  children: [ "listview" ];
+}
+
+listview {
+  orientation: horizontal;
+  lines: 3;
+  columns: 5;
+  fixed-height: true;
+  fixed-columns: true;
+  spacing: 0.8em;
+  dynamic: false;
+  layout: horizontal;
+  background-color: transparent;
+  expand: true;
+}
+
+element {
+  padding: 0.9em;
+  spacing: 0.5em;
+  background-color: @main-bg;
+  border-radius: 12;
+  border: 1px;
+  border-color: transparent;
+  orientation: vertical;
+  cursor: pointer;
+}
+
+element normal {
+  background-color: @main-bg;
+  text-color: @main-fg;
+  border-color: @main-br;
+}
+
+element normal.active {
+  background-color: @select-bg;
+  text-color: @main-fg;
+  border-color: @select-bg;
+}
+
+element selected {
+  background-color: @select-bg;
+  text-color: @select-fg;
+  border-color: @select-bg;
+}
+
+element selected.active {
+  background-color: @select-bg;
+  text-color: @select-fg;
+  border-color: @select-fg;
+}
+
+element alternate {
+  background-color: @main-bg;
+  text-color: @main-fg;
+  border-color: @main-br;
+}
+
+element-icon {
+  size: 16em;
+  background-color: transparent;
+  horizontal-align: 0.5;
+  vertical-align: 0.5;
+  margin: 0 0 0em 0;
+}
+
+element-text {
+  text-color: inherit;
+  horizontal-align: 0.5;
+  vertical-align: 0.5;
+  background-color: transparent;
+  font: "CascadiaCove Mono Nerd 10";
+  margin: 0.2em 0 0 0;
+}
