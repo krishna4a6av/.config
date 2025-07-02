@@ -8,6 +8,7 @@ SYMLINK="$CACHE_DIR/current_wallpaper"
 THEME_SYMLINK="$CACHE_DIR/current_theme"
 WALLPAPER_ROOT="$HOME/Pictures/Wallpapers"
 ROFI_THEME="$HOME/.config/rofi/wallpaper.rasi"
+ROFI_CLIP="$HOME/.config/rofi/clipboard.rasi"
 THEME="$1"
 mkdir -p "$THUMB_DIR"
 
@@ -67,7 +68,7 @@ if [[ ${#missing_thumbs[@]} -gt 0 ]]; then
   echo "🔄 Caching ${#missing_thumbs[@]} missing thumbnails for theme: $THEME"
   
   # Show caching message in main rofi 
-  echo -e "🔄 Caching ${#missing_thumbs[@]} missing thumbnails for theme: $THEME\nPlease wait..." | rofi -dmenu -p "Processing" -no-custom &
+  echo -e "🔄 Caching ${#missing_thumbs[@]} missing thumbnails for theme: $THEME\nPlease wait..." | rofi -dmenu -p "Processing" -theme $ROFI_CLIP &
   ROFI_PID=$!
   
   for img in "${missing_thumbs[@]}"; do

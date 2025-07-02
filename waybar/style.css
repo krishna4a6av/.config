@@ -1,10 +1,10 @@
 * {
     border: none;
     border-radius: 0px;
-    font-family: "JetBrainsMono Nerd Font","JetBrainsMono Nerd Font";
+    font-family: "CaskaydiaCove Nerd Font","JetBrainsMono Nerd Font";
     font-weight: bold;
-    font-size: 10px;
-    min-height: 10px;
+    font-size: 10.5px;
+    min-height: 15px;
 }
 
 @import "theme.css";
@@ -104,7 +104,6 @@ tooltip {
 #custom-cpuinfo,
 #cpu,
 #custom-display,
-#custom-github_hyde,
 #custom-gpuinfo,
 #custom-hyprsunset,
 #idle_inhibitor,

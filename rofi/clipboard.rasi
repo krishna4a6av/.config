@@ -1,0 +1,104 @@
+@import "theme.rasi"
+
+* {
+    background-color: @main-bg;
+    text-color:       @main-fg;
+    font:             "JetBrains Mono Nerd 10";
+}
+
+window {
+    width:    44%;
+    height:   80%;
+    border:   2px;
+    border-radius: 10px;
+    enabled: true;
+    transparency: "real";
+    cursor: default;
+    background-color: @main-br;
+    border-color: @main-fg;
+    background-color: @main-bg;
+}
+
+mainbox {
+    children: [ inputbar, listview ];
+    spacing:  10px;
+    orientation: vertical;
+    border-radius: 5px;
+}
+
+inputbar {
+    enabled: true;
+    padding: 8px;
+    margin: 10 10 10 10;
+    border-radius: 5px;
+    background-color: @main-br;
+    text-color: @main-fg;
+    children: [ "entry" ];
+}
+
+prompt {
+    enabled: true;
+    padding: 0 0px 0 0;
+    background-color: inherit;
+    text-color: inherit;
+}
+
+entry {
+    background-color: inherit;
+    text-color: inherit;
+    placeholder: "Search...";
+    placeholder-color: @select-bg;
+}
+
+listview {
+    enabled: true;
+    columns:  1;
+    lines:    10;
+    cycle:    false;
+    spacing:  15px;
+    layout:   vertical;
+    margin: 0 0 0 10;
+}
+
+
+// Elements //
+element {
+    enabled: true;
+    spacing: 0.8em;
+    padding: 0.4em 0.4em 0.4em 1.5em;
+    cursor: pointer;
+    background-color: transparent;
+    border-radius: 5;
+    text-color: @main-fg;
+}
+
+element-icon {
+    enabled: false;
+}
+
+element selected {
+    background-color: @select-bg;
+    text-color: @select-fg;
+}
+element-text {
+    vertical-align: 0.5;
+    horizontal-align: 0.0;
+    cursor: inherit;
+    background-color: transparent;
+    text-color: inherit;
+}
+
+// Error message //
+error-message {
+    text-color: @main-fg;
+    background-color: @main-bg;
+    text-transform: capitalize;
+    children: [ "textbox" ];
+}
+textbox {
+    text-color: inherit;
+    background-color: inherit;
+    vertical-align: 0.5;
+    horizontal-align: 0.5;
+}
+

@@ -24,8 +24,6 @@ window {
     fullscreen: false;
     enabled: true;
     cursor:  "default";
-    spacing: 0em;
-    padding: 0em;
     border-radius: 20;
     border: 2px;
     border-color: @main-fg;
@@ -33,8 +31,6 @@ window {
 }
 mainbox {
     enabled: true;
-    spacing: 0em;
-    padding: 0em;
     orientation:horizontal;
     children: [ "dummywall" , "listbox" ];
     background-color: transparent;
