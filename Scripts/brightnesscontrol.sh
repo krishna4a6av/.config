@@ -29,7 +29,6 @@ send_notification() {
     brightinfo=$(brightnessctl info | awk -F "'" '/Device/ {print $2}')
     angle="$((((brightness + 2) / 5) * 5))"
     # shellcheck disable=SC2154
-    ico="${iconsDir}/Wallbash-Icon/media/knob-${angle}.svg"
     bar=$(seq -s "." $((brightness / 15)) | sed 's/[0-9]//g')
     [[ "${isNotify}" == true ]] && notify-send -a "Brightness changed" -r 7 -t 800 -i "${ico}" "${brightness}${bar}" "${brightinfo}"
 }
