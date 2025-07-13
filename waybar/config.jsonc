@@ -14,7 +14,7 @@
 
         "modules-left": ["custom/padd","custom/l_end","hyprland/workspaces","custom/r_end","custom/l_end","hyprland/window","custom/r_end","custom/padd"],
         "modules-center": ["custom/padd","custom/l_end","idle_inhibitor","clock","custom/spotify","custom/r_end","custom/padd"],
-	"modules-right": ["custom/padd","custom/l_end","cpu","memory","network","custom/r_end","custom/l_end","backlight","pulseaudio","custom/updates","tray","custom/r_end","custom/l_end","privacy","battery","custom/keybindhint","custom/power","custom/r_end","custom/padd"],
+	"modules-right": ["custom/padd","custom/l_end","cpu","memory","network","custom/r_end","custom/l_end","backlight","pulseaudio","custom/updates","tray","custom/r_end","custom/l_end","privacy","battery","custom/swaync","custom/keybindhint","custom/power","custom/r_end","custom/padd"],
 
 
 
@@ -256,7 +256,7 @@
     },
 
     "custom/spotify": {
-        "exec": "~/Scripts//mediaplayer.py --player spotify",
+        "exec": "~/Scripts/mediaplayer.py --player spotify",
         "format": " |   {}",
         "return-type": "json",
         "on-click": "playerctl play-pause",
@@ -272,6 +272,18 @@
         "interval" : 86400, // once every day
         "tooltip": true
     },
+    
+    "custom/swaync": {
+    "tooltip": true,
+    "tooltip-format":"Open Swaync Center",
+    "format": "",
+    "return-type": "json",
+    "exec-if": "which swaync-client",
+    "exec": "swaync-client -swb",
+    "on-click": "swaync-client -t -sw",
+    "on-click-right": "swaync-client -d -sw",
+    "escape": true
+  },
 
 
 // modules for padding //

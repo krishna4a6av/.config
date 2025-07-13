@@ -1,18 +1,18 @@
-@import url('../waybar/theme.css');
+@import url('../colors/theme.css');
 
 * {
     outline: none;
     font-family: "CaskaydiaCove Nerd Font";
     font-size: 14px;
     text-shadow: none;
-    color: @main-fg;
+    color: @fg-main;
     background-color: transparent;
     background: transparent;
 }
 
 .control-center {
-    background-color: alpha(@main-bg, 0.8);
-    border: 2px solid @wb-act-bg;
+    background-color: alpha(@bg-base, 0.8);
+    border: 2px solid @border-color;
     padding: 5px;
 }
 
@@ -22,45 +22,44 @@
 }
 
 .notification {
-    background-color: @main-bg;
-    border: 2px solid @wb-act-bg;
+    background-color: @bg-base;
+    border: 2px solid @border-color;
 }
 
-.notification > *:last-child > *  {
+.notification > *:last-child > * {
     margin: 5px;
 }
 
 .summary { font-size: 1rem; }
-.time { font-size: 0.8rem; }
-.body { font-size: 1rem; }
+.time    { font-size: 0.8rem; }
+.body    { font-size: 1rem; }
 
 .notification-content {
     padding: 15px 10px 10px 20px;
 }
 
-.notification-action > button {
+.notification-action > button,
+.notification-action > label {
     padding: unset;
     margin: unset;
-}
-.notification-action > label {
     font-size: 1rem;
     font-weight: normal;
 }
 
 .notification.critical {
-    background-color: alpha(@wb-hvr-bg, 0.5);
+    background-color: alpha(@danger-color, 0.5);
 }
 .notification.low,
-.notification.normal  {
-    background-color: alpha(@main-bg, 0.5);
+.notification.normal {
+    background-color: alpha(@bg-surface, 0.5);
 }
 
 .close-button {
-    background-color: alpha(@wb-color, 0.8);
-    box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.35);
+    background-color: alpha(@accent-primary, 0.8);
+    box-shadow: 0 0 3px 0 @shadow-color;
 }
 .close-button:hover {
-    background-color: alpha(@wb-hvr-bg, 0.8);
+    background-color: alpha(@accent-hover, 0.8);
 }
 
 .notification-group-header,
@@ -70,95 +69,93 @@
 
 .notification-group-collapse-button,
 .notification-group-close-all-button {
-    background-color: @wb-color;
+    background-color: @accent-primary;
 }
-
 .notification-group-collapse-button:hover {
-    background-color: alpha(@wb-act-bg, 0.8);
+    background-color: alpha(@accent-hover, 0.8);
 }
 .notification-group-close-all-button:hover {
-    background-color: alpha(@wb-hvr-bg, 0.8);
+    background-color: alpha(@accent-active, 0.8);
 }
 
-trough highlight {
-    background: @wb-act-bg;
-}
 scale trough {
     margin: 0rem 1rem;
-    background-color: @wb-color;
-    min-height: 8px;
+    background-color: @accent-primary;
+    min-height: 4px;
     min-width: 70px;
 }
-slider {
-    background-color: @main-fg;
+
+trough slider {
+    background: @accent-active;
 }
+trough slider:hover {
+    background: @accent-hover;
+}
+trough highlight {
+    background: @accent-hover;
+}
+
 tooltip {
-    background-color: @wb-color;
+    background-color: @accent-primary;
 }
 
 /*** Widgets ***/
-/* Buttons widget */
 .widget-buttons-grid {
+    background: @bg-base;
     font-size: 1rem;
-    padding: 20px 20px 10px;
-    margin: unset;
+    padding: 10px 10px 10px;
 }
 .widget-buttons-grid > flowbox > flowboxchild > button {
-    background: @wb-act-fg;
-    box-shadow: 0px 0px 10px alpha(@main-bg, 0.8);
+    background: @accent-primary;
+    box-shadow: 0px 0px 10px alpha(@bg-overlay, 0.8);
     border-radius: 12px;
     min-width: 60px;
     min-height: 30px;
-    border: 2px solid @wb-act-bg;
     padding: 6px;
     margin: 0 3px 0;
     transition: all .5s ease;
 }
 .widget-buttons-grid > flowbox > flowboxchild > button:hover {
-    background: @wb-act-bg;
+    background: @accent-hover;
 }
 .widget-buttons-grid > flowbox > flowboxchild > button.toggle:checked {
-    background: @wb-act-bg;
+    background: @accent-active;
 }
 .widget-buttons-grid > flowbox > flowboxchild > button.toggle:checked:hover {
-    background: alpha(@wb-act-bg, 0.8);
+    background: alpha(@accent-hover, 0.8);
 }
 
-/* Mpris widget */
-@define-color mpris-album-art-overlay @main-bg;
-@define-color mpris-button-hover rgba(0, 0, 0, 0.5);
+/* MPRIS widget */
+@define-color mpris-album-art-overlay @bg-base;
 
 .widget-mpris .widget-mpris-player {
     padding: 16px;
     margin: 16px 20px;
     background-color: @mpris-album-art-overlay;
     border-radius: 12px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.65);
+    box-shadow: 0px 0px 10px @shadow-color;
 }
 .widget-mpris .widget-mpris-player .widget-mpris-album-art {
     border-radius: 12px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.65);
+    box-shadow: 0px 0px 10px @shadow-color;
 }
 .widget-mpris .widget-mpris-player .widget-mpris-title {
     font-weight: bold;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     margin: 0px 8px 8px 8px;
 }
 .widget-mpris .widget-mpris-player .widget-mpris-subtitle {
     font-size: 1rem;
 }
-.widget-mpris .widget-mpris-player > box > button:hover {
-    background-color: @mpribgbutton-hover;
-}
 .widget-mpris > box > button:hover {
-    background: alpha(@wb-act-bg, 0.6);
+    background: alpha(@accent-hover, 0.6);
 }
 
 /* Volume widget */
 .widget-volume {
     padding: 6px 5px 5px 5px;
     margin: unset;
-    font-size: 1.2rem;
+    font-size: 1rem;
 }
 .widget-volume > box > button {
     border: none;
@@ -172,28 +169,27 @@ tooltip {
 .widget-backlight {
     padding: 0 0 3px 16px;
     margin: unset;
-    font-size: 1.1rem;
+    font-size: 1rem;
 }
 
 /* DND widget */
 .widget-dnd {
     font-weight: bold;
-    margin: unset;
-    padding: 20px 15px 15px 15px;
+    padding: 20px 15px 15px;
+    font-size: 1rem;
 }
 .widget-dnd > switch {
-    font-size: initial;
     border-radius: 100px;
-    background: @wb-hvr-fg;
+    background: @accent-primary;
     border: none;
     box-shadow: none;
     padding: 3px;
 }
 .widget-dnd > switch:checked {
-    background: @wb-act-bg;
+    background: @accent-active;
 }
 .widget-dnd > switch slider {
-    background: @main-bg;
+    background: @bg-base;
     border-radius: 12px;
     min-width: 18px;
     min-height: 18px;
@@ -201,27 +197,21 @@ tooltip {
 
 /* Title widget */
 .widget-title {
-    padding: unset;
-    margin: unset;
     font-weight: bold;
     padding: 15px;
 }
 .widget-title > label {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
 }
 .widget-title > button {
-    padding:unset;
-    margin:unset;
-    text-shadow: none;
-    background: @wb-hvr-fg;
+    background: @accent-primary;
     border: none;
-    box-shadow: none;
     border-radius: 100px;
-    padding:0px 8px;
+    padding: 0px 8px;
     transition: all .7s ease;
 }
 .widget-title > button:hover {
-    background: alpha(@wb-hvr-bg, 0.8);
-    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.65);
+    background: alpha(@accent-active, 0.8);
+    box-shadow: 0 0 10px 0 @shadow-color;
 }
 
