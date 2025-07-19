@@ -13,7 +13,7 @@
 
 /* Base Waybar background */
 window#waybar {
-    background-color: alpha(@bg-surface, 0.5);
+    background-color: alpha(@bg-surface, 0.4);
 }
 
 /* Tooltips */
@@ -34,7 +34,7 @@ tooltip {
 }
 #workspaces button.active {
     background: @accent-active;
-    padding: 0px 11px;
+    padding: 0px 9px;
     margin: 2px;
     transition: all 0.4s cubic-bezier(.55, -0.68, .48, 1.682);
     animation: ws_active 20s ease-in-out 1;

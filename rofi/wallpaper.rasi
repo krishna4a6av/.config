@@ -1,13 +1,13 @@
-@import "theme.rasi"
+@import "../colors/rofi_theme.rasi"
 * {
   font: "CascadiaCove Mono Nerd 12";
   text-color: @main-fg;
 }
 window {
-  width: 100%;
+  width: 80%;
   height: 80%;
   //padding: 3%;
-  //border-radius: 16;
+  border-radius: 14;
   background-color: @main-bg;
   border-color: @main-br;
   border: 2px;
@@ -17,22 +17,32 @@ window {
 mainbox {
   orientation: vertical;
   background-color: transparent;
-  children: [ "listview" ];
+  children: [ "listview", "entry" ];
   expand: true;
 }
 listview {
   orientation: horizontal;
-  lines: 3;
+  lines: 4;
   columns: 30;  
-  fixed-height: true;
-  fixed-columns: true;
-  spacing: 7%;
-  dynamic: false;
+  spacing: 4%;
+  dynamic: true;
   layout: horizontal;
-  margin: 5% 9.5% 0 9.5%;
+  margin: 5% 5% 0 5.5%;
   background-color: transparent;
   expand: false;
   scrollbar: false;
+}
+entry {
+  padding: 0.4em 1em;
+  margin: 3% 10% 0 10%;  // Positioned cleanly at bottom
+  background-color: @main-br;
+  border: 2px;
+  border-radius: 10px;
+  border-color: @main-br;
+  text-color: @main-fg;
+  placeholder-color: @main-fg;
+  horizontal-align: 0.0;
+  expand: false;
 }
 element {
   padding: 0em;
@@ -43,7 +53,8 @@ element {
   border-color: transparent;
   orientation: vertical;
   cursor: pointer;
-  width: 22%;
+  width: 20%;
+  height: 10%;
 }
 element normal {
   background-color: @main-bg;
@@ -71,7 +82,7 @@ element alternate {
   border-color: @main-br;
 }
 element-icon {
-  size: 65%;
+  size: 56%;
   background-color: transparent;
   //border-radius: 12;
   margin: 0 0 0em 0;
@@ -80,5 +91,6 @@ element-text {
   text-color: inherit;
   horizontal-align: 0.5;
   background-color: transparent;
-  margin: 0.6em 0 0 0;
+  margin: 1% 0 0 0;
+  padding: 0 0 1% 0;
 }

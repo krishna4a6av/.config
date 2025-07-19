@@ -1,4 +1,4 @@
-@import "theme.rasi"
+@import "../colors/rofi_theme.rasi"
 
 * {
     background-color: @main-bg;
@@ -20,20 +20,23 @@ window {
 }
 
 mainbox {
-    children: [ inputbar, listview ];
+    children: [ entry , listview ];
     spacing:  10px;
     orientation: vertical;
     border-radius: 5px;
 }
 
-inputbar {
-    enabled: true;
-    padding: 8px;
-    margin: 10 10 10 10;
-    border-radius: 5px;
-    background-color: @main-br;
-    text-color: @main-fg;
-    children: [ "entry" ];
+entry {
+  padding: 0.4em 1em;
+  margin: 3% 1% 1% 1%;  // Positioned cleanly at bottom
+  background-color: @main-br;
+  border: 2px;
+  border-radius: 10px;
+  border-color: @main-br;
+  text-color: @main-fg;
+  placeholder-color: @main-fg;
+  horizontal-align: 0.0;
+  expand: false;
 }
 
 prompt {
@@ -55,20 +58,20 @@ listview {
     columns:  1;
     lines:    10;
     cycle:    false;
-    spacing:  15px;
+    spacing:  1.5%;
     layout:   vertical;
-    margin: 0 0 0 10;
+    margin: 0 1% 0 1%;
 }
 
 
 // Elements //
 element {
     enabled: true;
-    spacing: 0.8em;
-    padding: 0.4em 0.4em 0.4em 1.5em;
+    spacing: 1%;
+    padding: 1% 1% 1% 1%;
     cursor: pointer;
     background-color: transparent;
-    border-radius: 5;
+    border-radius: 5px;
     text-color: @main-fg;
 }
 
