@@ -1,0 +1,21 @@
+/* === Graphite Theme === */
+@define-color bg-base         #1b1d1e;  /* Main graphite background */
+@define-color bg-surface      #242627;  /* Slightly elevated surface */
+@define-color bg-overlay      #2f3132;  /* Overlay/hover */
+
+@define-color fg-main         #cfcfcf;  /* Main text (soft white) */
+@define-color fg-muted        #2f3132;  /* Muted text */
+@define-color fg-strong       #e06c75;  /* Accent red for emphasis */
+
+@define-color accent-primary  #5c6370;  /* Soft slate blue-gray */
+@define-color accent-hover    #4c566a;  /* Hover: darker graphite */
+@define-color accent-active   #7f848e;  /* Active: brighter gray */
+
+@define-color border-color    #3a3f4b;  /* Border: dim gray */
+@define-color shadow-color    rgba(0, 0, 0, 0.55);
+
+@define-color danger-color    #be5046;
+@define-color warning-color   #d19a66;
+@define-color info-color      #56b6c2;
+@define-color success-color   #98c379;
+

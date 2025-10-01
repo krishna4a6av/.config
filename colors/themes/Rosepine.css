@@ -1,0 +1,21 @@
+/* === Rosé Pine (Moon) Theme === */
+@define-color bg-base         #232136;  /* Deep background */
+@define-color bg-surface      #2a273f;  /* Surface for widgets */
+@define-color bg-overlay      #393552;  /* Hover/overlay */
+
+@define-color fg-main         #e0def4;  /* Main text */
+@define-color fg-muted        #393552;  /* Muted/inactive text */
+@define-color fg-strong       #eb6f92;  /* Strong (Rose) */
+
+@define-color accent-primary  #c4a7e7;  /* Foam (soft cyan) */
+@define-color accent-hover    #9ccfd8;  /* Iris (lavender hover) */
+@define-color accent-active   #eb6f92;  /* Pine (teal) */
+
+@define-color border-color    #403d52;  /* Desaturated border */
+@define-color shadow-color    rgba(0, 0, 0, 0.45);
+
+@define-color danger-color    #eb6f92;  /* Love (Red) */
+@define-color warning-color   #f6c177;  /* Gold (Yellow/Orange) */
+@define-color info-color      #9ccfd8;  /* Foam (Cyan) */
+@define-color success-color   #31748f;  /* Pine (Dark teal) */
+

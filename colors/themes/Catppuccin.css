@@ -1,27 +1,22 @@
-/* Base Backgrounds */
 @define-color bg-base         #1e1e2e;
 @define-color bg-surface      #181825;
 @define-color bg-overlay      #313244;
 
-/* Foregrounds */
 @define-color fg-main         #cdd6f4;
-@define-color fg-muted        #a6adc8;
+@define-color fg-muted        #313244;
 @define-color fg-strong       #f38ba8;
 
-/* 🌿 Darkened Accents */
-@define-color accent-primary  #6c8bbf;  /* Darkened blue */
-@define-color accent-hover    #5aa7c2;  /* Darkened sky */
-@define-color accent-active   #cba6f7;  /* Darkened teal */
+@define-color accent-primary  #6c8bbf;
+@define-color accent-hover    #5aa7c2;
+@define-color accent-active   #cba6f7;
 
-/* Borders & Shadows */
 @define-color border-color    #6c8bbf;
 @define-color shadow-color    rgba(0, 0, 0, 0.5);
 
-/* Alerts */
-@define-color danger-color    #d26478;  /* Slightly darker red */
-@define-color warning-color   #d9ba82;  /* Slightly muted yellow */
-@define-color info-color      #6cbac4;  /* Dark cyan */
-@define-color success-color   #7ea37e;  /* Olive green */
+@define-color danger-color    #d26478;
+@define-color warning-color   #d9ba82;
+@define-color info-color      #6cbac4;
+@define-color success-color   #7ea37e;
 
 
 

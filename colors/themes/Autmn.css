@@ -1,0 +1,20 @@
+@define-color bg-base         #0f1b1f;  /* dark night forest floor */
+@define-color bg-surface      #1b2a2f;  /* lifted bark (darker blue-green variant of bg) */
+@define-color bg-overlay      #24373e;  /* deeper forest shadow */
+
+@define-color fg-main         #d0dbe0;  /* soft frost */
+@define-color fg-muted        #24373e;  /* faint cloud */
+@define-color fg-strong       #E09B03;  /* strong amber leaf */
+
+@define-color accent-primary  #AF8D4B;  /* dry golden leaf */
+@define-color accent-hover    #638B8F;  /* foggy teal river */
+@define-color accent-active   #AF8D4B;  /* frostblue */
+
+@define-color border-color    #A0A39F;  /* tree branch grey */
+@define-color shadow-color    rgba(0, 0, 0, 0.5);  /* standard fallback */
+
+@define-color danger-color    #b33939;  /* deep crimson leaf */
+@define-color warning-color   #E09B03;  /* golden-orange alert */
+@define-color info-color      #C7BCAF;  /* soft warm bark info */
+@define-color success-color   #84925e;  /* mossy green */
+

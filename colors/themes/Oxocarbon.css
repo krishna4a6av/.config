@@ -1,0 +1,21 @@
+@define-color bg-base         #120811;  /* near-black with subtle magenta tint */
+@define-color bg-surface      #1a0f1a;  /* deep violet-burgundy blend */
+@define-color bg-overlay      #2b1a2f;  /* shadowy plum with structure */
+
+@define-color fg-main         #d9d7df;  /* brighter pale silver */
+@define-color fg-muted        #2b1a2f;  /* stronger plum */
+@define-color fg-strong       #f06aa3;  /* punchier rose */
+
+@define-color accent-primary  #b14a6c;  /* crisp raspberry */
+@define-color accent-hover    #ff4fc9;  /* clearer rose-pink */
+@define-color accent-active   #e15a94;  /* vibrant magenta-pink */
+@define-color border-color    #6e4257;  /* darkened mauve */
+
+
+@define-color shadow-color    rgba(0, 0, 0, 0.7);
+
+@define-color danger-color    #ff3264;  /* alert neon red-pink */
+@define-color warning-color   #ffb347;  /* vivid mango orange */
+@define-color info-color      #7da6ff;  /* cool sky blue */
+@define-color success-color   #6dffb3;  /* mint glow */
+
