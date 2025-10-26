@@ -1,16 +1,16 @@
 @import "../colors/rofi_theme.rasi"
 * {
-  font: "CascadiaCove Mono Nerd 12";
+  font: "CascadiaCove Mono Nerd 21";
   text-color: @main-fg;
 }
 window {
   width: 80%;
   height: 80%;
   //padding: 3%;
-  border-radius: 14;
+  border-radius: 1%;
   background-color: @main-bg;
   border-color: @main-br;
-  border: 2px;
+  border: 3px;
   anchor: center;
   location: center;
 }
@@ -35,9 +35,9 @@ listview {
 entry {
   padding: 0.4em 1em;
   margin: 3% 10% 0 10%;  // Positioned cleanly at bottom
-  background-color: @main-br;
+  background-color: @select-fg;
   border: 2px;
-  border-radius: 10px;
+  border-radius: 1%;
   border-color: @main-br;
   text-color: @main-fg;
   placeholder-color: @main-fg;

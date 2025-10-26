@@ -4,13 +4,13 @@
 
 @define-color fg-main         #cdd6f4;
 @define-color fg-muted        #313244;
-@define-color fg-strong       #f38ba8;
+@define-color fg-strong       #f2d5cf;
 
-@define-color accent-primary  #6c8bbf;
-@define-color accent-hover    #5aa7c2;
-@define-color accent-active   #cba6f7;
+@define-color accent-primary  #5aa7c2;
+@define-color accent-hover    #cba6f7;
+@define-color accent-active   #7aa2f7;
 
-@define-color border-color    #6c8bbf;
+@define-color border-color    #8caaee;
 @define-color shadow-color    rgba(0, 0, 0, 0.5);
 
 @define-color danger-color    #d26478;

@@ -10,7 +10,7 @@ configuration {
     display-window:              " ";
     drun-display-format:         "{name}";
     window-format:               "{w}{t}";
-    font:                        "CascadiaCove Mono Nerd 10";
+    font:                        "CascadiaCove Mono Nerd 18";
     icon-theme:                  "Gruvbox-plus-dark";
 }
 
@@ -18,15 +18,15 @@ configuration {
 
 // Main //
 window {
-    height: 27em;
-    width: 49em;
+    height: 60%;
+    width: 70%;
     transparency: "real";
     fullscreen: false;
     enabled: true;
     cursor:  "default";
     border-radius: 20;
-    border: 2px;
-    border-color: @main-fg;
+    border: 3px;
+    border-color: @main-br;
     background-color: @main-bg;
 }
 mainbox {
@@ -38,7 +38,7 @@ mainbox {
 dummywall {
     spacing: 0em;
     padding: 0em;
-    width: 27em;
+    width: 35%;
     expand: false;
     orientation: vertical;
     children: [ "inputbar", "spacer", "mode-switcher" ];
@@ -56,9 +56,9 @@ spacer {
 mode-switcher {
     orientation: horizontal;
     enabled: true;
-    height: 0.2em;
+    height: 8%;
     padding: 0.01em 1em;
-    spacing: 1.3em;
+    spacing: 2%;
     background-color: #00000000;
     position: south;
     margin: 0em 0em 0.3em 0em;
@@ -84,7 +84,7 @@ inputbar {
     children: [ "entry" ];
     background-color: #00000066;
     padding: 0.01em 1em;
-    border-radius: 15;
+    border-radius: 20;
     margin: 0.6em 1em 0em 1em;
     position: north;
 }
@@ -97,7 +97,7 @@ entry {
     cursor: text;
     border: 0;
     padding: 0.5em 0em;
-    font: "CascadiaCove Mono Nerd 11";
+    font: "CascadiaCove Mono Nerd 13";
 }
 
 // Lists //
@@ -110,17 +110,12 @@ listbox {
 listview {
     enabled: true;
     spacing: 0.5em;
-    padding: 1.5em;
+    margin: 2% 2% 2% 2%;
     columns: 1;
-    lines: 8;
+    lines: 9;
     cycle: true;
-    dynamic: true;
-    scrollbar: false;
     layout: vertical;
-    reverse: false;
     expand: false;
-    fixed-height: true;
-    fixed-columns: true;
     cursor: "default";
     background-color: transparent;
     text-color: @main-fg;

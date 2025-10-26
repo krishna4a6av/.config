@@ -1,37 +1,32 @@
 @import "../colors/rofi_theme.rasi"
 
 * {
-    background-color: @main-bg;
     text-color:       @main-fg;
-    font:             "JetBrains Mono Nerd 10";
+    font:             "JetBrains Mono Nerd 16";
 }
 
 window {
     width:    44%;
-    height:   80%;
-    border:   2px;
-    border-radius: 10px;
-    enabled: true;
-    transparency: "real";
-    cursor: default;
-    background-color: @main-br;
-    border-color: @main-fg;
+    height:   77%;
+    border:   3px;
+    border-radius: 1%;
     background-color: @main-bg;
+    border-color: @main-br;
 }
 
 mainbox {
+    background-color: transparent;
     children: [ entry , listview ];
     spacing:  10px;
     orientation: vertical;
-    border-radius: 5px;
 }
 
 entry {
   padding: 0.4em 1em;
-  margin: 3% 1% 1% 1%;  // Positioned cleanly at bottom
-  background-color: @main-br;
+  margin: 3% 1% 1% 1%;
+  background-color: @select-fg;
   border: 2px;
-  border-radius: 10px;
+  border-radius: 1%;
   border-color: @main-br;
   text-color: @main-fg;
   placeholder-color: @main-fg;
@@ -39,19 +34,6 @@ entry {
   expand: false;
 }
 
-prompt {
-    enabled: true;
-    padding: 0 0px 0 0;
-    background-color: inherit;
-    text-color: inherit;
-}
-
-entry {
-    background-color: inherit;
-    text-color: inherit;
-    placeholder: "Search...";
-    placeholder-color: @select-bg;
-}
 
 listview {
     enabled: true;
@@ -60,7 +42,9 @@ listview {
     cycle:    false;
     spacing:  1.5%;
     layout:   vertical;
-    margin: 0 1% 0 1%;
+    background-color: transparent;
+    margin: 0 2% 2% 2%;
+    border-radius: 1%;
 }
 
 
@@ -68,10 +52,9 @@ listview {
 element {
     enabled: true;
     spacing: 1%;
-    padding: 1% 1% 1% 1%;
-    cursor: pointer;
+    padding: 1% 1% 1% 3%;
     background-color: transparent;
-    border-radius: 5px;
+    border-radius: 1%;
     text-color: @main-fg;
 }
 

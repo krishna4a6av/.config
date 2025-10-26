@@ -10,7 +10,7 @@
 @define-color accent-hover    #f2545b;  /* cherry red */
 @define-color accent-active   #ff7373;  /* glowing rose red */
 
-@define-color border-color    #b03a48;  /* scarlet line */
+@define-color border-color    #F5A78F;  /* scarlet line */
 @define-color shadow-color    rgba(0, 0, 0, 0.7);
 
 @define-color danger-color    #ff1e3c;  /* alert crimson red */

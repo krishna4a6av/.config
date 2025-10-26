@@ -2,13 +2,13 @@
 @define-color bg-surface      #32302f;
 @define-color bg-overlay      #3c3836;
 
-@define-color fg-main         #ebdbb2;
+@define-color fg-main         #d5c4a1;
 @define-color fg-muted        #3c3836;
-@define-color fg-strong       #fb4934;
+@define-color fg-strong       #ebdbb2;
 
-@define-color accent-primary  #83a598;
-@define-color accent-hover    #689d6a;
-@define-color accent-active   #c79921;
+@define-color accent-primary  #689d6a;
+@define-color accent-hover    #83a598;
+@define-color accent-active   #b57614;
 
 @define-color border-color    #928374;
 @define-color shadow-color    rgba(0, 0, 0, 0.45);

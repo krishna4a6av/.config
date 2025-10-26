@@ -1,25 +1,20 @@
-/* === Backgrounds === */
-@define-color bg-base         #1f1f28;  /* Main background */
-@define-color bg-surface      #1f1f28;  /* Slightly lifted surfaces */
-@define-color bg-overlay      #2a2a37;  /* Panel/overlay bg */
+@define-color bg-base         #1f1f28;  
+@define-color bg-surface      #1f1f28;
+@define-color bg-overlay      #2a2a37;  
 
-/* === Foregrounds === */
-@define-color fg-main         #dcd7ba;  /* Main text */
-@define-color fg-muted        #2a2a37;  /* Muted or inactive text */
-@define-color fg-strong       #e46876;  /* Strong emphasis (red/pink) */
+@define-color fg-main         #dcd7ba;  
+@define-color fg-muted        #2a2a37;  
+@define-color fg-strong       #d4c787;
 
-/* === Accents === */
-@define-color accent-primary  #7e9cd8;  /* Blue (Accent) */
-@define-color accent-hover    #6581b8;  /* Darker blue for hover */
-@define-color accent-active   #6a9589;  /* Teal-green */
+@define-color accent-primary  #7e9cd8;  
+@define-color accent-hover    #6a9589;  
+@define-color accent-active   #6581b8;  
 
-/* === Utility === */
-@define-color border-color    #7e9cd8;  /* Matches accent-primary */
+@define-color border-color    #29526E;  
 @define-color shadow-color    rgba(0, 0, 0, 0.45);
 
-/* === Semantic Colors === */
-@define-color danger-color    #e46876;  /* Red */
-@define-color warning-color   #ff9e3b;  /* Orange-Yellow */
-@define-color info-color      #7fb4ca;  /* Cyan */
-@define-color success-color   #98bb6c;  /* Green */
+@define-color danger-color    #e46876; 
+@define-color warning-color   #ff9e3b;
+@define-color info-color      #7fb4ca;
+@define-color success-color   #98bb6c;
 
