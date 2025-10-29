@@ -5,16 +5,18 @@
     "output": [ "*" ],
     "position": "top",
     "mod": "dock",
-    "height": 28,
+    "height": 49,
+    //"margin-right": 15,
+    //"margin-left": 15,
     "exclusive": true,
     "passthrough": false,
     "gtk-layer-shell": true,
     "reload_style_on_change": true,
 
 
-        "modules-left": ["custom/padd","custom/l_end","hyprland/workspaces","custom/r_end","custom/l_end","hyprland/window","custom/r_end","custom/padd"],
-        "modules-center": ["custom/padd","custom/l_end","idle_inhibitor","clock","custom/spotify","custom/r_end","custom/padd"],
-	"modules-right": ["custom/padd","custom/l_end","cpu","memory","network","custom/r_end","custom/l_end","backlight","pulseaudio","custom/updates","tray","custom/r_end","custom/l_end","privacy","battery","custom/swaync","custom/keybindhint","custom/power","custom/r_end","custom/padd"],
+    "modules-left": ["custom/padd","custom/l_end","hyprland/workspaces","custom/r_end","custom/l_end","hyprland/window","custom/r_end","custom/padd"],
+    "modules-center": ["custom/padd","custom/l_end","idle_inhibitor","clock","custom/spotify","custom/r_end","custom/padd"],
+    "modules-right": ["custom/padd","custom/l_end","cpu","memory","network","custom/r_end","custom/l_end","backlight","pulseaudio","custom/updates","tray","custom/r_end","custom/l_end","privacy","battery","custom/swaync","custom/keybindhint","custom/power","custom/r_end","custom/padd"],
 
 
 
@@ -33,7 +35,7 @@
             "m": 30, // medium
         },
         "interval": 30,
-        "format": "󰾆   {used}GB",
+        "format": "󰾆 {used}GB",
         "rotate": 0,
         "format-m": "󰾅 {used}GB",
         "format-h": "󰓅 {used}GB",
@@ -155,14 +157,14 @@
 
     "pulseaudio": {
         "scroll-step": 3, // %, can be a float
-        "format": "{icon}  {volume}% {format_source}",
+        "format": "{icon} {volume}% {format_source}",
         "format-bluetooth": "{volume}% {icon} {format_source}",
         "format-bluetooth-muted": " {icon} {format_source}",
         "format-muted": " {format_source}",
         //"format-source": "{volume}% ",
         //"format-source-muted": "",
         "format-source": "",
-        "format-source-muted": "",
+        "format-source-muted": "󰍭",
         "format-icons": {
             "headphone": "",
             "hands-free": "",
@@ -185,7 +187,7 @@
         "format": "<span foreground='#fab387'>{icon}</span>  {volume}%",
         "format-muted": " ",
         "format-source": "",
-        "format-source-muted": "",
+        "format-source-muted": "󰍭",
         //"format-muted": "<span foreground='#fab387'> </span>",
         //"format-icons": [ "<span foreground='#fab387'></span>" ]
         "format-icons": {
@@ -201,7 +203,7 @@
 
 
     "custom/updates": {
-        "format": "<big>󰮯</big>  {}",
+        "format": "<big>󰮯</big> {}",
         "interval": 3600,                     // every hour
         "exec": "checkupdates | wc -l",       // # of updates
         "exec-if": "exit 0",                  // always run; consider advanced run conditions
@@ -211,7 +213,7 @@
         "min-length": 3
     },
     "custom/keybindhint": {
-        "format": " ",
+        "format": "  ",
         "tooltip-format": " Keybinds",
         "rotate": 0,
         "on-click": "~/Scripts/keybinds_hint.sh"
@@ -265,7 +267,7 @@
     },
 
     "custom/power": {
-        "format": " {}",
+        "format": "  {}",
         "rotate": 0,
         "exec": "echo ; echo  logout",
         "on-click": "wlogout",
@@ -276,7 +278,7 @@
     "custom/swaync": {
     "tooltip": true,
     "tooltip-format":"Open Swaync Center",
-    "format": "",
+    "format": " ",
     "return-type": "json",
     "exec-if": "which swaync-client",
     "exec": "swaync-client -swb",

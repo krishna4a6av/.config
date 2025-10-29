@@ -5,15 +5,18 @@
     border-radius: 0px;
     font-family: "CaskaydiaCove Nerd Font", "JetBrainsMono Nerd Font";
     font-weight: bold;
-    font-size: 10.5px;
-    min-height: 19px;
+    font-size: 20px;
+    min-height: 26px;
     box-shadow: none;
     text-shadow: none;
 }
 
 /* Base Waybar background */
 window#waybar {
-    background-color: alpha(@bg-surface, 0.4);
+    background-color: alpha(@bg-surface, 0.6);
+    /*border: 3px solid @border-color;
+    border-radius: 20px;*/
+
 }
 
 /* Tooltips */
@@ -27,20 +30,21 @@ tooltip {
 #workspaces button {
     color: @fg-main;
     background: transparent;
-    border-radius: 8px;
-    padding: 0px 2px;
-    margin: 2px 0;
+    border-radius: 15px;
+    padding: 0px 6px;
+    margin: 4px 0;
     animation: ws_normal 20s ease-in-out 1;
 }
 #workspaces button.active {
     background: @accent-active;
-    padding: 0px 9px;
-    margin: 2px;
+    padding: 0px 14px;
+    margin: 4px;
     transition: all 0.4s cubic-bezier(.55, -0.68, .48, 1.682);
     animation: ws_active 20s ease-in-out 1;
 }
 #workspaces button:hover {
     background: @accent-hover;
+    padding: 0px 14px;
     color: @fg-strong;
     transition: all 0.3s cubic-bezier(.55, -0.68, .48, 1.682);
     animation: ws_hover 20s ease-in-out 1;

@@ -16,8 +16,6 @@ ln -sfn "$WALLPAPER_ROOT/$THEME" "$THEME_SYMLINK"
 
 # Update colors + wallpaper
 "$HOME/Scripts/Colors.sh" "$THEME"
+"$NVIM_THEME_SWITCHER" "$THEME"
 "$HOME/Scripts/Wallpaper.sh" "$THEME"
-# Update Neovim theme
-if [[ -f "$NVIM_THEME_SWITCHER" ]]; then
-    "$NVIM_THEME_SWITCHER" "$THEME" 2>/dev/null || echo "⚠️  Neovim theme '$THEME' not found"
-fi
+

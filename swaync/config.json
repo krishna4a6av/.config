@@ -8,14 +8,13 @@
     "control-center-layer": "top",
     "layer-shell": true,
 
-    "control-center-width": 400,
-    "control-center-height": 700,
-    "control-center-margin-top": 2,
-    "control-center-margin-bottom": 10,
-    "control-center-margin-right": 2,
+    "control-center-width": 630,
+    "control-center-height": 950,
+    "control-center-margin-top": 8,
+    "control-center-margin-right": 8,
     "control-center-margin-left": 0,
 
-    "notification-window-width": 380,
+    "notification-window-width": 600,
     "notification-icon-size": 50,
     "notification-body-image-height": 200,
     "notification-body-image-width": 200,
@@ -52,7 +51,7 @@
     ],
     "widget-config": {
         "mpris": {
-            "image-size": 50,
+            "image-size": 70,
             "image-radius": 0
         },
         "volume": {
@@ -106,7 +105,7 @@
                 },
                 {
                   "label": "󰸉 ",
-                  "command": "~/Scripts/Wallpaper.sh current_theme"
+                  "command": "~/Scripts/Wallpaper.sh"
                 },
                 {
                   "label": "󰋖 ",

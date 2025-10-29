@@ -129,7 +129,7 @@
 {
     "$schema": null,
     "logo": {
-          "source": "~/.config/fastfetch/logo/hny2.jpg",//"$(fastfetch.sh logo)",
+          "source": "~/.config/fastfetch/logo/poke/mew.txt",
           "height": 24,
           "padding": {
             "top": 2,

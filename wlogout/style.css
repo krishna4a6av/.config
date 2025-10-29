@@ -1,26 +1,18 @@
 @import "../colors/theme.css";
 
-* {
-	background-image: none;
-	box-shadow: none;
-}
-
 window {
     font-family: CaskaydiaCove Nerd Font, monospace;
-    font-size: 12pt;
-    background-color: alpha(@bg-base, 0.8);
+    font-size: 16pt;
+    background-color: alpha(@bg-base, 0.5);
 }
 
 button {
     color: @fg-main;
     background-color: @bg-surface;
     outline-style: none;
-    border: none;
-    border-width: 10px;
     background-repeat: no-repeat;
     background-position: center;
-    background-size: 10%;
-    border-radius: 0px;
+    background-size: 20%;
     box-shadow: none;
     text-shadow: none;
     animation: gradient_f 20s ease-in infinite;
@@ -28,39 +20,47 @@ button {
 
 button:focus {
     background-color: @accent-active;
-    color: @fg-strong;
-    background-size: 20%;
-    border-radius: 10px;
+    color: @fg-main;
+    background-size: 25%;
 }
 
 button:hover {
     background-color: @accent-hover;
     color: @fg-strong;
     background-size: 25%;
-    border-radius: 0px;
     animation: gradient_f 20s ease-in infinite;
     transition: all 0.3s cubic-bezier(.55,0.0,.28,1.682);
 }
 
-/* Per-button hover radius overrides */
+/* Per-button hover margin and radius overrides */
 button:hover#lock {
-    border-radius: 10px 10px 0px 10px;
+    border-radius: 20px 10px 10px 20px;
     margin: 5px 0px 0px 5px;
 }
 
 button:hover#logout {
-    border-radius: 10px 0px 10px 10px;
+    border-radius: 10px 10px 10px 10px;
+    margin: 0px 5px 5px 5px;
+}
+
+button:hover#suspend {
+    border-radius: 10px 20px 20px 10px;
     margin: 0px 0px 5px 5px;
 }
 
-button:hover#shutdown {
-    border-radius: 10px 10px 10px 0px;
+button:hover#hibernate {
+    border-radius: 20px 10px 10px 20px;
     margin: 5px 5px 0px 0px;
 }
 
+button:hover#shutdown {
+    border-radius: 10px 10px 10px 10px;
+    margin: 5px 5px 0px 5px;
+}
+
 button:hover#reboot {
-    border-radius: 0px 10px 10px 10px;
-    margin: 0px 5px 5px 0px;
+    border-radius: 10px 20px 20px 10px;
+    margin: 5px 0px 0px 5px;
 }
 
 /* Icons */
