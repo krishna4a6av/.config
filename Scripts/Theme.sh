@@ -17,5 +17,6 @@ ln -sfn "$WALLPAPER_ROOT/$THEME" "$THEME_SYMLINK"
 # Update colors + wallpaper
 "$HOME/Scripts/Colors.sh" "$THEME"
 "$NVIM_THEME_SWITCHER" "$THEME"
+"$HOME/Scripts/Setgtk.sh" "$THEME"
 "$HOME/Scripts/Wallpaper.sh" "$THEME"
 
