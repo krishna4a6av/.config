@@ -8,16 +8,16 @@ set -e
 # Theme mapping: generic_name -> GTK_theme_name
 declare -A THEME_MAP=(
     ["dracula"]="Colloid-Dark-Dracula"
-    ["autmn"]="Colloid-Dark-Nord"
-    ["gruvbox"]="Gruvbox-Material-Dark"
-    ["catppuccin-mocha"]="catppuccin-mocha-blue-standard+default"
-    ["catppuccin"]="Colloid-Dark-Catppuccin"
+    ["autmn"]="Nord"
+    ["gruvbox"]="Gruvbox-Dark"
+    ["catppuccin"]="Catppuccin-Mocha"
     ["kanagawa"]="Kanagawa-Dark"
     ["tokyo-night"]="Tokyonight-Dark"
     ["everforest"]="Everforest-Dark"
-    ["rosepine"]="rose-pine-gtk"
+    ["rosepine"]="Rose-Pine"
     ["graphite"]="Graphite-Dark"
     ["oxocarbon"]="phocus"
+    ["crimson"]="Red-Stone"
 
     # Add your custom mappings here
     # ["my-theme"]="Actual-GTK-Theme-Name"
