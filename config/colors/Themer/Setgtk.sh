@@ -141,21 +141,16 @@ update_setting "$GTK3_CONF" "gtk-theme-name" "$THEME"
 update_setting "$GTK4_CONF" "gtk-theme-name" "$THEME"
 
 # Restart portals to apply theme for GNOME/Flatpak apps
-echo "🔄 Reloading desktop portals..."
-if pgrep -f xdg-desktop-portal-gtk >/dev/null; then
-    pkill -HUP -f xdg-desktop-portal-gtk || true
-fi
+#echo "🔄 Reloading desktop portals..."
+#if pgrep -f xdg-desktop-portal-gtk >/dev/null; then
+#    pkill -HUP -f xdg-desktop-portal-gtk || true
+#fi
+#
+#if pgrep -f xdg-desktop-portal >/dev/null; then
+#    pkill -HUP -f xdg-desktop-portal || true
+#fi
 
-if pgrep -f xdg-desktop-portal >/dev/null; then
-    pkill -HUP -f xdg-desktop-portal || true
-fi
 
-# Fallback: restart xdg-desktop-portal-gtk cleanly if still stale
-if ! xdg-desktop-portal-gtk --version &>/dev/null 2>&1; then
-    killall xdg-desktop-portal xdg-desktop-portal-gtk 2>/dev/null || true
-    nohup xdg-desktop-portal-gtk >/dev/null 2>&1 &
-    nohup xdg-desktop-portal >/dev/null 2>&1 &
-fi
 
 echo ""
 echo "✅ GTK theme successfully changed to: $THEME"
