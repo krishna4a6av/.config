@@ -39,7 +39,7 @@ The scripts control the themes of the following applications:
 
 ```bash
 # Clone the repository
-git clone https://github.com/<your-username>/<your-dotfiles-repo>.git ~/.dotfiles
+git clone https://github.com/krishna4a6av/.config.git ~/.dotfiles
 cd ~/.dotfiles
 
 # Run the setup script
@@ -47,16 +47,17 @@ cd ~/.dotfiles
 ```
 
 <details>
-<summary># 🖼️ Screenshots</summary>
 
-### Everforest
+  ### 🖼️ Screenshots
+
+<summary> Everforest</summary>
 <table>
   <tr>
     <td><img src="./.ss/ever/20251104_01h51m01s_grim.png" width="300" /></td>
   </tr>
 </table>
 
-### Gruvbox
+<summary> Gruvbox</summary>
 <table>
   <tr>
     <td><img src="./.ss/gruv/20251030_01h45m04s_grim.png" width="300" /></td>
@@ -69,7 +70,7 @@ cd ~/.dotfiles
   </tr>
 </table>
 
-### Kanagawa
+<summary> Kanagawa</summary>
 <table>
   <tr>
     <td><img src="./.ss/kana-ss/20251024_23h37m48s_grim.png" width="300" /></td>
@@ -112,3 +113,6 @@ This script is responsible for setting the GTK (Gnome Toolkit) theme, which affe
 This directory contains all your theme color files in multiple formats for different tools.
 
 </details>
+
+--Note: Add wallpapers in ~/Pictures/Wallpapers/ in specified theme file, for the wallpaper script to work
+my wallpapers: https://github.com/krishna4a6av/Wallpapers.git

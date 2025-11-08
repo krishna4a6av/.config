@@ -13,17 +13,11 @@
 
 set -euo pipefail
 
-DOTFILES_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-THEMES_DIR="$DOTFILES_DIR/themes"
-CONFIG_DIR="$DOTFILES_DIR/config"
-TARGET_THEMES="$HOME/.themes"
-TARGET_CONFIG="$HOME/.config"
-STOW_IGNORE_FILE="$CONFIG_DIR/stow-local-ignore"
-
 # Colors for output
 GREEN="\e[32m"
 YELLOW="\e[33m"
 RED="\e[31m"
+CYAN="\033[36m"
 RESET="\e[0m"
 
 # ---------------------------------------------------------
@@ -31,8 +25,7 @@ echo -e "${YELLOW} ⚠️  This is a simple script to place the config file and 
 echo -e "${YELLOW} It is assumed all required pcakages are already installed and does not install anything, they can installed through the package manager as per need.${RESET}"
 echo -e "${YELLOW} It will backup any existing ~/.config/<package> directories (if found) as xyz_bak${RESET}"
 echo -e "${YELLOW}and replace them with symlinks from this dotfiles repo.${RESET}"
-echo -e "If you want to exclude specific packages from being stowed, add them to:"
-echo -e "  ${GREEN}${STOW_IGNORE_FILE}${RESET}"
+echo -e "If you want to exclude specific packages from being stowed, add them to: .stow-local-ignore"
 echo
 
 read -rp "Do you want to continue? [y/N]: " consent
@@ -47,6 +40,17 @@ if ! command -v stow &>/dev/null; then
   echo "Please install it and re-run this script (e.g. 'sudo pacman -S stow' or 'sudo apt install stow')."
   exit 1
 fi
+
+
+DOTFILES_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+THEMES_DIR="$DOTFILES_DIR/themes"
+CONFIG_DIR="$DOTFILES_DIR/config"
+TARGET_THEMES="$HOME/.themes"
+TARGET_CONFIG="$HOME/.config"
+STOW_IGNORE_FILE="$CONFIG_DIR/stow-local-ignore"
+
+
+
 
 # --- Load ignore list (if present) ---
 declare -A IGNORE_MAP=()
@@ -143,5 +147,24 @@ fi
 echo -e "\n${GREEN}All done — your dotfiles have been applied.${RESET}"
 echo -e "${YELLOW}Note: To change which packages are stowed, edit ${STOW_IGNORE_FILE} (one package name per line) and re-run this script.${RESET}"
 
-echo -e "\n${RED} --------------- Hope you enjoy the dots! --------------- ${RESET}"
+
+# Ask user if they want to clone wallpapers
+read -rp "Do you want to clone the wallpapers repository as well(around 2gigs)? (Y/n): " clone_wp
+if [[ "$clone_wp" =~ ^[Yy]$ ]]; then
+    WALLPAPER_DIR="$HOME/Pictures/Wallpapers"
+    if [[ -d "$WALLPAPER_DIR" ]]; then
+        echo -e "${YELLOW}Wallpapers directory already exists. Backing it up...${RESET}"
+        mv "$WALLPAPER_DIR" "${WALLPAPER_DIR}_bak"
+    fi
+    echo -e "${CYAN}→ Cloning wallpaper repo...${RESET}"
+    git clone https://github.com/krishna4a6av/Wallpapers.git "$WALLPAPER_DIR"
+    echo -e "${GREEN}✅ Wallpapers cloned to $WALLPAPER_DIR${RESET}"
+else
+    echo -e "${YELLOW}Skipped wallpaper cloning.${RESET}"
+    echo -e "Wallpaper needs to be added in ~/Pictures/Wallpapers/ dir for the wallpaper script"
+    echo -e "You can either add the wallpapers there with folder with same name as themes or change path in wallpaper script"
+    echo -e "My wallpaper repo is here:https://github.com/krishna4a6av/Wallpapers.git  "
+fi
+
+echo -e "\n${CYAN} --------------- Hope you enjoy the dots! --------------- ${RESET}"
 
