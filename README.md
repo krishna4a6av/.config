@@ -56,8 +56,9 @@ cd ~/.dotfiles
   <tr>
     <td><img src="./.ss/ever/20251104_01h51m01s_grim.png" width="300" /></td>
   </tr>
-</table>
+</table></details>
 
+<details>
 <summary> Gruvbox</summary>
 <table>
   <tr>
@@ -69,8 +70,9 @@ cd ~/.dotfiles
     <td><img src="./.ss/gruv/20251030_01h48m10s_grim.png" width="300" /></td>
     <td><img src="./.ss/gruv/20251030_01h48m19s_grim.png" width="300" /></td>
   </tr>
-</table>
+</table></details>
 
+<details>
 <summary> Kanagawa</summary>
 <table>
   <tr>
@@ -83,7 +85,7 @@ cd ~/.dotfiles
     <td><img src="./.ss/kana-ss/20251024_23h55m52s_grim.png" width="300" /></td>
     <td><img src="./.ss/kana-ss/20251024_23h56m12s_grim.png" width="300" /></td>
   </tr>
-</table>
+</table></details>
 
 </details>
 
