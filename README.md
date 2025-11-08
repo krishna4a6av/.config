@@ -25,17 +25,17 @@ The scripts control the themes of the following applications:
 | `Wlogout`   | Logout menu                                         |
 | `Hyprlock`  | Lock screen                                         |
 
-* The script currently changes gtk themes as well.
-* I don't use any qt application so no qt support.
-
----
-
-- This setup assumes all required software (Hyprland, Kitty, Waybar, Rofi, etc.) are already installed.
-- Existing configuration files in `~/.config` will be backed up with `_bak` suffix before being replaced.
+ The script currently changes gtk themes as well.
+ I don't use any qt application so no qt support.
 
 ---
 
 ## ⚙️ Installation
+
+
+- This setup assumes all required software (Hyprland, Kitty, Waybar, Rofi, etc.) are already installed.
+- Existing configuration files in `~/.config` will be backed up with `_bak` suffix before being replaced.
+
 
 ```bash
 # Clone the repository
@@ -46,21 +46,30 @@ cd ~/.dotfiles
 ./setup.sh
 ```
 
----
+<details>
+<summary>🖼️ Screenshots</summary>
 
-## 🖼️ Screenshots
+<details>
+<summary>Everforest</summary>
 
-### Everforest
 ![Everforest](./.ss/ever/20251104_01h51m01s_grim.png)
 
-### Gruvbox
+</details>
+
+<details>
+<summary>Gruvbox</summary>
+
 ![Gruvbox](./.ss/gruv/20251030_01h45m04s_grim.png)
 ![Gruvbox](./.ss/gruv/20251030_01h47m11s_grim.png)
 ![Gruvbox](./.ss/gruv/20251030_01h47m57s_grim.png)
 ![Gruvbox](./.ss/gruv/20251030_01h48m10s_grim.png)
 ![Gruvbox](./.ss/gruv/20251030_01h48m19s_grim.png)
 
-### Kanagawa
+</details>
+
+<details>
+<summary>Kanagawa</summary>
+
 ![Kanagawa](./.ss/kana-ss/20251024_23h37m48s_grim.png)
 ![Kanagawa](./.ss/kana-ss/20251024_23h39m04s_grim.png)
 ![Kanagawa](./.ss/kana-ss/20251024_23h42m43s_grim.png)
@@ -68,7 +77,9 @@ cd ~/.dotfiles
 ![Kanagawa](./.ss/kana-ss/20251024_23h55m52s_grim.png)
 ![Kanagawa](./.ss/kana-ss/20251024_23h56m12s_grim.png)
 
----
+</details>
+
+</details>
 
 ## 🧩 How it Works
 
