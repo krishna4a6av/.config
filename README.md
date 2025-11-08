@@ -77,13 +77,8 @@ cd ~/.dotfiles
 <table>
   <tr>
     <td><img src="./.ss/kana-ss/20251024_23h37m48s_grim.png" width="300" /></td>
-    <td><img src="./.ss/kana-ss/20251024_23h39m04s_grim.png" width="300" /></td>
-    <td><img src="./.ss/kana-ss/20251024_23h42m43s_grim.png" width="300" /></td>
-  </tr>
-  <tr>
     <td><img src="./.ss/kana-ss/20251024_23h54m53s_grim.png" width="300" /></td>
     <td><img src="./.ss/kana-ss/20251024_23h55m52s_grim.png" width="300" /></td>
-    <td><img src="./.ss/kana-ss/20251024_23h56m12s_grim.png" width="300" /></td>
   </tr>
 </table></details>
 
