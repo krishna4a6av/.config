@@ -47,37 +47,41 @@ cd ~/.dotfiles
 ```
 
 <details>
-  ##<summary>🖼️ Screenshots</summary>
+<summary># 🖼️ Screenshots</summary>
 
-<details>
-<summary>Everforest</summary>
-<div style="overflow-x: auto; white-space: nowrap;">
-  <img src="./.ss/ever/20251104_01h51m01s_grim.png" width="600" />
-</div>
-</details>
+### Everforest
+<table>
+  <tr>
+    <td><img src="./.ss/ever/20251104_01h51m01s_grim.png" width="300" /></td>
+  </tr>
+</table>
 
-<details>
-<summary>Gruvbox</summary>
-<div style="overflow-x: auto; white-space: nowrap;">
-  <img src="./.ss/gruv/20251030_01h45m04s_grim.png" width="600" />
-  <img src="./.ss/gruv/20251030_01h47m11s_grim.png" width="600" />
-  <img src="./.ss/gruv/20251030_01h47m57s_grim.png" width="600" />
-  <img src="./.ss/gruv/20251030_01h48m10s_grim.png" width="600" />
-  <img src="./.ss/gruv/20251030_01h48m19s_grim.png" width="600" />
-</div>
-</details>
+### Gruvbox
+<table>
+  <tr>
+    <td><img src="./.ss/gruv/20251030_01h45m04s_grim.png" width="300" /></td>
+    <td><img src="./.ss/gruv/20251030_01h47m11s_grim.png" width="300" /></td>
+    <td><img src="./.ss/gruv/20251030_01h47m57s_grim.png" width="300" /></td>
+  </tr>
+  <tr>
+    <td><img src="./.ss/gruv/20251030_01h48m10s_grim.png" width="300" /></td>
+    <td><img src="./.ss/gruv/20251030_01h48m19s_grim.png" width="300" /></td>
+  </tr>
+</table>
 
-<details>
-<summary>Kanagawa</summary>
-<div style="overflow-x: auto; white-space: nowrap;">
-  <img src="./.ss/kana-ss/20251024_23h37m48s_grim.png" width="600" />
-  <img src="./.ss/kana-ss/20251024_23h39m04s_grim.png" width="600" />
-  <img src="./.ss/kana-ss/20251024_23h42m43s_grim.png" width="600" />
-  <img src="./.ss/kana-ss/20251024_23h54m53s_grim.png" width="600" />
-  <img src="./.ss/kana-ss/20251024_23h55m52s_grim.png" width="600" />
-  <img src="./.ss/kana-ss/20251024_23h56m12s_grim.png" width="600" />
-</div>
-</details>
+### Kanagawa
+<table>
+  <tr>
+    <td><img src="./.ss/kana-ss/20251024_23h37m48s_grim.png" width="300" /></td>
+    <td><img src="./.ss/kana-ss/20251024_23h39m04s_grim.png" width="300" /></td>
+    <td><img src="./.ss/kana-ss/20251024_23h42m43s_grim.png" width="300" /></td>
+  </tr>
+  <tr>
+    <td><img src="./.ss/kana-ss/20251024_23h54m53s_grim.png" width="300" /></td>
+    <td><img src="./.ss/kana-ss/20251024_23h55m52s_grim.png" width="300" /></td>
+    <td><img src="./.ss/kana-ss/20251024_23h56m12s_grim.png" width="300" /></td>
+  </tr>
+</table>
 
 </details>
 
