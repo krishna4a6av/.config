@@ -46,9 +46,10 @@ cd ~/.dotfiles
 ./setup.sh
 ```
 
-<details>
 
-  ### 🖼️ Screenshots
+### 🖼️ Screenshots
+
+<details>
 
 <summary> Everforest</summary>
 <table>
