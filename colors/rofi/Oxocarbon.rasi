@@ -1,9 +1,0 @@
-* {
-  main-bg:     #101010e6;  // bg-base with transparency
-  main-br:     #6e4257cc;  // bg-surface for border
-  main-fg:     #c6c4cb;    // fg-main
-
-  select-bg:   #ff4fc9e6;  // accent-active with transparency
-  select-fg:   #1b1630;    // bg-base
-}
-
