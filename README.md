@@ -13,7 +13,7 @@ It can be installed via you pacakage manager so,
 sudo pacman -S stow
 ```
 
-- To use matugen colors you need to install from you distros's package manager as well
+- To use matugen colors you need to install it from you distros's package manager as well.
 
 The scripts uses and control the themes of the following applications:
 
