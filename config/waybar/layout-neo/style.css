@@ -1,0 +1,118 @@
+@import "../colors/theme.css";
+
+* {
+    font-family: FontAwesome, Roboto, Helvetica, Arial, sans-serif;
+    font-size: 18px;
+}
+
+window#waybar {
+    background-color: @bg-base;
+    color: @fg-main;
+    border: 2px solid @fg-muted;
+    border-radius: 4px;
+    box-shadow: inset -2px 2px 0 0 @fg-strong, inset 2px -2px 0 0 @bg-overlay;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* --- Common module styling --- */
+#custom-firefox,
+#custom-power,
+#battery,
+#cpu,
+#memory,
+#tray,
+#pulseaudio,
+#pulseaudio.microphone,
+#power-profiles-daemon,
+#mpd,
+#clock,
+#window,
+#workspaces {
+    background-color: @bg-surface;
+    margin: 4px 0px;
+    padding: 6px 10px;
+    border: 1px solid @fg-muted;
+    border-radius: 6px;
+    box-shadow: inset 2px -2px 0px 0px @fg-strong, inset -2px 2px 0px 0px @bg-overlay;
+}
+
+#custom-power {
+    padding: 6px 12px;
+}
+
+#custom-firefox {
+    padding: 6px 12px;
+}
+
+#mpd,
+#clock {
+    background: @bg-overlay;
+    font-weight: bold;
+    font-size: 20px;
+    padding: 6px 16px;
+}
+
+#cpu,
+#memory {
+    min-width: 40px;
+}
+
+#pulseaudio.muted {
+    opacity: 0.6;
+}
+
+/* --- Hover effects --- */
+#pulseaudio:hover,
+#pulseaudio.microphone:hover,
+#custom-firefox:hover,
+#custom-power:hover,
+#tray:hover,
+#window:hover,
+#power-profiles-daemon:hover {
+    background-color: @accent-hover;
+    box-shadow: inset 2px -2px 0px 0px @accent-primary, inset -2px 2px 0px 0px @accent-active;
+}
+
+#tray,
+#battery,
+#power-profiles-daemon {
+    padding: 4px 6px;
+    border-radius: 6px;
+    min-width: 25px;
+    transition: all 0.2s ease;
+}
+
+/* Workspaces */
+#workspaces button {
+    color: @fg-main;
+    background: transparent;
+    padding: 2px 4px;
+    animation: ws_normal 20s ease-in-out 1;
+}
+#workspaces button.active {
+    background: @accent-primary;
+    padding: 2px 6px;
+    transition: all 0.4s cubic-bezier(.55, -0.68, .48, 1.682);
+    animation: ws_active 20s ease-in-out 1;
+}
+#workspaces button:hover {
+    background: @accent-hover;
+    padding: 2px 8px;
+    color: @fg-strong;
+    transition: all 0.3s cubic-bezier(.55, -0.68, .48, 1.682);
+    animation: ws_hover 20s ease-in-out 1;
+}
+
+#window {
+    font-weight: 500;
+    min-width: 15px;
+    text-shadow: 1px 1px 0 @fg-strong;
+}
+
+/* --- Smooth spacing across top --- */
+.modules-left,
+.modules-center,
+.modules-right {
+    margin: 2px 20px;
+}
+

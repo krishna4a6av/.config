@@ -1,0 +1,148 @@
+{
+    "layer": "top", 
+    "exclusive": true,
+    "reload-on-style-change": true,
+    "position": "top",
+    "height": 20, 
+    "spacing": 8, 
+    "margin-left": 100,
+    "margin-right": 100,
+
+    "modules-left": [
+        "custom/power",
+        "hyprland/workspaces",
+        "hyprland/window"
+    ],
+
+    "modules-center": [
+        "clock"
+    ],
+
+    "modules-right": [
+        "cpu",
+        "pulseaudio#microphone",
+        "pulseaudio#volume",
+        "tray",
+        "battery",
+        "power-profiles-daemon"
+    ],
+
+    "cpu": {
+        "format": "  {usage}%",
+        "tooltip": false
+    },
+
+    "clock": {
+        "format": "{:%a, %d. %b  %H:%M %p}",
+        "format-alt": "{:%I:%M %p}",
+        "tooltip": false
+    },
+
+    "hyprland/workspaces": {
+        "disable-scroll": true,
+        "rotate": 0,
+        "all-outputs": true,
+        "active-only": false,
+        "on-click": "activate",
+        "disable-scroll": false,
+        "on-scroll-up": "hyprctl dispatch workspace -1",
+        "on-scroll-down": "hyprctl dispatch workspace +1",
+        "persistent-workspaces": {
+        }
+    },
+
+    "hyprland/window": {
+        "format": "  {}",
+        "separate-outputs": true,
+        "max-length": 80,
+        "rewrite": {
+            "kriahna@cacpc:(.*)": "$1 ",
+            "(.*)fish": "",
+            "(.*)nvim": "",
+            "(.*) — Mozilla Firefox": "󰈹",
+            "(.*)Zen Browser": "󰈹",
+            "(.*)Mozilla Firefox": "Firefox 󰈹",
+            "(.*) - Visual Studio Code": "$1 󰨞",
+            "(.*)Visual Studio Code": "Code 󰨞",
+            "(.*) - Code - OSS": "$1 󰨞",
+            "(.*)Code - OSS": "Code 󰨞",
+            "(.*) — Dolphin": "$1 󰉋",
+            "(.*)Nautilus": "$1 󰉋",
+            "(.*)Thunar": "󰉋",
+            "(.*)Spotify": "󰓇",
+            "(.*)Steam": "Steam 󰓓",
+            "(.*) - Discord": "$1  ",
+            "(.*)Netflix": "Netflix 󰝆 ",
+            "(.*) — Google chrome": "$1  ",
+            "(.*)Google chrome": "Google chrome  ",
+            "(.*) — Github": "$1  ",
+            "(.*)Github": "Github ",
+            "(.*)Spotify Free": "Spotify 󰓇",
+            "(.*)Spotify Premiun": "Spotify 󰓇"
+        }
+    },
+
+    "battery": {
+        "format": "{icon} {capacity}%",
+        "tooltip-format": "{timeTo}\nCycles: {cycles}\nWattage: {power}W\nHealth: {health}%",
+        "states": {
+            "critical": 10,
+            "warning": 25,
+            "medium": 50,
+            "good": 80,
+            "full": 100
+        },
+        "format-icons": {
+            "critical": "󰁺",
+            "warning": "󰁼",
+            "medium": "󰁾",
+            "good": "󰂁",
+            "full": "󰁹",
+            "charging": "󰂄"
+        }
+    },
+
+    "tray": {
+        "icon-size": 18,
+        "spacing": 8,
+        "tooltip": false
+    },
+    "power-profiles-daemon": {
+        "format-icons": {
+            "power-saver": "󰌪",
+            "balanced": "󰗑",
+            "performance": "󱐋"
+        }
+    },
+
+    "pulseaudio#volume": {
+        "format": "{icon}",
+        "format-muted": "",
+        "tooltip": false,
+        "format-icons": {
+            "default": ["", "", ""]
+        }
+    },
+
+    "pulseaudio#microphone": {
+        "format": "{format_source}",
+        "format-muted": "{format_source}",
+        "tooltip": false,
+        "format-source": "",
+        "format-source-muted": ""
+    },
+
+    "custom/power": {
+        "format": "⏻",
+        "tooltip": false,
+        "on-click": "wlogout"
+    },
+
+    "custom/firefox": {
+        "format": "󰈹",
+        "tooltip": false,
+        "on-click": "firefox"
+    }
+}
+
+

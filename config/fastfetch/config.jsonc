@@ -129,7 +129,7 @@
 {
     "$schema": null,
     "logo": {
-          "source": "~/.config/fastfetch/logo/poke/mew.txt",
+          "source": "~/.config/fastfetch/logo/poke/gengar.txt",
           "height": 24,
           "padding": {
             "top": 2,

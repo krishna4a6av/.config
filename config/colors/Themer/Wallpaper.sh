@@ -1,89 +1,167 @@
-#!/bin/bash
+#!/usr/bin/env bash
+set -euo pipefail
 
-THEME="$1"
+THEME="${1:-}"
 
 CACHE_DIR="${XDG_CACHE_HOME:-$HOME/.cache}/wall-cache"
 THUMB_DIR="$CACHE_DIR/thumbs"
 SYMLINK="$CACHE_DIR/current_wallpaper"
 THEME_SYMLINK="$CACHE_DIR/current_theme"
+
 WALLPAPER_ROOT="$HOME/Pictures/Wallpapers"
 ROFI_THEME="$HOME/.config/rofi/wallpaper.rasi"
-ROFI_CLIP="$HOME/.config/rofi/clipboard.rasi"
+
+
+if [[ -z "$THEME" ]]; then
+    if [[ ! -L "$THEME_SYMLINK" ]]; then
+        THEME="all"
+    fi
+fi
+
+print_usage() {
+    cat <<EOF
+Wallpaper Manager
+-----------------
+Usage:
+  wallpapers.sh                  Pick wallpaper from current theme
+  wallpapers.sh path             Print full path of current wallpaper
+  wallpapers.sh <theme-name>     Pick wallpaper from the specific theme
+  wallpapers.sh all              Pick wallpaper from all themes
+  wallpapers.sh help             Show this help menu
+
+Examples:
+  wallpapers.sh path
+
+-- You need to add wallpapers in ~/Pictures/Wallpapers/<theme-name>
+EOF
+}
+
+# If user runs: wallpapers.sh help
+if [[ "$THEME" == "help" ]]; then
+    print_usage
+    exit 0
+fi
+
 
 mkdir -p "$THUMB_DIR"
 
-# ── Show current wallpaper path ──
-if [[ "$THEME" == "current" ]]; then
-  [[ -L "$SYMLINK" && -e "$SYMLINK" ]] && readlink -f "$SYMLINK" || echo "❌ No wallpaper symlink found."
-  exit $?
-fi
+# Helper: Create thumbnail safely
+make_thumb() {
+    local img="$1"
+    local thumb="$2"
+    local base=$(basename "$img")
+    local name="${base%.*}"
 
-# ── Load theme from current_theme if none passed ──
-if [[ -z "$THEME" ]]; then
-  if [[ -L "$THEME_SYMLINK" && -e "$THEME_SYMLINK" ]]; then
-    THEME=$(basename "$(readlink -f "$THEME_SYMLINK")")
-  else
-    echo "❌ No theme selected or active. Pass one manually."
-    exit 1
-  fi
-fi
-
-WALLPAPER_DIR="$WALLPAPER_ROOT/$THEME"
-[[ ! -d "$WALLPAPER_DIR" ]] && { echo "❌ Theme folder not found: $WALLPAPER_DIR"; exit 1; }
-
-# ── Check for missing thumbnails ──
-theme_files=$(find "$WALLPAPER_DIR" -type f \( -iname "*.jpg" -o -iname "*.png" -o -iname "*.jpeg" -o -iname "*.webm" \))
-missing_thumbs=()
-
-while IFS= read -r img; do
-  filename=$(basename "$img")
-  name="${filename%.*}"
-  thumb_path="$THUMB_DIR/${THEME}_${name}.thumb.png"
-  [[ ! -f "$thumb_path" ]] && missing_thumbs+=("$img")
-done <<< "$theme_files"
-
-if [[ ${#missing_thumbs[@]} -gt 0 ]]; then
-  echo "🔄 Caching ${#missing_thumbs[@]} missing thumbnails for $THEME..."
-  echo -e "🔄 Caching thumbnails...\nPlease wait..." | rofi -dmenu -p "Processing" -theme "$ROFI_CLIP" &
-  ROFI_PID=$!
-
-  for img in "${missing_thumbs[@]}"; do
-    filename=$(basename "$img")
-    name="${filename%.*}"
-    thumb_path="$THUMB_DIR/${THEME}_${name}.thumb.png"
-    is_video=$(file --mime-type -b "$img" | grep -c '^video/')
-    input_img="$img"
-
-    if [[ "$is_video" -eq 1 ]]; then
-      tmp_img="/tmp/${name}.png"
-      ffmpeg -y -i "$img" -frames:v 1 -q:v 2 "$tmp_img" &>/dev/null
-      input_img="$tmp_img"
+    if file --mime-type -b "$img" | grep -q '^video/'; then
+        tmp="/tmp/${name}.png"
+        ffmpeg -y -i "$img" -frames:v 1 -q:v 2 "$tmp" &>/dev/null
+        magick "$tmp" -strip -resize 400x600^ -gravity center -extent 400x600 "$thumb"
+        rm -f "$tmp"
+    else
+        magick "$img"[0] -strip -resize 400x600^ -gravity center -extent 400x600 "$thumb"
     fi
+}
 
-    magick "$input_img"[0] -strip -resize 400x600^ -gravity center -extent 400x600 "$thumb_path"
-    [[ "$is_video" -eq 1 ]] && rm -f "$tmp_img"
-  done
+thumb_name() {
+    local img="$1"
+    local hash
+    hash=$(printf "%s" "$img" | md5sum | cut -d' ' -f1)
+    echo "$THUMB_DIR/${hash}.png"
+}
 
-  kill $ROFI_PID 2>/dev/null
+
+# Mode: Show current wallpaper
+if [[ "$THEME" == "path" ]]; then
+    if [[ -L "$SYMLINK" ]]; then
+        readlink -f "$SYMLINK"
+    else
+        echo "❌ No wallpaper symlink found."
+    fi
+    exit
 fi
 
-# ── Show Rofi selection ──
+
+# Load previous theme if no theme given
+if [[ -z "$THEME" ]]; then
+    if [[ -L "$THEME_SYMLINK" ]]; then
+        THEME=$(basename "$(readlink -f "$THEME_SYMLINK")")
+    else
+        echo "❌ No theme active. Select one manually."
+        exit 1
+    fi
+fi
+
+
+# MODE: ALL wallpapers across ALL themes
+if [[ "$THEME" == "all" ]]; then
+    mapfile -t ALL_IMAGES < <(
+        find "$WALLPAPER_ROOT" \
+            -type f \( -iname "*.jpg" -o -iname "*.png" -o -iname "*.jpeg" -o -iname "*.webm" \)
+    )
+
+    ENTRIES=""
+
+    for img in "${ALL_IMAGES[@]}"; do
+        base=$(basename "$img")
+        name="${base%.*}"
+        thumb=$(thumb_name "$img")
+
+        [[ ! -f "$thumb" ]] && make_thumb "$img" "$thumb"
+
+        ENTRIES+="${base}\x00icon\x1f${thumb}\n"
+    done
+
+    SELECTED_NAME=$(printf "%b" "$ENTRIES" | LC_ALL=C rofi -dmenu -show-icons -p "Select wallpaper" -theme "$ROFI_THEME") || exit 1
+
+    SELECTED=$(printf "%s\n" "${ALL_IMAGES[@]}" | grep -F "/$SELECTED_NAME" | head -n 1)
+
+    swww-daemon --fork 2>/dev/null || true
+    swww img "$SELECTED" --transition-type any --transition-duration 1
+
+    ln -sf "$SELECTED" "$SYMLINK"
+    echo "✅ Wallpaper set: $SELECTED"
+    echo "🎨 Matugen: regenerating theme from wallpaper..."
+    "$HOME/.config/colors/Themer/Matugen.sh"
+    exit
+fi
+
+
+# NORMAL THEME MODE
+WALLPAPER_DIR="$WALLPAPER_ROOT/$THEME"
+
+if [[ ! -d "$WALLPAPER_DIR" ]]; then
+    echo "❌ Theme folder not found: $WALLPAPER_DIR"
+    exit 1
+fi
+
+mapfile -t THEME_IMAGES < <(
+    find "$WALLPAPER_DIR" \
+        -type f \( -iname "*.jpg" -o -iname "*.png" -o -iname "*.jpeg" -o -iname "*.webm" \)
+)
+
 ENTRIES=""
-while IFS= read -r img; do
-  filename=$(basename "$img")
-  name="${filename%.*}"
-  thumb_path="$THUMB_DIR/${THEME}_${name}.thumb.png"
-  [[ -f "$thumb_path" ]] && ENTRIES+="$filename\x00icon\x1f$thumb_path\n"
-done <<< "$theme_files"
 
-SELECTED_NAME=$(echo -e "$ENTRIES" | rofi -dmenu -show-icons -p "Select wallpaper" -theme "$ROFI_THEME")
-[[ -z "$SELECTED_NAME" ]] && exit 1
+for img in "${THEME_IMAGES[@]}"; do
+    base=$(basename "$img")
+    name="${base%.*}"
+    thumb=$(thumb_name "$img")
 
-SELECTED=$(find "$WALLPAPER_DIR" -type f -name "$SELECTED_NAME" | head -n 1)
+    [[ ! -f "$thumb" ]] && make_thumb "$img" "$thumb"
 
-pgrep -x swww-daemon >/dev/null || { swww-daemon & sleep 0.5; }
+    ENTRIES+="${base}\x00icon\x1f${thumb}\n"
+done
+
+SELECTED_NAME=$(printf "%b" "$ENTRIES" | LC_ALL=C rofi -dmenu -show-icons -p "Wallpaper" -theme "$ROFI_THEME") || exit 1
+
+SELECTED=$(printf "%s\n" "${THEME_IMAGES[@]}" | grep -F "/$SELECTED_NAME" | head -n 1)
+
+swww-daemon --fork 2>/dev/null || true
 swww img "$SELECTED" --transition-type any --transition-duration 1
+
+
+
 
 ln -sf "$SELECTED" "$SYMLINK"
 echo "✅ Wallpaper set: $SELECTED"
+
 

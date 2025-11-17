@@ -1,0 +1,104 @@
+
+/* forward/back buttons */
+.nautilus-window > headerbar.titlebar > .linked.raised > button.image-button:disabled {
+     box-shadow: none;
+     border-width: 2px;
+}
+
+.nautilus-window > headerbar.titlebar > .linked.raised > button.image-button:first-child {
+     border-radius: 6px 0px 0px 6px;
+}
+
+.nautilus-window > headerbar.titlebar > .linked.raised > button.image-button:last-child {
+     border-radius: 0px 6px 6px 0px;
+}
+
+/*************
+ * rhythmbox *
+ *************/
+
+toolbar.primary-toolbar.horizontal > toolitem > grid.horizontal > button.scale.flat,
+toolbar.primary-toolbar.horizontal > toolitem > grid.horizontal > button.scale.flat:hover,
+toolbar.primary-toolbar.horizontal > toolitem > grid.horizontal > button.scale.flat:hover:active {
+	padding: 0px 12px;
+}
+
+/* gnome-weather */
+#weather-page {
+    padding: 0px;
+    margin: -3px -3px -3px 0px;
+}
+
+#weather-page > frame {
+    border-radius: 0px;
+    margin: 0px 0px 0px -2px;
+    border-color: transparent;
+}
+
+#weather-page stack > scrolledwindow > .frame {
+    background-color: transparent;
+    background-image: linear-gradient(to bottom,
+                                      alpha(shade(@theme_selected_bg_color, 1.2), 0.1),
+                                      alpha(shade(@theme_selected_bg_color, 0.95), 0.1));
+    border-color: @osd_button_border;
+}
+
+#weather-page frame.weather-clear stack > scrolledwindow > .frame {
+    color: @theme_fg_color;
+    text-shadow: none;
+}
+
+#weather-page frame.weather-few-clouds-night .linked.stack-switcher.osd > button:checked,
+#weather-page frame.weather-few-clouds-night stack > scrolledwindow > .frame label,
+#weather-page frame.weather-clear-night .linked.stack-switcher.osd > button:checked,
+#weather-page frame.weather-clear-night stack > scrolledwindow > .frame label,
+#weather-page frame.weather-storm .linked.stack-switcher.osd > button:checked,
+#weather-page frame.weather-storm stack > scrolledwindow > .frame label,
+#weather-page frame.weather-showers .linked.stack-switcher.osd > button:checked,
+#weather-page frame.weather-showers stack > scrolledwindow > .frame label,
+#weather-page frame.weather-overcast .linked.stack-switcher.osd > button:checked,
+#weather-page frame.weather-overcast stack > scrolledwindow > .frame label {
+    color: @osd_button_fg_hover;
+}
+
+/****************
+ * dconf-editor *
+ ****************/
+
+window.background.dconf-editor popover.menu {
+    background-color: @bg_dark_color;
+    background: @bg_dark_color;
+}
+
+/* the slash */
+.dconf-editor headerbar.titlebar .pathbar {
+    color: @menu_fg_dark_color;
+}
+
+.dconf-editor .properties-list row.activatable:hover {
+    background-image: none;
+    box-shadow: none;
+    border-radius: 0px;
+}
+
+/*********
+ * gedit *
+ *********/
+
+.gedit-side-panel-paned.horizontal > box.vertical > statusbar.horizontal {
+    padding: 6px;
+}
+
+/**********************
+ * gnome-disk-utility *
+ **********************/
+
+/* fixes for backdrop/foreground state */
+window.background.csd > box > paned > notebook box > widget > box > box > box widget:selected {
+	color: @theme_selected_fg_color;
+}
+
+window.background.csd > box > paned > notebook box > widget > box > box > box widget:backdrop:selected {
+	color: @theme_fg_color;
+}
+

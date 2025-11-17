@@ -166,6 +166,7 @@ require('lazy').setup({
   { 'kepano/flexoki-neovim', name = 'flexoki' },
   { 'nyoom-engineering/oxocarbon.nvim', name = 'oxocarbon' },
   { 'mhartington/oceanic-next', name = 'oceanic-next' },
+  { 'sainnhe/everforest', name = 'everforest' },
   {
     'anAcc22/sakura.nvim',
     name = 'sakura',

@@ -1,0 +1,19 @@
+style "tooltips" 	
+    {
+  xthickness 				= 9  ## give your tooltip text some room, set x,y big!##
+  ythickness 				= 9
+  fg[NORMAL] 			= "#000000"
+  engine "pixmap"
+    {
+    image
+    {
+      	function				= FLAT_BOX
+        detail				= "tooltip"
+        recolorable			= TRUE
+        file					= "Others/tooltip.png"
+        border				= { 3, 3, 4, 4 }
+        stretch				= TRUE
+    }
+  }
+
+}

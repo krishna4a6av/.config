@@ -1,0 +1,111 @@
+{
+    "layer": "top", 
+    "exclusive": true,
+    "reload-on-style-change": true,
+    "position": "left",
+    "height": 1444,
+    "width": 60,
+    
+    "spacing": 0,
+    "modules-left": [
+    	"custom/power",
+	"custom/firefox",
+	"hyprland/workspaces"
+    ],
+    "modules-center": [
+    ],
+    "modules-right": [
+        "clock",
+        "mpd",
+	//"cpu",
+	//"memory",
+	"pulseaudio#microphone",
+	"pulseaudio#volume",
+        "tray",
+	"battery",
+        "power-profiles-daemon"
+    ],
+
+    "clock": {
+        "format": "<span> {:%I \n %M}</span>",
+        "tooltip": false
+    },
+    "mpd": {
+      "format": "",
+      "format-stopped": "",
+      "format-paused": "",
+      "tooltip": true,
+      "tooltip-format": "{artist} - {artist}"
+    },
+
+    "cpu": {
+        "format": " {usage}",
+        "tooltip": false
+    },
+    "memory": {
+        "format": "{}",
+	"tooltip": false
+    },
+    "hyprland/workspaces": {
+        "disable-scroll": true,
+        "rotate": 0,
+        "all-outputs": true,
+        "active-only": false,
+        "on-click": "activate",
+        "disable-scroll": false,
+        "on-scroll-up": "hyprctl dispatch workspace -1",
+        "on-scroll-down": "hyprctl dispatch workspace +1",
+        "persistent-workspaces": {
+        }
+    },
+    "battery": {
+        "format": "{icon}",
+        "format-full": "{icon}",
+        "format-charging": "{icon}",
+        "format-plugged": "{icon}",
+	"tooltip": false,
+        "format-icons": {
+	"default": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
+	"charging": ["󰢟", "󰢜", "󰂆", "󰂇", "󰂈", "󰢝", "󰂉", "󰢞", "󰂊", "󰂋", "󰂅"]
+	}
+    },
+    "tray": {
+        "icon-size": 16,
+	"tooltip": "false",
+        "rotate": 0,
+        "spacing": 5
+    },
+    "power-profiles-daemon": {
+        "format-icons": {
+            "power-saver": "󰌪",
+            "balanced": "󰗑",
+            "performance": "󱐋"
+        }
+    },
+    "pulseaudio#volume": {
+        "format": "{icon}",
+        "format-muted": "",
+	"tooltip": false,
+        "format-icons": {
+            "default": ["", "", ""]
+        }
+    },
+    "pulseaudio#microphone": {
+        "format": "{format_source}",
+        "format-muted": "{format_source}",
+	"tooltip": false,
+        "format-source": "",
+        "format-source-muted": ""
+    },
+    "custom/power": {
+        "format" : "⏻",
+	"tooltip": "false",
+	"on-click": "wlogout",
+    },
+    "custom/firefox": {
+	"format": "󰈹",
+	"tooltip": false,
+	"on-click": "firefox"
+
+    },
+}

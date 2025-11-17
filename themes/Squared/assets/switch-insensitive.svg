@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generator: Gravit.io -->
+
+<svg
+   style="isolation:isolate"
+   viewBox="0 0 45 25"
+   width="45"
+   height="25"
+   version="1.1"
+   id="svg11496"
+   sodipodi:docname="switch-insensitive.svg"
+   inkscape:version="1.3.2 (091e20ef0f, 2023-11-25)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs11500" />
+  <sodipodi:namedview
+     id="namedview11498"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     showgrid="false"
+     inkscape:zoom="25.28"
+     inkscape:cx="22.982595"
+     inkscape:cy="7.7531646"
+     inkscape:window-width="2560"
+     inkscape:window-height="1372"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg11496"
+     showguides="true">
+    <sodipodi:guide
+       position="-2.4894187,23.489566"
+       orientation="0,-1"
+       id="guide8"
+       inkscape:locked="false" />
+  </sodipodi:namedview>
+  <path
+     style="display:inline;fill:none;fill-opacity:1;stroke:#fdffff;stroke-width:1.15591;stroke-opacity:1;opacity:0.15"
+     d="M 12.147922,2.0779536 A 11.56997,10.422046 0 0 0 0.57795166,12.5 11.56997,10.422046 0 0 0 12.147922,22.922046 h 9.134186 2.435784 9.134186 A 11.56997,10.422046 0 0 0 44.422048,12.5 11.56997,10.422046 0 0 0 32.852078,2.0779536 h -9.134186 -2.435784 z"
+     id="path872"
+     inkscape:connector-curvature="0" />
+</svg>

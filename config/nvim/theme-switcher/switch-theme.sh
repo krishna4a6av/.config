@@ -18,6 +18,7 @@ declare -A THEMES=(
     ["Oxocarbon"]="oxocarbon"
     ["Rosepine"]="rose-pine-moon"
     ["Tokyo-night"]="tokyonight-night"
+    ["Flexoki"]="flexoki-light"
 )
 
 

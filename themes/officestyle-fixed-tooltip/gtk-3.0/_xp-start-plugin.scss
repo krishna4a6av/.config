@@ -1,0 +1,281 @@
+/**
+ * xp-start-plugin.scss - Luna (Blue) Start Button/Menu Styles
+ *
+ * This source-code is part of Windows XP stuff for XFCE:
+ * <<https://www.oddmatics.uk>>
+ *
+ * Author(s): Rory Fewell <roryf@oddmatics.uk>
+ */
+
+button.xp-start-button
+{
+       background-image: linear-gradient(to bottom, 
+#8ca2b7 0%,
+#58636f 100%);
+    background-size:  100% 100%;
+    background-color: transparent;
+    border-style:     none;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    border-color:     #58636f;
+    color:            #FFF;
+    font-family:      'Franklin Gothic Medium';
+    font-size:        0pt;
+    margin-right:     0px;
+    box-shadow: inset 0px 1px  darken(#58636f , 1%), inset 0px -1px  darken(#58636f , 1%);
+     > label {color: #fff}
+
+    &:hover
+    {
+       background-image: linear-gradient(to bottom, 
+lighten(#8ca2b7, 10%) 0%,
+#58636f 100%);
+    box-shadow: inset 0px 1px  darken(#58636f , 1%), inset 0px -1px  darken(#58636f , 1%);
+
+
+    }
+
+    &:active,
+    &:checked
+    {
+     background-image: linear-gradient(to bottom, 
+darken(#8ca2b7, 20%) 0%,
+darken(#58636f, 20%) 100%);
+    box-shadow: inset 0px 1px  darken(#58636f , 20%), inset 0px -1px  darken(#58636f , 20%);
+
+    }
+
+    @at-root .xp-flag
+    {
+        background-image:    url("assets/start_flag.png");
+        background-position: center;
+        background-repeat:   no-repeat;
+        margin-left:         5px;
+        margin-right:        4px;
+        min-height:          24px;
+        min-width:           30px;
+    }
+
+    label
+    {
+        margin-right: 14px;
+    }
+}
+
+window.csd.xp-start-menu // Specificity hack -_-
+{
+    background: transparent;
+    border:     none;
+
+    decoration
+    {
+        box-shadow: 6px 6px 2px -3px rgba(0, 0, 0, 0.4);
+    }
+
+    menubar
+    {
+        padding: 6px;
+        
+        menuitem,
+        separator
+        {
+            &:not(:last-child)
+            {
+                margin-bottom: 4px;
+            }
+        }
+    }
+
+    @at-root .xp-start-logoffpane
+    {
+        background-image:  
+        linear-gradient(to bottom, 
+#6b798a,#8aa0b5);
+        background-position: -2px 0px;
+        background-size:      101% 100%;
+        border-color:         #6b798a;
+        border-style:         solid;
+        border-width:         0px 1px;
+
+        button
+        {
+            margin-bottom: 6px;
+            margin-top:    4px;
+            padding:       2px 8px 2px 2px;
+            box-shadow: none;
+            text-shadow: 0px 1px 2px #000;
+
+            &:last-child
+            {
+                margin-right: -3px;
+            }
+
+            &,
+            &:active,
+            &:checked,
+            &:focus,
+            &:hover
+            {
+                background: transparent;
+                border:     none;
+                color:      #FFFFFF;
+            }
+
+            &:active,
+            &:hover
+            {
+                background: #58636f;
+                color:      $selected_fg_color;
+            }
+
+            &:active
+            {
+                padding: 3px 7px 1px 3px;
+            }
+
+            image
+            {
+                margin-right: 4px;
+            }
+        }
+    }
+    
+
+    @at-root .xp-start-places-column
+    {
+        background-color:  #58636f;
+        background:  #58636f;
+        border-style: solid;
+        border-width: 1px 4px 1px 1px;
+        color:        #fff;
+        border-color:         #6b798a;
+        border-top-color: #58636f;
+
+        menubar {
+        	       background-image:  linear-gradient(to bottom,  #58636f , #6b798a);
+        	       menuitem:hover{background:#373737; color:#fff;}
+        }
+        menuitem
+        {
+            padding: 0px;
+
+            &.significant
+            {
+                font-weight: bold;
+            }
+
+            image
+            {
+                margin-right: 2px;
+            }
+        }
+
+        separator
+        {
+            background: linear-gradient(90deg, rgba(211,229,250,1) 0%,  #373737 50%,  rgba(211,229,250,1) 100%);
+        }
+    }
+
+    @at-root .xp-start-programs-column
+    {
+        background:   #FFFFFF;
+        border-style: solid;
+        border-width: 1px 4px 1px 1px;
+        color:        #0A246A;
+        border-color:         #58636f;
+        border-top-color: #58636f;
+        color:        #373737;
+        min-width:    182px;
+        box-shadow:none;
+        margin-right: -4px;
+
+        menubar {
+        	       background-image:  linear-gradient(to bottom,  #fff , #ffe);
+        	       menuitem:hover {background-image:linear-gradient(to bottom, 
+                   #EAF5FA,  
+                   #E1EAFA); 
+      color: $fg_color;
+      border-radius: 4px;
+      box-shadow: inset 1px 0 #b5c6da,
+                  inset -1px 0 #b5c6da,
+                  inset 0 1px #b5c6da,
+                  inset 0 -1px #b5c6da; }
+        }
+
+        box.xp-start-all-programs
+        {
+            font-weight: bold;
+            min-height:  initial;
+
+            .arrow
+            {
+                background-image: -gtk-icontheme("pan-end-symbolic");
+                background-position: right center;
+                background-repeat:   no-repeat;
+                margin-left:         10px;
+                min-height:          24px;
+                min-width:           16px;
+                
+                &:hover
+                {
+                  //  background-image: url("assets/all_programs_arrow_hot.png");
+                }
+            }
+        }
+        
+        
+        separator
+        {
+            background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(211,211,200,1) 25%, rgba(211,211,200,1) 50%, rgba(211,211,200,1) 75%, rgba(255,255,255,1) 100%);
+            
+            &:nth-last-child(2)
+            {
+                margin-top: 10px;
+            }
+        }
+    }
+
+    @at-root .xp-start-userpane
+    {
+        background-image: 
+        linear-gradient(to bottom, 
+#8ca2b7 0%,
+#58636f 100%)
+         ; 
+        background-size:      101% 100%;
+        background-position: -2px 0px;
+        border-top-left-radius: 7px;
+        border-top-right-radius: 7px;
+        border-style:         solid;
+        border-color:         #8ca2b7 ;
+        border-width:         1px 1px 0px;
+        box-shadow:           inset 0px 3px lighten(#8ca2b7, 10%) ,inset 0px 2px lighten(#8ca2b7, 30%), inset 0px 1px lighten(#8ca2b7, 10%);
+        min-width:            380px;
+
+        box
+        {
+        	//user-tile
+        	border-color:#356cca;
+            border-style: solid;
+            border-width: 3px 3px 3px 3px;
+            margin:       2px 0px 2px 1px;
+            
+            image
+            {
+                background: #CCD6EB;
+                box-shadow: none;
+                margin: 0px;
+            }
+        }
+        
+        label
+        {
+            color:       #FFFFFF;
+            font-family: 'Franklin Gothic Medium';
+            font-size:   14pt;
+            margin-left: 5px;
+            text-shadow: 0px 1px 2px #000;
+        }
+    }
+}
+

@@ -8,7 +8,7 @@ set -e
 # Theme mapping: generic_name -> GTK_theme_name
 declare -A THEME_MAP=(
     ["dracula"]="Colloid-Dark-Dracula"
-    ["autmn"]="Nord"
+    ["autmn"]="Squared"
     ["gruvbox"]="Gruvbox-Dark"
     ["catppuccin"]="Catppuccin-Mocha"
     ["kanagawa"]="Kanagawa-Dark"
@@ -18,6 +18,8 @@ declare -A THEME_MAP=(
     ["graphite"]="Graphite-Dark"
     ["oxocarbon"]="phocus"
     ["crimson"]="Red-Stone"
+    ["flexoki"]="flexoki"
+    ["slatemist"]="Blue-Submarine"
 
     # Add your custom mappings here
     # ["my-theme"]="Actual-GTK-Theme-Name"
@@ -103,42 +105,43 @@ fi
 echo "✓ Found theme at: $THEME_PATH"
 
 # Ensure a valid D-Bus session for gsettings/dconf
-if [[ -z "$DBUS_SESSION_BUS_ADDRESS" ]] || ! busctl --user list >/dev/null 2>&1; then
-    echo "⚠️  No valid DBus session detected, reusing or starting one..."
-    eval "$(dbus-launch --sh-syntax)"
-fi
+#if [[ -z "$DBUS_SESSION_BUS_ADDRESS" ]] || ! busctl --user list >/dev/null 2>&1; then
+#    echo "⚠️  No valid DBus session detected, reusing or starting one..."
+#    eval "$(dbus-launch --sh-syntax)"
+#fi
 
 # Force gsettings and dconf update
 echo "🔧 Updating GSettings and Dconf..."
 gsettings set org.gnome.desktop.interface gtk-theme "$THEME" || true
+gsettings set org.gnome.desktop.interface color-scheme 'default'
 dconf write /org/gnome/desktop/interface/gtk-theme "'$THEME'" || true
 
 # Update GTK config files
 GTK3_CONF="$HOME/.config/gtk-3.0/settings.ini"
 GTK4_CONF="$HOME/.config/gtk-4.0/settings.ini"
 
-mkdir -p "$(dirname "$GTK3_CONF")" "$(dirname "$GTK4_CONF")"
-
-update_setting() {
-    local file="$1"
-    local key="$2"
-    local value="$3"
-    
-    if [[ ! -f "$file" ]]; then
-        echo "[Settings]" > "$file"
-        echo "${key}=${value}" >> "$file"
-    elif grep -q "^${key}=" "$file"; then
-        sed -i "s|^${key}=.*|${key}=${value}|" "$file"
-    elif grep -q "^\[Settings\]" "$file"; then
-        sed -i "/^\[Settings\]/a ${key}=${value}" "$file"
-    else
-        echo -e "[Settings]\n${key}=${value}" > "$file"
-    fi
-}
-
-echo "🔧 Updating GTK configuration files..."
-update_setting "$GTK3_CONF" "gtk-theme-name" "$THEME"
-update_setting "$GTK4_CONF" "gtk-theme-name" "$THEME"
+#mkdir -p "$(dirname "$GTK3_CONF")" "$(dirname "$GTK4_CONF")"
+#
+#update_setting() {
+#    local file="$1"
+#    local key="$2"
+#    local value="$3"
+#    
+#    if [[ ! -f "$file" ]]; then
+#        echo "[Settings]" > "$file"
+#        echo "${key}=${value}" >> "$file"
+#    elif grep -q "^${key}=" "$file"; then
+#        sed -i "s|^${key}=.*|${key}=${value}|" "$file"
+#    elif grep -q "^\[Settings\]" "$file"; then
+#        sed -i "/^\[Settings\]/a ${key}=${value}" "$file"
+#    else
+#        echo -e "[Settings]\n${key}=${value}" > "$file"
+#    fi
+#}
+#
+#echo "🔧 Updating GTK configuration files..."
+#update_setting "$GTK3_CONF" "gtk-theme-name" "$THEME"
+#update_setting "$GTK4_CONF" "gtk-theme-name" "$THEME"
 
 # Restart portals to apply theme for GNOME/Flatpak apps
 #echo "🔄 Reloading desktop portals..."

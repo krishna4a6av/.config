@@ -1,0 +1,12 @@
+
+
+* {
+    main-bg: {{ colors.surface.default.hex }};
+    main-fg: {{ colors.on_surface.default.hex }};
+    main-br: {{ colors.outline.default.hex }};
+
+    select-bg: {{ colors.primary_container.default.hex }};
+    select-fg: {{ colors.on_primary_container.default.hex }};
+}
+
+

@@ -24,6 +24,7 @@ THEME_FILE="$THEME_DIR/${THEME_NAME}.css"
 ROFI_FILE="$ROFI_DIR/${THEME_NAME}.rasi"
 HYPR_FILE="$HYPR_DIR/${THEME_NAME}.conf"
 KITTY_FILE="$KITTY_DIR/${THEME_NAME}.conf"
+#matugen symlinks are handled in Matugen.sh
 
 # Check required files exist
 if [[ ! -f "$THEME_FILE" ]]; then
@@ -53,7 +54,7 @@ ln -sf "$HYPR_FILE" "$HYPR_LINK"
 ln -sf "$KITTY_FILE" "$KITTY_LINK"
 
 # Reload components
-pkill -SIGUSR2 waybar
+pkill waybar && waybar & disown
 pkill swaync && swaync & disown
 
 # Reload Kitty (will affect new windows only)

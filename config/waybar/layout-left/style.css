@@ -1,0 +1,121 @@
+@import "../colors/theme.css";
+
+
+* {
+    /* `otf-font-awesome` is required to be installed for icons */
+    font-family: FontAwesome, Roboto, Helvetica, Arial, sans-serif;
+    font-size: 18px;
+}
+
+window#waybar {
+    background-color: @bg-surface;
+    color: @fg-main;
+    border: 2px solid @border-color;
+    border-radius: 6px;
+    box-shadow: inset -2px 2px 0 0px @shadow-color, inset 2px -2px 0px 0px @shadow-color;
+}
+
+#custom-firefox,
+#custom-power,
+#battery,
+#cpu,
+#memory,
+#tray,
+#pulseaudio,
+#workspaces,
+#mpd,
+#power-profiles-daemon,
+#clock {
+    background-color: @bg-overlay;
+    margin: 4px 2px;
+    padding: 12px 6px;
+    border: 1px solid @border-color;
+    box-shadow: inset 2px -2px 0px 0px @bg-base, inset -2px 2px 0px 0px @bg-surface;
+}
+
+#mpd,
+#clock {
+    background: @accent-primary;
+    font-weight: bold;
+    font-size: 22px;
+    padding: 6px 10px;
+}
+
+#custom-power {
+    margin-top: 4px;
+}
+
+#battery {
+    margin-bottom: 4px;
+}
+
+#cpu {
+    border-bottom: none;
+    margin-bottom: -2px;
+    box-shadow: inset 2px 0px 0px 0px @bg-base, inset -2px 2px 0px 0px @bg-surface;
+}
+
+#memory {
+    margin-top: -2px;
+    border-top: none;
+    box-shadow: inset 2px -2px 0px 0px @bg-base, inset -2px 0px 0px 0px @bg-surface;
+}
+
+/* Workspaces */
+#workspaces button {
+    color: @fg-main;
+    font-weight: bold;
+    background: transparent;
+    padding: 2px 0px;
+    animation: ws_normal 20s ease-in-out 1;
+}
+#workspaces button.active {
+    background: @accent-active;
+    padding: 3px 0px;
+    margin: 1px;
+    transition: all 0.4s cubic-bezier(.55, -0.68, .48, 1.682);
+    animation: ws_active 20s ease-in-out 1;
+}
+#workspaces button:hover {
+    background: @accent-hover;
+    padding: 4px 0px;
+    color: @fg-strong;
+    transition: all 0.3s cubic-bezier(.55, -0.68, .48, 1.682);
+    animation: ws_hover 20s ease-in-out 1;
+}
+
+#pulseaudio.microphone {
+    border-bottom: none;
+    margin-top: 2px;
+    margin-bottom: -2px;
+    border: 1px solid @border-color;
+    border-bottom: none;
+    box-shadow: inset 2px -2px 0px 0px @bg-base, inset -2px 2px 0px 0px @bg-surface;
+}
+
+#pulseaudio {
+    margin-top: -4px;
+    border-top: none;
+    box-shadow: inset 2px -2px 0px 0px @bg-base, inset -2px 0px 0px 0px @bg-surface;
+}
+
+/* --- Hover effects --- */
+#pulseaudio:hover,
+#pulseaudio.microphone:hover,
+#custom-firefox:hover,
+#custom-power:hover,
+#tray:hover,
+#window:hover,
+#power-profiles-daemon:hover {
+    background-color: @accent-hover;
+    box-shadow: inset 2px -2px 0px 0px @accent-primary, inset -2px 2px 0px 0px @accent-active;
+}
+
+
+/* --- Smooth spacing across top --- */
+.modules-left,
+.modules-center,
+.modules-right {
+    margin: 5px 2px;
+}
+

@@ -13,6 +13,8 @@ It can be installed via you pacakage manager so,
 sudo pacman -S stow
 ```
 
+- To use matugen colors you need to install from you distros's package manager as well
+
 The scripts uses and control the themes of the following applications:
 
 | Application | Description                                         |
@@ -27,8 +29,8 @@ The scripts uses and control the themes of the following applications:
 | `Hyprlock`  | Lock screen                                         |
 | `Neovim`    | Editor                                              |
 
- The script currently changes gtk themes as well.
- I don't use any qt application so no qt support.
+ The script currently changes gtk themes as well hard generated as well as matugen.
+ I don't use any qt application so no qt support, matugen works with it thoug.
 
 * You can adjust the wallpaper manager in /config/colors/Themer/Wallpapers.sh, the script uses swww by default.
 
@@ -56,39 +58,54 @@ cd ~/.dotfiles
 ### 🖼️ Screenshots
 
 <details>
-
-<summary> Everforest</summary>
-<table>
-  <tr>
-    <td><img src="./.ss/ever/20251104_01h51m01s_grim.png" width="300" /></td>
-  </tr>
-</table></details>
-
-<details>
-<summary> Gruvbox</summary>
-<table>
-  <tr>
-    <td><img src="./.ss/gruv/20251030_01h45m04s_grim.png" width="300" /></td>
-    <td><img src="./.ss/gruv/20251030_01h47m11s_grim.png" width="300" /></td>
-    <td><img src="./.ss/gruv/20251030_01h47m57s_grim.png" width="300" /></td>
-  </tr>
-  <tr>
-    <td><img src="./.ss/gruv/20251030_01h48m10s_grim.png" width="300" /></td>
-    <td><img src="./.ss/gruv/20251030_01h48m19s_grim.png" width="300" /></td>
-  </tr>
-</table></details>
-
-<details>
-<summary> Kanagawa</summary>
-<table>
-  <tr>
-    <td><img src="./.ss/kana-ss/20251024_23h37m48s_grim.png" width="300" /></td>
-    <td><img src="./.ss/kana-ss/20251024_23h54m53s_grim.png" width="300" /></td>
-    <td><img src="./.ss/kana-ss/20251024_23h55m52s_grim.png" width="300" /></td>
-  </tr>
-</table></details>
-
+  <summary> Gruvbox</summary>
+  <table>
+    <tr>
+      <td><img src="./.ss/gruv/20251030_01h45m04s_grim.png" width="300" /></td>
+      <td><img src="./.ss/gruv/20251030_01h47m11s_grim.png" width="300" /></td>
+      <td><img src="./.ss/gruv/20251030_01h47m57s_grim.png" width="300" /></td>
+    </tr>
+    <tr>
+      <td><img src="./.ss/gruv/20251030_01h48m10s_grim.png" width="300" /></td>
+      <td><img src="./.ss/gruv/20251030_01h48m19s_grim.png" width="300" /></td>
+    </tr>
+  </table>
 </details>
+
+<details>
+  <summary> Flexoki</summary>
+  <img src="./.ss/Flexoki.png" width="300" />
+</details>
+
+<details>
+  <summary> Graphite</summary>
+  <img src="./.ss/graphite.png" width="300" />
+</details>
+
+<details>
+  <summary> Everforest</summary>
+  <img src="./.ss/everforest.png" width="300" />
+</details>
+
+
+<details>
+  <summary> Autmn</summary>
+  <img src="./.ss/autmn.png" width="300" />
+</details>
+
+<details>
+  <summary> Kanagawa</summary>
+  <img src="./.ss/kanagawa.png" width="300" />
+</details>
+
+<details>
+  <summary> Catppuccin</summary>
+  <img src="./.ss/catppuccin.png" width="300" />
+</details>
+
+
+
+
 
 Will add rest of the ss later... someday.
 
@@ -136,4 +153,4 @@ Will add rest of the ss later... someday.
 
 --Note: Add wallpapers in ~/Pictures/Wallpapers/ in specified theme file, for the wallpaper script to work.
 
-my wallpapers: https://github.com/krishna4a6av/Wallpapers.git
+My wallpapers: https://github.com/krishna4a6av/Wallpapers.git
