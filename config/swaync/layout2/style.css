@@ -135,12 +135,11 @@ tooltip {
 }
 
 /* MPRIS widget */
-@define-color mpris-album-art-overlay @bg-base;
 
 .widget-mpris .widget-mpris-player {
     padding: 16px;
     margin: 16px 20px;
-    background-color: @mpris-album-art-overlay;
+    background-color: @bg-base;
     border-radius: 12px;
     box-shadow: 0px 0px 10px @shadow-color;
 }

@@ -174,8 +174,8 @@ tooltip {
     border: 3px solid @border-color;
     color: @bg-base;
     font-weight: bold;
-    padding: 10px;
-    margin: 0px 2px;
+    padding: 10px 16px;
+    margin: 2px 2px;
     transition: transform 0.1s ease;
     box-shadow: inset 2px -2px 0px 0px @fg-strong, inset -2px 2px 0px 0px @bg-overlay;
 
@@ -206,6 +206,9 @@ tooltip {
 .widget-mpris .widget-mpris-subtitle {
     font-size: 0.8rem;
     opacity: 0.85;
+}
+.widget-mpris > box > button:hover {
+    background: alpha(@accent-hover, 0.6);
 }
 
 /* --- Volume / Backlight --- */

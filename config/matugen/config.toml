@@ -57,4 +57,7 @@ output_path = '~/.config/qt6ct/colors/matugen-qt6ct.conf'
 input_path = '~/.config/matugen/templates/matugen.kvconfig'
 output_path = '~/.config/Kvantum/matugen/matugen.kvconfig'
 
-
+# zed
+#[templates.zed]
+#input_path = '~/.config/matugen/templates/zed-colors.json'
+#output_path = '~/.config/zed/themes/matugen.json'

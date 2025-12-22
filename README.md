@@ -3,6 +3,8 @@
 A modular, theme-aware dotfiles setup for Linux.
 It includes automatic color theming, wallpaper management, and cross-application consistency across Hyprland, GTK, Rofi, Kitty, Swaync and Neovim.
 
+* I am using a 14" laptop so the sizing of elements will likely be too big for most other screens and will need manual configuration. (I will add a sizing factor later to make it easier but for now it'd need to be done by the user)
+
 ## Prerequisites
 
 This setup script uses `GNU stow` to manage dotfiles. Make sure you have it installed.
@@ -33,7 +35,7 @@ The scripts uses and control the themes of the following applications:
  I don't use any qt application so no qt support, matugen works with it thoug.
 
 * You can adjust the wallpaper manager in /config/colors/Themer/Wallpapers.sh, the script uses swww by default.
-
+* Display setting is set at 2880x1800 in 14", 120 Hz for me you can adjust it int /hypr/config/monitors.conf.
 
 ---
 

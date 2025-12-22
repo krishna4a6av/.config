@@ -8,8 +8,8 @@
     "control-center-layer": "top",
     "layer-shell": true,
 
-    "control-center-width": 570,
-    "control-center-height": 800,
+    "control-center-width": 550,
+    "control-center-height": 850,
     "control-center-margin-top": 8,
     "control-center-margin-right": 35,
     "control-center-margin-left": 0,
@@ -51,7 +51,7 @@
     ],
     "widget-config": {
         "mpris": {
-            "image-size": 60,
+            "image-size": 80,
             "image-radius": 0
         },
         "volume": {

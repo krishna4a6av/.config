@@ -51,7 +51,7 @@
     ],
     "widget-config": {
         "mpris": {
-            "image-size": 70,
+            "image-size": 90,
             "image-radius": 0
         },
         "volume": {

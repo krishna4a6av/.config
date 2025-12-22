@@ -1,12 +1,12 @@
 
 
 * {
-    main-bg: #16130b;
-    main-fg: #e9e2d4;
-    main-br: #979080;
+    main-bg: #12140d;
+    main-fg: #e3e3d7;
+    main-br: #909284;
 
-    select-bg: #564500;
-    select-fg: #fde186;
+    select-bg: #3b4d0f;
+    select-fg: #d5ec9d;
 }
 
 
