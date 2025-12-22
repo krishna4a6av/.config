@@ -3,11 +3,10 @@
 A modular, theme-aware dotfiles setup for Linux.
 It includes automatic color theming, wallpaper management, and cross-application consistency across Hyprland, GTK, Rofi, Kitty, Swaync and Neovim.
 
-* I am using a 14" laptop so the sizing of elements will likely be too big for most other screens and will need manual configuration. (I will add a sizing factor later to make it easier but for now it'd need to be done by the user)
 
 ## Prerequisites
 
-This setup script uses `GNU stow` to manage dotfiles. Make sure you have it installed.
+- The setup script uses `GNU stow` to manage dotfiles. Make sure you have it installed.
 It can be installed via you pacakage manager so,
 
 ```
@@ -15,9 +14,7 @@ It can be installed via you pacakage manager so,
 sudo pacman -S stow
 ```
 
-- To use matugen colors you need to install it from you distros's package manager as well.
-
-The scripts uses and control the themes of the following applications:
+- The scripts uses and controlsthe themes of the following applications:
 
 | Application | Description                                         |
 |-------------|-----------------------------------------------------|
@@ -32,10 +29,9 @@ The scripts uses and control the themes of the following applications:
 | `Neovim`    | Editor                                              |
 
  The script currently changes gtk themes as well hard generated as well as matugen.
- I don't use any qt application so no qt support, matugen works with it thoug.
+ I don't use any qt application so no qt support, matugen works with it though.
 
-* You can adjust the wallpaper manager in /config/colors/Themer/Wallpapers.sh, the script uses swww by default.
-* Display setting is set at 2880x1800 in 14", 120 Hz for me you can adjust it int /hypr/config/monitors.conf.
+- To use matugen colors you need to install it from you distros's package manager as well.
 
 ---
 
@@ -43,8 +39,8 @@ The scripts uses and control the themes of the following applications:
 
 
 - The setup script assumes all required software (Hyprland, Kitty, Waybar, Rofi, etc.) are already installed, and do not install anything.
-- Existing configuration files in `~/.config` will be backed up with `_bak` suffix before being replaced.
-- The config file are symlinked with stow. So they can be easily managed and modified.
+- Existing configuration files in `~/.config/file` will be backed up with `_bak` suffix before being replaced(so file_bak).
+- The config file are symlinked with stow. So they can be easily managed and modified. I recommend going through setup.sh before running it.
 
 
 ```bash
@@ -55,6 +51,12 @@ cd ~/.dotfiles
 # Run the setup script
 ./setup.sh
 ```
+
+# Important stuff
+* I am using a 14" laptop so the sizing of elements will likely be too big for most other screens and will need manual configuration. (I might add a sizing factor later to make it easier but for now it'd need to be done by the user)
+* Display setting is set at 2880x1800 in 14", 120 Hz for me you can adjust it int /hypr/config/monitors.conf.
+* The wallpaper script uses swww by default, You can adjust the wallpaper manager in /config/colors/Themer/Wallpapers.sh.
+* Add wallpapers in ~/Pictures/Wallpapers/ in specified theme file, for the wallpaper script to work. (My wallpapers: https://github.com/krishna4a6av/Wallpapers.git)
 
 
 ### 🖼️ Screenshots
@@ -153,6 +155,3 @@ Will add rest of the ss later... someday.
 
 
 
---Note: Add wallpapers in ~/Pictures/Wallpapers/ in specified theme file, for the wallpaper script to work.
-
-My wallpapers: https://github.com/krishna4a6av/Wallpapers.git
