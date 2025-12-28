@@ -31,7 +31,7 @@ sudo pacman -S stow
  The script currently changes gtk themes as well hard generated as well as matugen.
  I don't use any qt application so no qt support, matugen works with it though.
 
-- To use matugen colors you need to install it from you distros's package manager as well.
+- To use matugen colors you need to install it from your distros's package manager as well.
 
 ---
 
@@ -54,7 +54,7 @@ cd ~/.dotfiles
 
 # Important stuff
 * I am using a 14" laptop so the sizing of elements will likely be too big for most other screens and will need manual configuration. (I might add a sizing factor later to make it easier but for now it'd need to be done by the user)
-* Display setting is set at 2880x1800 in 14", 120 Hz for me you can adjust it int /hypr/config/monitors.conf.
+* Display setting is set at 2880x1800 in 14", 120 Hz for me you can adjust it in .config/hypr/config/monitors.conf.
 * The wallpaper script uses swww by default, You can adjust the wallpaper manager in /config/colors/Themer/Wallpapers.sh.
 * Add wallpapers in ~/Pictures/Wallpapers/ in specified theme file, for the wallpaper script to work. (My wallpapers: https://github.com/krishna4a6av/Wallpapers.git)
 
