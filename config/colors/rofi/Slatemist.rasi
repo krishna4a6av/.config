@@ -1,9 +1,20 @@
 
 * {
   main-bg:    #82949ee6;
-  main-br:    #a1acaecc;
-  main-fg:    #b3b5b2e6;
-  select-bg:  #687677e6;
+  main-br:    #4c566acc;
+  main-fg:    #2e3440e6;
+  select-bg:  #36454fe6;
   select-fg:  #b3b5b2;
 }
 
+//alternate nord pallet
+//* {
+//  main-bg:    #2e3440e6;
+//  main-br:    #4c566acc;
+//  main-fg:    #d8dee9e6;
+//
+//  select-bg:  #434c5ee6;
+//  select-fg:  #eceff4;
+//}
+//
+//

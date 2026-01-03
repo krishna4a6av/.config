@@ -2,7 +2,7 @@
 
 window {
     font-family: CaskaydiaCove Nerd Font, monospace;
-    font-size: 16pt;
+    font-size: 20pt; /* ← change this to scale everything as everthing scales in em */
     background-color: alpha(@bg-base, 0.5);
 }
 
@@ -12,7 +12,7 @@ button {
     outline-style: none;
     background-repeat: no-repeat;
     background-position: center;
-    background-size: 20%;
+    background-size: 2.5em;
     box-shadow: none;
     text-shadow: none;
     animation: gradient_f 20s ease-in infinite;
@@ -21,66 +21,90 @@ button {
 button:focus {
     background-color: @accent-active;
     color: @fg-main;
-    background-size: 25%;
+    background-size: 4em;
 }
 
 button:hover {
     background-color: @accent-hover;
     color: @fg-strong;
-    background-size: 25%;
+    background-size: 4em;
     animation: gradient_f 20s ease-in infinite;
     transition: all 0.3s cubic-bezier(.55,0.0,.28,1.682);
 }
 
-/* Per-button hover margin and radius overrides */
+/* === Per-button hover margin & radius === */
+
 button:hover#lock {
-    border-radius: 20px 10px 10px 20px;
-    margin: 5px 0px 0px 5px;
+    border-radius: 1.25em 0.6em 0.6em 1.25em;
+    margin: 0.3em 0 0 0.3em;
 }
 
 button:hover#logout {
-    border-radius: 10px 10px 10px 10px;
-    margin: 0px 5px 5px 5px;
+    border-radius: 0.6em;
+    margin: 0.3em;
 }
 
 button:hover#suspend {
-    border-radius: 10px 20px 20px 10px;
-    margin: 0px 0px 5px 5px;
+    border-radius: 0.6em 1.25em 1.25em 0.6em;
+    margin: 0 0 0.3em 0.3em;
 }
 
 button:hover#hibernate {
-    border-radius: 20px 10px 10px 20px;
-    margin: 5px 5px 0px 0px;
+    border-radius: 1.25em 0.6em 0.6em 1.25em;
+    margin: 0.3em 0.3em 0 0;
 }
 
 button:hover#shutdown {
-    border-radius: 10px 10px 10px 10px;
-    margin: 5px 5px 0px 5px;
+    border-radius: 0.6em;
+    margin: 0.3em 0.3em 0 0.3em;
 }
 
 button:hover#reboot {
-    border-radius: 10px 20px 20px 10px;
-    margin: 5px 0px 0px 5px;
+    border-radius: 0.6em 1.25em 1.25em 0.6em;
+    margin: 0.3em 0 0 0.3em;
 }
 
-/* Icons */
+/* === Icons === */
+
 #lock {
-    background-image: image(url("/usr/share/wlogout/icons/lock.png"), url("/usr/local/share/wlogout/icons/lock.png"));
-}
-#logout {
-    background-image: image(url("/usr/share/wlogout/icons/logout.png"), url("/usr/local/share/wlogout/icons/logout.png"));
-}
-#suspend {
-    background-image: image(url("/usr/share/wlogout/icons/suspend.png"), url("/usr/local/share/wlogout/icons/suspend.png"));
-}
-#hibernate {
-    background-image: image(url("/usr/share/wlogout/icons/hibernate.png"), url("/usr/local/share/wlogout/icons/hibernate.png"));
-}
-#shutdown {
-    background-image: image(url("/usr/share/wlogout/icons/shutdown.png"), url("/usr/local/share/wlogout/icons/shutdown.png"));
-}
-#reboot {
-    background-image: image(url("/usr/share/wlogout/icons/reboot.png"), url("/usr/local/share/wlogout/icons/reboot.png"));
+    background-image: image(
+        url("/usr/share/wlogout/icons/lock.png"),
+        url("/usr/local/share/wlogout/icons/lock.png")
+    );
 }
 
+#logout {
+    background-image: image(
+        url("/usr/share/wlogout/icons/logout.png"),
+        url("/usr/local/share/wlogout/icons/logout.png")
+    );
+}
+
+#suspend {
+    background-image: image(
+        url("/usr/share/wlogout/icons/suspend.png"),
+        url("/usr/local/share/wlogout/icons/suspend.png")
+    );
+}
+
+#hibernate {
+    background-image: image(
+        url("/usr/share/wlogout/icons/hibernate.png"),
+        url("/usr/local/share/wlogout/icons/hibernate.png")
+    );
+}
+
+#shutdown {
+    background-image: image(
+        url("/usr/share/wlogout/icons/shutdown.png"),
+        url("/usr/local/share/wlogout/icons/shutdown.png")
+    );
+}
+
+#reboot {
+    background-image: image(
+        url("/usr/share/wlogout/icons/reboot.png"),
+        url("/usr/local/share/wlogout/icons/reboot.png")
+    );
+}
 

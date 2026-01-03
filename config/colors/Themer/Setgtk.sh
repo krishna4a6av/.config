@@ -19,7 +19,7 @@ declare -A THEME_MAP=(
     ["oxocarbon"]="phocus"
     ["crimson"]="Red-Stone"
     ["flexoki"]="flexoki"
-    ["slatemist"]="Blue-Submarine"
+    ["slatemist"]="Nordic-bluish-accent"
 
     # Add your custom mappings here
     # ["my-theme"]="Actual-GTK-Theme-Name"

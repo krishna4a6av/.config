@@ -3,7 +3,7 @@
     "exclusive": true,
     "reload-on-style-change": true,
     "position": "top",
-    "height": 20, 
+    "height": 40, // Adjust to change the actual height of the bar 
     "spacing": 8, 
     "margin-left": 100,
     "margin-right": 100,

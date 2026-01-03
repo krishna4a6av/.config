@@ -1,68 +1,77 @@
 @import "../colors/theme.css";
 
+/* Adjust the height of bar itself in the layout to make the bar smaller/bigger
+* Everythign will scale according once you chage the font-size below
+* due to to how em values work */
+
+
+
 * {
     border: none;
-    border-radius: 0px;
+    border-radius: 0;
     font-family: "CaskaydiaCove Nerd Font", "JetBrainsMono Nerd Font";
     font-weight: bold;
-    font-size: 18px;
+    font-size: 17px; /* ← change this to scale everything */
     box-shadow: none;
     text-shadow: none;
 }
 
 window#waybar {
     background-color: alpha(@bg-surface, 0.6);
-
 }
 
-/* Tooltips */
+/* === Tooltips === */
 tooltip {
     background: @bg-overlay;
     color: @fg-main;
-    border-radius: 7px;
+    border-radius: 0.39em;
 }
 
-/* Workspaces */
+/* === Workspaces === */
 #workspaces button {
     color: @fg-main;
     background: transparent;
-    border-radius: 14px;
-    padding: 0px 6px;
-    margin: 4px 0;
+    border-radius: 0.78em;
+    padding: 0 0.33em;    
+    margin: 0.22em 0;     
     animation: ws_normal 20s ease-in-out 1;
 }
+
 #workspaces button.active {
     background: @accent-active;
-    padding: 5px 18px;
-    margin: 4px;
+    padding: 0.28em 1em;
+    margin: 0.22em;
     transition: all 0.4s cubic-bezier(.55, -0.68, .48, 1.682);
     animation: ws_active 20s ease-in-out 1;
 }
+
 #workspaces button:hover {
     background: @accent-hover;
-    padding: 5px 16px;
+    padding: 0.28em 0.89em;
     color: @fg-strong;
     transition: all 0.3s cubic-bezier(.55, -0.68, .48, 1.682);
     animation: ws_hover 20s ease-in-out 1;
 }
 
-/* Taskbar */
+/* === Taskbar === */
 #taskbar button {
     color: @fg-muted;
     background: transparent;
-    border-radius: 8px;
-    padding: 0px 2px;
-    margin: 2px 0;
+    border-radius: 0.44em;
+    padding: 0 0.11em;    
+    margin: 0.11em 0;     
     animation: tb_normal 20s ease-in-out 1;
 }
+
 #taskbar button.active {
     background: @accent-active;
     color: @fg-main;
-    padding: 0px 11px;
-    margin: 2px;
+    padding: 0 0.61em;
+    margin: 0.11em;
     transition: all 0.4s cubic-bezier(.55, -0.68, .48, 1.682);
     animation: tb_active 20s ease-in-out 1;
 }
+
 #taskbar button:hover {
     background: @accent-hover;
     color: @fg-strong;
@@ -70,7 +79,7 @@ tooltip {
     animation: tb_hover 20s ease-in-out 1;
 }
 
-/* Module container styling */
+/* === Module container styling === */
 #custom-swaync,
 #backlight,
 #battery,
@@ -114,47 +123,53 @@ tooltip {
     color: @fg-main;
     background: @bg-surface;
     opacity: 1;
-    margin: 3px 0;
-    padding: 0 4px;
+    margin: 0.17em 0;  
+    padding: 0 0.22em; 
 }
 
-/* Ends with rounded corners */
+/* === Ends with rounded corners === */
 #custom-r_end {
-    border-radius: 0px 19px 19px 0px;
-    margin-right: 8px;
-    padding-right: 0px;
-}
-#custom-l_end {
-    border-radius: 19px 0px 0px 19px;
-    margin-left: 8px;
-    padding-left: 0px;
-}
-#custom-sr_end {
-    border-radius: 0px;
-    margin-right: 8px;
-    padding-right: 0px;
-}
-#custom-sl_end {
-    border-radius: 0px;
-    margin-left: 8px;
-    padding-left: 0px;
-}
-#custom-rr_end {
-    border-radius: 0px 7px 7px 0px;
-    margin-right: 8px;
-    padding-right: 0px;
-}
-#custom-rl_end {
-    border-radius: 7px 0px 0px 7px;
-    margin-left: 8px;
-    padding-left: 0px;
+    border-radius: 0 1.06em 1.06em 0;
+    margin-right: 0.44em;            
+    padding-right: 0;
 }
 
-/* Tray menu tweaks */
-#tray menu * {
-    min-height: 16px;
+#custom-l_end {
+    border-radius: 1.06em 0 0 1.06em;
+    margin-left: 0.44em;
+    padding-left: 0;
 }
+
+#custom-sr_end {
+    border-radius: 0;
+    margin-right: 0.44em;
+    padding-right: 0;
+}
+
+#custom-sl_end {
+    border-radius: 0;
+    margin-left: 0.44em;
+    padding-left: 0;
+}
+
+#custom-rr_end {
+    border-radius: 0 0.39em 0.39em 0;
+    margin-right: 0.44em;
+    padding-right: 0;
+}
+
+#custom-rl_end {
+    border-radius: 0.39em 0 0 0.39em;
+    margin-left: 0.44em;
+    padding-left: 0;
+}
+
+/* === Tray menu tweaks === */
+#tray menu * {
+    min-height: 0.89em;
+}
+
 #tray menu separator {
-    min-height: 10px;
+    min-height: 0.56em;
 }
 

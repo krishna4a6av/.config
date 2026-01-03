@@ -1,60 +1,68 @@
 @import url('../colors/theme.css');
 
+
+/* Adjust the height of them menu itself in the layout to make it smaller/bigger
+* Everythign will scale according once you chage the font-size below
+* due to to how em values work */
+
+
 * {
     outline: none;
     font-family: "CaskaydiaCove Nerd Font";
-    font-size: 21px;
+    font-size:19px; /* ← change this to scale everything */
     text-shadow: none;
     color: @fg-main;
     background-color: transparent;
     background: transparent;
 }
 
+/* === Control center === */
 .control-center {
     background-color: alpha(@bg-base, 0.8);
-    border: 3px solid @border-color;
-    padding: 7px;
+    border: 0.14em solid @border-color;
+    padding: 0.33em;                   
 }
-/* For Webkit-based browsers (used by SwayNC) */
+
+/* === Scrollbars hidden === */
 .notification-list-container::-webkit-scrollbar {
-    width: 0px; /* Hide the scrollbar */
+    width: 0;
 }
-
-/* Also for Firefox, though not necessary for SwayNC */
 .notification-list-container {
-    scrollbar-width: none; /* Hide the scrollbar for Firefox */
+    scrollbar-width: none;
 }
 
+/* === Notifications === */
 .control-center .notification-row .notification-background {
-    border-radius: 15px;
-    margin-top: 5px;
+    border-radius: 0.71em;
+    margin-top: 0.24em;   
 }
 
 .notification {
     background-color: @bg-base;
-    border: 2px solid @border-color;
+    border: 0.10em solid @border-color;
 }
 
 .notification > *:last-child > * {
-    margin: 5px;
+    margin: 0.24em;
 }
 
-.summary { font-size: 1rem; }
-.time    { font-size: 0.8rem; }
-.body    { font-size: 1rem; }
+.summary { font-size: 1em; }
+.time    { font-size: 0.8em; }
+.body    { font-size: 1em; }
 
 .notification-content {
-    padding: 15px 10px 10px 20px;
+    padding: 0.71em 0.48em 0.48em 0.95em;
 }
 
 .notification-action > button,
 .notification-action > label {
     padding: unset;
     margin: unset;
-    font-size: 1rem;
+    font-size: 1em;
     font-weight: normal;
 }
 
+/* === Urgency levels === */
 .notification.critical {
     background-color: alpha(@danger-color, 0.5);
 }
@@ -63,17 +71,19 @@
     background-color: alpha(@bg-surface, 0.5);
 }
 
+/* === Close button === */
 .close-button {
     background-color: alpha(@accent-primary, 0.8);
-    box-shadow: 0 0 3px 0 @shadow-color;
+    box-shadow: 0 0 0.14em 0 @shadow-color;
 }
 .close-button:hover {
     background-color: alpha(@accent-hover, 0.8);
 }
 
+/* === Notification groups === */
 .notification-group-header,
 .notification-group-icon {
-    font-size: 0.9rem;
+    font-size: 0.9em;
 }
 
 .notification-group-collapse-button,
@@ -87,11 +97,12 @@
     background-color: alpha(@accent-active, 0.8);
 }
 
+/* === Sliders === */
 scale trough {
-    margin: 0rem 1rem;
+    margin: 0 1em;
     background-color: @accent-primary;
-    min-height: 4px;
-    min-width: 70px;
+    min-height: 0.19em;
+    min-width: 3.33em; 
 }
 
 trough slider {
@@ -104,26 +115,29 @@ trough highlight {
     background: @accent-hover;
 }
 
+/* === Tooltip === */
 tooltip {
     background-color: @accent-primary;
 }
 
-/*** Widgets ***/
+/* === Widgets grid === */
 .widget-buttons-grid {
     background: @bg-base;
-    font-size: 2rem;
-    padding: 10px 10px 10px;
+    font-size: 2em;
+    padding: 0.48em;
 }
+
 .widget-buttons-grid > flowbox > flowboxchild > button {
     background: @accent-primary;
-    box-shadow: 0px 0px 10px alpha(@bg-overlay, 0.8);
-    border-radius: 12px;
-    min-width: 60px;
-    min-height: 30px;
-    padding: 6px;
-    margin: 0 3px 0;
+    box-shadow: 0 0 0.48em alpha(@bg-overlay, 0.8);
+    border-radius: 0.57em;
+    min-width: 2.86em; 
+    min-height: 1.43em;
+    padding: 0.29em;
+    margin: 0 0.14em;
     transition: all .5s ease;
 }
+
 .widget-buttons-grid > flowbox > flowboxchild > button:hover {
     background: @accent-hover;
 }
@@ -134,114 +148,113 @@ tooltip {
     background: alpha(@accent-hover, 0.8);
 }
 
-/* MPRIS widget */
-
+/* === MPRIS widget === */
 .widget-mpris .widget-mpris-player {
-    padding: 16px;
-    margin: 16px 20px;
+    padding: 0.76em;
+    margin: 0.76em 0.95em;
     background-color: @bg-base;
-    border-radius: 12px;
-    box-shadow: 0px 0px 10px @shadow-color;
+    border-radius: 0.57em;
+    box-shadow: 0 0 0.48em @shadow-color;
 }
+
 .widget-mpris .widget-mpris-player .widget-mpris-album-art {
-    border-radius: 12px;
-    box-shadow: 0px 0px 10px @shadow-color;
+    border-radius: 0.57em;
+    box-shadow: 0 0 0.48em @shadow-color;
 }
+
 .widget-mpris .widget-mpris-player .widget-mpris-title {
     font-weight: bold;
-    font-size: 1.1rem;
-    margin: 0px 8px 8px 8px;
+    font-size: 1.1em;
+    margin: 0 0.38em 0.38em;
 }
+
 .widget-mpris .widget-mpris-player .widget-mpris-subtitle {
-    font-size: 1rem;
+    font-size: 1em;
 }
+
 .widget-mpris > box > button:hover {
     background: alpha(@accent-hover, 0.6);
 }
 
-/* Volume widget */
+/* === Volume widget === */
 .widget-volume {
-    padding: 6px 5px 5px 5px;
-    margin: unset;
-    font-size: 1rem;
+    padding: 0.29em 0.24em 0.24em;
+    font-size: 1em;
 }
 .widget-volume > box > button {
     border: none;
 }
+
 .per-app-volume {
-    padding: 4px 8px 8px 8px;
-    margin: 0px 8px 8px 8px;
+    padding: 0.19em 0.38em 0.38em;
+    margin: 0 0.38em 0.38em;
 }
 
-/* Backlight widget */
+/* === Backlight widget === */
 .widget-backlight {
-    padding: 0 0 3px 16px;
-    margin: unset;
-    font-size: 1rem;
+    padding: 0 0 0.14em 0.76em;
+    font-size: 1em;
 }
 
-/* DND widget */
+/* === DND widget === */
 .widget-dnd {
     font-weight: bold;
-    padding: 20px 15px 15px;
-    font-size: 1rem;
+    padding: 0.95em 0.71em 0.71em;
+    font-size: 1em;
 }
+
 .widget-dnd > switch {
-    border-radius: 100px;
+    border-radius: 4.76em;
     background: @accent-primary;
-    border: none;
-    box-shadow: none;
-    padding: 3px;
+    padding: 0.14em;
 }
+
 .widget-dnd > switch:checked {
     background: @accent-active;
 }
+
 .widget-dnd > switch slider {
     background: @bg-base;
-    border-radius: 12px;
-    min-width: 18px;
-    min-height: 18px;
+    border-radius: 0.57em;
+    min-width: 0.86em;
+    min-height: 0.86em;
 }
 
-/* Title widget */
+/* === Title widget === */
 .widget-title {
     font-weight: bold;
-    padding: 15px;
+    padding: 0.71em;
 }
+
 .widget-title > label {
-    font-size: 1.1rem;
+    font-size: 1.1em;
 }
+
 .widget-title > button {
     background: @accent-primary;
-    border: none;
-    border-radius: 100px;
-    padding: 0px 8px;
+    border-radius: 4.76em;
+    padding: 0 0.38em;
     transition: all .7s ease;
 }
+
 .widget-title > button:hover {
     background: alpha(@accent-active, 0.8);
-    box-shadow: 0 0 10px 0 @shadow-color;
+    box-shadow: 0 0 0.48em @shadow-color;
 }
 
-
-/* Hide ALL scrollbars (vertical and horizontal) */
+/* === Kill ALL scrollbars === */
 scrollbar,
 scrollbar.vertical,
 scrollbar.horizontal,
 scrollbar slider,
 scrollbar trough {
     all: unset;
-    background: transparent;
-    border: none;
     width: 0 !important;
     height: 0 !important;
-    min-width: 0 !important;
-    min-height: 0 !important;
 }
 
-/* Also hide scrollbar overlays (GTK overlay scrollbars) */
-scrollbar, scrollbar * {
+scrollbar,
+scrollbar * {
     opacity: 0 !important;
 }
-
 

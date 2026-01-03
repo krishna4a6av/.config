@@ -5,7 +5,7 @@
     "output": [ "*" ],
     "position": "top",
     "mod": "dock",
-    "height": 48,
+    "height": 42, // adjust bar height from here
     "margin-right": 15,
     "margin-left": 15,
     "exclusive": true,
