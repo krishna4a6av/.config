@@ -9,7 +9,7 @@
     border-radius: 0;
     font-family: "CaskaydiaCove Nerd Font", "JetBrainsMono Nerd Font";
     font-weight: bold;
-    font-size: 18px; /* ← change this to scale everything accordingly*/
+    font-size: 17px; /* ← change this to scale everything accordingly*/
     box-shadow: none;
     text-shadow: none;
 }
@@ -33,15 +33,16 @@ window#waybar {
 
 #workspaces button.active {
     background: @accent-active;
-    padding: 0 0.84em;       
-    margin: 0.21em;
+    padding: 0 0.78em;       
+    margin: 0.25em;
     transition: all 0.4s cubic-bezier(.55, -0.68, .48, 1.682);
     animation: ws_active 20s ease-in-out 1;
 }
 
 #workspaces button:hover {
     background: @accent-hover;
-    padding: 0 0.95em;
+    padding: 0 0.82em;
+    margin: 0.25em;
     color: @fg-strong;
     transition: all 0.3s cubic-bezier(.55, -0.68, .48, 1.682);
     animation: ws_hover 20s ease-in-out 1;

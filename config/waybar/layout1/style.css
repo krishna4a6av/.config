@@ -31,23 +31,24 @@ tooltip {
 #workspaces button {
     color: @fg-main;
     background: transparent;
-    border-radius: 0.78em;
-    padding: 0 0.33em;    
-    margin: 0.22em 0;     
+    border-radius: 0.74em;
+    padding: 0 0.33em;
+    margin: 0.22em 0;
     animation: ws_normal 20s ease-in-out 1;
 }
 
 #workspaces button.active {
     background: @accent-active;
-    padding: 0.28em 1em;
-    margin: 0.22em;
+    padding: 0 0.74em;
+    margin: 0.31em;
     transition: all 0.4s cubic-bezier(.55, -0.68, .48, 1.682);
     animation: ws_active 20s ease-in-out 1;
 }
 
 #workspaces button:hover {
     background: @accent-hover;
-    padding: 0.28em 0.89em;
+    padding: 0 0.78em;
+    margin: 0.31em;
     color: @fg-strong;
     transition: all 0.3s cubic-bezier(.55, -0.68, .48, 1.682);
     animation: ws_hover 20s ease-in-out 1;

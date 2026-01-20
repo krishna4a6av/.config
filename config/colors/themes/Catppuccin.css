@@ -7,10 +7,10 @@
 @define-color fg-strong       #f2d5cf;
 
 @define-color accent-primary  #5aa7c2;
-@define-color accent-hover    #cba6f7;
-@define-color accent-active   #7aa2f7;
+@define-color accent-hover    #7aa2f7;
+@define-color accent-active   #caa6f7;
 
-@define-color border-color    #8caaee;
+@define-color border-color    #cba6f7;
 @define-color shadow-color    rgba(0, 0, 0, 0.5);
 
 @define-color danger-color    #d26478;

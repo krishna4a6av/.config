@@ -96,13 +96,16 @@ window#waybar {
 #workspaces button {
     color: @fg-main;
     background: transparent;
-    padding: 0.11em 0.22em;
+    border-radius: 0.33em;
+    padding: 0.11em 0.33em;
+    margin: 0.22em 0;
     animation: ws_normal 20s ease-in-out 1;
 }
 
 #workspaces button.active {
     background: @accent-primary;
-    padding: 0.11em 0.33em;
+    padding: 0.11em 0.54em;
+    margin: 0.31em;
     transition: all 0.4s cubic-bezier(.55, -0.68, .48, 1.682);
     animation: ws_active 20s ease-in-out 1;
 }
@@ -110,6 +113,7 @@ window#waybar {
 #workspaces button:hover {
     background: @accent-hover;
     padding: 0.11em 0.44em;
+    margin: 0.31em;
     color: @fg-strong;
     transition: all 0.3s cubic-bezier(.55, -0.68, .48, 1.682);
     animation: ws_hover 20s ease-in-out 1;
