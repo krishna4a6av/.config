@@ -34,11 +34,8 @@ mapfile -t THEMES < <(
 # Build Rofi menu
 MENU=""
 for theme in "${THEMES[@]}"; do
-    if [[ -d "$WALLPAPER_ROOT/$theme" ]]; then
         MENU+="$theme\n"
-    else
-        MENU+="$theme  (no wallpapers)\n"
-    fi
+
 done
 
 OPTIONS=$(printf "%bMatugen (light)\nMatugen (dark)\n" "$MENU")
