@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 
+# Adds the matugen theme files in case matugen theme is selected
 MATUGEN_DIR="$HOME/.config/colors/matugen"
 WALLPAPER_SYMLINK="$HOME/.cache/wall-cache/current_wallpaper"
 SET_GTK="$HOME/.config/colors/Themer/setgtk.sh"

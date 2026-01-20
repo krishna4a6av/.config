@@ -1,8 +1,6 @@
 #!/usr/bin/env bash
-# ---------------------------------------------
-# GTK theme switcher for Hyprland/Wayland
-# Maps generic names to GTK themes and applies them system-wide
-# ---------------------------------------------
+
+# GTK theme switcher, maps generic names to GTK themes and applies them system-wide
 set -e
 
 # Theme mapping: generic_name -> GTK_theme_name

@@ -59,6 +59,7 @@ cd ~/.dotfiles
 * Display setting is set at 2880x1800 in 14", 120 Hz for me you can adjust it in .config/hypr/config/monitors.conf.
 * The wallpaper script uses swww by default, You can adjust the wallpaper manager in /config/colors/Themer/Wallpapers.sh. Alternative you can also adjust the file to look for walpaper in the script.
 * Add wallpapers in ~/Pictures/Wallpapers/ in specified theme file, for the wallpaper script to work. (My wallpapers: https://github.com/krishna4a6av/Wallpapers.git)
+* You can see the all keybinds with "SUPER + /"
 
 
 ### 🖼️ Screenshots

@@ -1,0 +1,15 @@
+# All themes are here, you can just add the themes here and they'll appear in the rofi menu.
+# And add them wallpapers folder in ~/Pictures/Wallpapers/*theme 
+# And all the config themes in the ~/.config/colors folder
+
+Autmn
+Catppuccin
+Crimson
+Everforest
+Flexoki
+Graphite
+Gruvbox
+Kanagawa
+Oxocarbon
+Rosepine
+Slatemist

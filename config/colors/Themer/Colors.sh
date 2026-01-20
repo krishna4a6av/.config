@@ -2,9 +2,10 @@
 
 # Usage: colors.sh <ThemeName>
 # Replace the colors file for different applications
-
+# managed by themes.sh
 THEME_DIR="$HOME/.config/colors/themes"
 ROFI_DIR="$HOME/.config/colors/rofi"
+ROFI_NOTIF="$HOME/.config/rofi/notify.rasi"
 HYPR_DIR="$HOME/.config/colors/hyprland"
 KITTY_DIR="$HOME/.config/colors/kitty"
 
@@ -28,22 +29,22 @@ KITTY_FILE="$KITTY_DIR/${THEME_NAME}.conf"
 
 # Check required files exist
 if [[ ! -f "$THEME_FILE" ]]; then
-    echo "❌ Theme CSS '$THEME_FILE' not found."
+    rofi -e "❌ Theme CSS '$THEME_FILE' not found." -theme "$ROFI_NOTIF"
     exit 1
 fi
 
 if [[ ! -f "$ROFI_FILE" ]]; then
-    echo "❌ Rofi theme '$ROFI_FILE' not found."
+    rofi -e "❌ Rofi theme '$ROFI_FILE' not found." -theme "$ROFI_NOTIF"
     exit 1
 fi
 
 if [[ ! -f "$HYPR_FILE" ]]; then
-    echo "❌ Hyprland theme '$HYPR_FILE' not found."
+    rofi -e "❌ Hyprland theme '$HYPR_FILE' not found." -theme "$ROFI_NOTIF"
     exit 1
 fi
 
 if [[ ! -f "$KITTY_FILE" ]]; then
-    echo "❌ Kitty theme '$KITTY_FILE' not found."
+    rofi -e "❌ Kitty theme '$KITTY_FILE' not found." -theme "$ROFI_NOTIF"
     exit 1
 fi
 

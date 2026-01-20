@@ -1,0 +1,45 @@
+@theme "../colors/rofi_theme.rasi"
+
+* {
+    font: "JetBrainsMono Nerd Font 12";
+    text-color:       @main-fg;
+
+}
+
+window {
+    width: 420px;
+    padding: 20px;
+    border: 2px;
+    border-radius: 12px;
+    border-color: @main-br;
+    background-color: @main-bg;
+}
+
+mainbox {
+    background-color: transparent;
+    spacing:  10px;
+    orientation: vertical;
+}
+
+
+element {
+    enabled: true;
+    spacing: 1%;
+    padding: 1% 1% 1% 3%;
+    background-color: transparent;
+    border-radius: 1%;
+    text-color: @main-fg;
+}
+
+error-message {
+    text-color: @main-fg;
+    background-color: @main-bg;
+    text-transform: capitalize;
+    children: [ "textbox" ];
+}
+textbox {
+    text-color: inherit;
+    background-color: inherit;
+    vertical-align: 0.5;
+    horizontal-align: 0.5;
+}
