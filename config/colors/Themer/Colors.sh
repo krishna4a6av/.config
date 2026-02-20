@@ -57,7 +57,4 @@ ln -sf "$KITTY_FILE" "$KITTY_LINK"
 # Reload components
 pkill waybar && waybar & disown
 pkill swaync && swaync & disown
-
-# Reload Kitty (will affect new windows only)
-kill -SIGUSR1 $(pgrep kitty)
-
+pkill -SIGUSR1 kitty 2>/dev/null || true
