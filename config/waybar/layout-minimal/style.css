@@ -8,30 +8,28 @@
 
 * {
     border: none;
-    border-radius: 0;
     font-family: "CaskaydiaCove Nerd Font", "JetBrainsMono Nerd Font";
     font-weight: bold;
-    font-size: 17px; /* ← change this to scale everything */
+    font-size: 18px; /* ← change this to scale everything */
     box-shadow: none;
     text-shadow: none;
 }
 
 window#waybar {
-    background-color: alpha(@bg-surface, 0.6);
+    background-color: @bg-surface;
 }
 
-/* === Tooltips === */
+/* === Tooltips/ popup thingy === */
 tooltip {
     background: @bg-overlay;
     color: @fg-main;
-    border-radius: 0.39em;
 }
 
 /* === Workspaces === */
 #workspaces button {
     color: @fg-main;
     background: transparent;
-    border-radius: 0.74em;
+    border-radius: 0.2em;
     padding: 0 0.33em;
     margin: 0.22em 0;
     animation: ws_normal 20s ease-in-out 1;
@@ -39,46 +37,46 @@ tooltip {
 
 #workspaces button.active {
     background: @accent-active;
-    padding: 0 0.74em;
-    margin: 0.31em;
+    padding: 0 0.35em;
+    margin: 0.21em;
     transition: all 0.4s cubic-bezier(.55, -0.68, .48, 1.682);
     animation: ws_active 20s ease-in-out 1;
 }
 
 #workspaces button:hover {
     background: @accent-hover;
-    padding: 0 0.78em;
-    margin: 0.31em;
+    padding: 0 0.4em;
+    margin: 0.21em;
     color: @fg-strong;
     transition: all 0.3s cubic-bezier(.55, -0.68, .48, 1.682);
     animation: ws_hover 20s ease-in-out 1;
 }
 
-/* === Taskbar === */
-#taskbar button {
-    color: @fg-muted;
-    background: transparent;
-    border-radius: 0.44em;
-    padding: 0 0.11em;    
-    margin: 0.11em 0;     
-    animation: tb_normal 20s ease-in-out 1;
+/* === Taskbar ===*/
+#taskbar {
+    background: rgba(20, 20, 20, 0.6);
+    padding: 0 0.6em;
+    margin: 0.3em 0em;
 }
 
-#taskbar button.active {
-    background: @accent-active;
-    color: @fg-main;
-    padding: 0 0.61em;
-    margin: 0.11em;
-    transition: all 0.4s cubic-bezier(.55, -0.68, .48, 1.682);
-    animation: tb_active 20s ease-in-out 1;
+#taskbar button {
+    padding: 0 0.5em;
+    margin: 0 0.15em;
+    background: transparent;
+    transition: all 0.2s ease;
 }
 
 #taskbar button:hover {
     background: @accent-hover;
-    color: @fg-strong;
-    transition: all 0.3s cubic-bezier(.55, -0.68, .48, 1.682);
-    animation: tb_hover 20s ease-in-out 1;
+    margin: 0 0.2em;
 }
+
+#taskbar button.active {
+    background: @accent-active;
+    margin: 0 0.2em;
+}
+
+
 
 /* === Module container styling === */
 #custom-swaync,
@@ -128,42 +126,6 @@ tooltip {
     padding: 0 0.22em; 
 }
 
-/* === Ends with rounded corners === */
-#custom-r_end {
-    border-radius: 0 1.06em 1.06em 0;
-    margin-right: 0.44em;            
-    padding-right: 0;
-}
-
-#custom-l_end {
-    border-radius: 1.06em 0 0 1.06em;
-    margin-left: 0.44em;
-    padding-left: 0;
-}
-
-#custom-sr_end {
-    border-radius: 0;
-    margin-right: 0.44em;
-    padding-right: 0;
-}
-
-#custom-sl_end {
-    border-radius: 0;
-    margin-left: 0.44em;
-    padding-left: 0;
-}
-
-#custom-rr_end {
-    border-radius: 0 0.39em 0.39em 0;
-    margin-right: 0.44em;
-    padding-right: 0;
-}
-
-#custom-rl_end {
-    border-radius: 0.39em 0 0 0.39em;
-    margin-left: 0.44em;
-    padding-left: 0;
-}
 
 /* === Tray menu tweaks === */
 #tray menu * {

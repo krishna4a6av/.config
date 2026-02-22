@@ -1,5 +1,6 @@
 @import url('../colors/theme.css');
 
+
 /* Adjust the height of them menu itself in the layout to make it smaller/bigger
 * Everythign will scale according once you chage the font-size below
 * due to to how em values work */
@@ -8,7 +9,7 @@
 * {
     outline: none;
     font-family: "CaskaydiaCove Nerd Font";
-    font-size: 19px; /* ← change this to scale everything */
+    font-size:19px; /* ← change this to scale everything */
     text-shadow: none;
     color: @fg-main;
     background-color: transparent;
@@ -17,7 +18,7 @@
 
 /* === Control center === */
 .control-center {
-    background-color: alpha(@bg-base, 0.8);
+    background-color: @bg-base;
     border: 0.14em solid @border-color;
     padding: 0.33em;                   
 }
@@ -61,7 +62,7 @@
     font-weight: normal;
 }
 
-/* === Urgency === */
+/* === Urgency levels === */
 .notification.critical {
     background-color: alpha(@danger-color, 0.5);
 }
@@ -119,21 +120,19 @@ tooltip {
     background-color: @accent-primary;
 }
 
-/* === Buttons grid === */
+/* === Widgets grid === */
 .widget-buttons-grid {
-    background: @bg-base;
-    font-size: 2em;
-    padding: 0.48em;
+    background: @bg-overlay;
+
 }
 
 .widget-buttons-grid > flowbox > flowboxchild > button {
     background: @accent-primary;
-    box-shadow: 0 0 0.48em alpha(@bg-overlay, 0.8);
     border-radius: 0.57em;
-    min-width: 2.86em; 
-    min-height: 1.43em;
-    padding: 0.29em;
-    margin: 0 0.14em;
+    min-width: 3em; 
+    min-height: 1.8em;
+    padding: 0.3 0.3em;
+    margin: 0 0.2em;
     transition: all .5s ease;
 }
 
@@ -147,7 +146,7 @@ tooltip {
     background: alpha(@accent-hover, 0.8);
 }
 
-/* === MPRIS === */
+/* === MPRIS widget === */
 .widget-mpris .widget-mpris-player {
     padding: 0.76em;
     margin: 0.76em 0.95em;
@@ -175,6 +174,7 @@ tooltip {
     background: alpha(@accent-hover, 0.6);
 }
 
+/* === Volume widget === */
 .widget-volume {
     padding: 0.29em 0.24em 0.24em;
     font-size: 1em;
@@ -188,13 +188,13 @@ tooltip {
     margin: 0 0.38em 0.38em;
 }
 
-/* === Backlight === */
+/* === Backlight widget === */
 .widget-backlight {
     padding: 0 0 0.14em 0.76em;
     font-size: 1em;
 }
 
-/* === DND === */
+/* === DND widget === */
 .widget-dnd {
     font-weight: bold;
     padding: 0.95em 0.71em 0.71em;
@@ -255,3 +255,4 @@ scrollbar,
 scrollbar * {
     opacity: 0 !important;
 }
+

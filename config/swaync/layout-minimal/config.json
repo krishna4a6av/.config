@@ -1,18 +1,17 @@
 {
     "$schema": "/etc/xdg/swaync/configSchema.json",
     "positionX": "right",
-    "positionY": "top",
+    "positionY": "bottom",
     "cssPriority": "user",
     
     "layer": "overlay",
     "control-center-layer": "top",
     "layer-shell": true,
 
-    "control-center-width": 550,
-    "control-center-height": 850,
-    "control-center-margin-top": 8,
-    "control-center-margin-right": 35,
-    "control-center-margin-left": 0,
+    "control-center-width": 630,
+    "control-center-height": 1550,
+    "control-center-margin-bottom": 8,
+    "control-center-margin-right": 8,
 
     "notification-window-width": 600,
     "notification-icon-size": 50,
@@ -51,7 +50,7 @@
     ],
     "widget-config": {
         "mpris": {
-            "image-size": 80,
+            "image-size": 90,
             "image-radius": 0
         },
         "volume": {

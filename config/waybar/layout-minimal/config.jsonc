@@ -3,7 +3,7 @@
 
     "layer": "top",
     "output": [ "*" ],
-    "position": "top",
+    "position": "bottom",
     "mod": "dock",
     "height": 43,
     "exclusive": true,
@@ -12,9 +12,9 @@
     "reload_style_on_change": true,
 
 
-    "modules-left": ["custom/padd","custom/l_end","hyprland/workspaces","custom/r_end","custom/l_end","hyprland/window","custom/r_end","custom/padd"],
-    "modules-center": ["custom/padd","custom/l_end","idle_inhibitor","clock","custom/spotify","custom/r_end","custom/padd"],
-    "modules-right": ["custom/padd","custom/l_end","cpu","memory","network","custom/r_end","custom/l_end","backlight","pulseaudio","custom/updates","tray","custom/r_end","custom/l_end","privacy","battery","custom/swaync","custom/keybindhint","custom/power","custom/r_end","custom/padd"],
+    "modules-left": ["custom/padd","hyprland/workspaces","custom/padd","custom/div","custom/padd","wlr/taskbar","custom/padd"],
+    "modules-center": ["custom/padd","idle_inhibitor","custom/spc","clock","custom/spc","custom/spotify","custom/padd"],
+    "modules-right": ["custom/padd","backlight","custom/spc","custom/div","custom/spc","network","custom/spc","custom/div","custom/spc","memory","custom/spc","custom/div","custom/spc","pulseaudio","custom/spc","custom/div","custom/spc","tray","custom/spc","custom/div","custom/spc","privacy","battery","custom/spc","custom/div","custom/power","custom/padd"],
 
 
 
@@ -44,16 +44,6 @@
         "tooltip-format": "󰾆 {percentage}%\n {used:0.1f}GB/{total:0.1f}GB"
     },
 
-    "custom/cpuinfo": {
-        "exec": " cpuinfo.sh",
-        "return-type": "json",
-        "format": "{}",
-        "rotate": 0,
-        "interval": 5, // once every 5 seconds
-        "tooltip": true,
-        "max-length": 1000
-    },
-
     "idle_inhibitor": {
         "format": "{icon}",
         "rotate": 0,
@@ -67,7 +57,7 @@
     "clock": {
         "format": "{:%I:%M %p}",
         "rotate": 0,
-        "format-alt": "{:%R 󰃭 %d·%m·%y}",
+        "format-alt": "{:%R | 󰃭 %d·%m·%y}",
         "tooltip-format": "<span>{calendar}</span>",
         "calendar": {
             "mode": "month",
@@ -129,6 +119,16 @@
         "max-length": 50
     },
 
+    "wlr/taskbar": {
+    "format": "{icon}",
+    "icon-size": 19,
+    "icon-theme": "Gruvbox-Plus-Dark",
+    "tooltip-format": "{title}",
+    "on-click": "activate",
+    "on-click-middle": "close",
+    "ignore-list": [ ],
+    },
+
     "backlight": {
         "device": "intel_backlight",
         "rotate": 0,
@@ -176,40 +176,7 @@
         "on-click-right": "amixer sset Master toggle"
     },
 
-    "wireplumber": {
-        "on-click": "pavucontrol",
-        "on-click-right": "amixer sset Master toggle 1>/dev/null",
-        //on-click: "${wpctl} set-mute @DEFAULT_AUDIO_SINK@ toggle";
-        //on-scroll-down: "${wpctl} set-volume -l 1.0 @DEFAULT_AUDIO_SINK@ 0.04+";
-        //on-scroll-up: "${wpctl} set-volume -l 1.0 @DEFAULT_AUDIO_SINK@ 0.04-";
-        "format": "<span foreground='#fab387'>{icon}</span>  {volume}%",
-        "format-muted": " ",
-        "format-source": "",
-        "format-source-muted": "󰍭",
-        //"format-muted": "<span foreground='#fab387'> </span>",
-        //"format-icons": [ "<span foreground='#fab387'></span>" ]
-        "format-icons": {
-            "headphone": " ",
-            "hands-free": " ",
-            "headset": " ",
-            "phone": " ",
-            "portable": " ",
-            "car": " ",
-            "default": [" ", " ", " "]
-        },
-    },
 
-
-    "custom/updates": {
-        "format": "<big>󰮯</big> {}",
-        "interval": 3600,                     // every hour
-        "exec": "checkupdates | wc -l",       // # of updates
-        "exec-if": "exit 0",                  // always run; consider advanced run conditions
-        "on-click": "alacritty -e 'paru'; pkill -SIGRTMIN+8 waybar", // update system
-        "signal": 8,
-        "max-length": 5,
-        "min-length": 3
-    },
     "custom/keybindhint": {
         "format": "  ",
         "tooltip-format": " Keybinds",
@@ -257,7 +224,7 @@
 
     "custom/spotify": {
         "exec": "~/Scripts/mediaplayer.py --player spotify",
-        "format": " |   {}",
+        "format": " |    {}",
         "return-type": "json",
         "on-click": "playerctl play-pause",
         "on-scroll-up": "playerctl next",
@@ -288,37 +255,13 @@
 
 // modules for padding //
 
-    "custom/l_end": {
-        "format": " ",
+    "custom/div": {
+        "format": "|",
         "interval" : "once",
         "tooltip": false
     },
 
-    "custom/r_end": {
-        "format": " ",
-        "interval" : "once",
-        "tooltip": false
-    },
-
-    "custom/sl_end": {
-        "format": " ",
-        "interval" : "once",
-        "tooltip": false
-    },
-
-    "custom/sr_end": {
-        "format": " ",
-        "interval" : "once",
-        "tooltip": false
-    },
-
-    "custom/rl_end": {
-        "format": " ",
-        "interval" : "once",
-        "tooltip": false
-    },
-
-    "custom/rr_end": {
+    "custom/spc": {
         "format": " ",
         "interval" : "once",
         "tooltip": false
