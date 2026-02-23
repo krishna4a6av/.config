@@ -1,72 +1,70 @@
-// Catppuccin Theme Color Palette
+// Catppuccin Mocha Theme Color Palette
 
 // Red
-$red-light: #ea999c;
-$red-dark: #e64553;
+$red-light: #eba0ac;     // maroon
+$red-dark: #f38ba8;      // red
 
 // Pink
-$pink-light: #f4b8e4;
-$pink-dark: #ea76cb;
+$pink-light: #f2cdcd;    // flamingo
+$pink-dark: #f5c2e7;     // pink
 
 // Purple
-$purple-light: #ca9ee6;
-$purple-dark: #8839ef;
+$purple-light: #b4befe;  // lavender
+$purple-dark: #cba6f7;   // mauve
 
 // Blue
-$blue-light: #8caaee;
-$blue-dark: #1e66f5;
+$blue-light: #89dceb;    // sky
+$blue-dark: #89b4fa;     // blue
 
 // Teal
-$teal-light: #81c8be;
-$teal-dark: #179299;
+$teal-light: #94e2d5;    // teal
+$teal-dark: #74c7ec;     // sapphire
 
 // Green
-$green-light: #a6d189;
-$green-dark: #40a02b;
+$green-light: #a6e3a1;   // green
+$green-dark: #7ea37e;    // softer green (custom success tone)
 
 // Yellow
-$yellow-light: #e5c890;
-$yellow-dark: #df8e1d;
+$yellow-light: #f9e2af;  // yellow
+$yellow-dark: #d9ba82;   // warm warning tone
 
 // Orange
-$orange-light: #ef9f76;
-$orange-dark: #fe640b;
+$orange-light: #fab387;  // peach
+$orange-dark: #d26478;   // danger tone (soft red-orange)
 
-// Grey
-$grey-050: #eff1f5;
-$grey-100: #e6e9ef;
-$grey-150: #dce0e8;
-$grey-200: #ccd0da;
-$grey-250: #bcc0cc;
-$grey-300: #acb0be;
-$grey-350: #9ca0b0;
-$grey-400: #8c8fa1;
-$grey-450: #7c7f93;
-$grey-500: #6c6f85;
-$grey-550: #5c5f77;
-$grey-600: #4c4f69;
-$grey-650: #303446;
-$grey-700: #292c3c;
-$grey-750: #24273a;
-$grey-800: #232634;
-$grey-850: #1e1e2e;
-$grey-900: #181825;
+// Grey (Mocha Surfaces)
+$grey-050: #f5e0dc;  // rosewater
+$grey-100: #f2cdcd;  // flamingo
+$grey-150: #f5c2e7;  // pink
+$grey-200: #cdd6f4;  // text
+$grey-250: #bac2de;  // subtext1
+$grey-300: #a6adc8;  // subtext0
+$grey-350: #9399b2;  // overlay2
+$grey-400: #7f849c;  // overlay1
+$grey-450: #6c7086;  // overlay0
+$grey-500: #585b70;  // surface2
+$grey-550: #45475a;  // surface1
+$grey-600: #313244;  // surface0
+$grey-650: #1e1e2e;  // base
+$grey-700: #181825;  // mantle
+$grey-750: #11111b;  // crust
+$grey-800: #11111b;
+$grey-850: #11111b;
+$grey-900: #11111b;
 $grey-950: #11111b;
 
-// White
-$white: #eff1f5;
+// White / Black (Mocha context)
+$white: #cdd6f4;  // text
+$black: #11111b;  // crust
 
-// Black
-$black: #11111b;
-
-// Button
-$button-close: if($variant == 'light', $red-dark, $red-light);
-$button-max: if($variant == 'light', $green-dark, $green-light);
-$button-min: if($variant == 'light', $yellow-dark, $yellow-light);
+// Button (Mac-style buttons using Mocha tones)
+$button-close: if($variant == 'light', $red-dark, #f38ba8);
+$button-max: if($variant == 'light', $green-dark, #a6e3a1);
+$button-min: if($variant == 'light', $yellow-dark, #f9e2af);
 
 // Link
-$links: if($variant == 'light', #04a5e5, #99d1db);
+$links: if($variant == 'light', #89b4fa, #74c7ec);
 
-// Theme
-$default-light: $blue-light;
-$default-dark: $blue-dark;
+// Theme Defaults
+$default-light: #89dceb;  // sky
+$default-dark: #89b4fa;   // blue
