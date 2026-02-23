@@ -1,0 +1,234 @@
+/******************
+ * AdwToggleGroup *
+ ******************/
+
+$toggle_transition: color 200ms $ease-out-quad,
+                    background 200ms $ease-out-quad,
+                    box-shadow 200ms $ease-out-quad;
+
+toggle-group {
+  background: $button_color;
+  border-radius: $button_radius + $base_padding / 2;
+  padding: $base_padding / 2;
+
+  &:disabled {
+    background-color: color-mix(in srgb, $button_color 45%, transparent);
+  }
+
+  > toggle {
+    border-radius: $button_radius;
+    font-weight: bold;
+    min-width: 34px;
+    min-height: 34px - $base_padding;
+
+    &.image-button > image:disabled {
+      filter: opacity($strong_disabled_opacity);
+    }
+
+    &.text-button {
+      min-width: 18px - $base_padding;
+      padding-left: 11px - $base_padding / 2;
+      padding-right: 11px - $base_padding / 2;
+
+      > label:disabled {
+        filter: opacity($strong_disabled_opacity);
+      }
+    }
+
+    &.image-text-button {
+      min-width: 10px + $base_padding;
+      padding-left: 11px - $base_padding / 2;
+      padding-right: 11px - $base_padding / 2;
+
+      > buttoncontent > box > label {
+        padding: 0;
+      }
+
+      > buttoncontent > box > image:disabled,
+      > buttoncontent > box > label:disabled {
+        filter: opacity($strong_disabled_opacity);
+      }
+    }
+
+    @include focus-ring($transition: $toggle_transition, $outer: true, $offset: 0);
+
+    &:hover {
+      background-color: $hover_color;
+    }
+
+    &:active, &.keyboard-activating {
+      background-color: $active_color;
+    }
+
+    &:checked {
+      background-color: $selected_color;
+      color: $card_fg_color;
+      box-shadow: none;
+
+      &:disabled {
+        background-color: $hover_color;
+        box-shadow: none;
+      }
+    }
+  }
+
+  &.osd,
+  .osd & {
+    --active-toggle-bg-color: white;
+    --active-toggle-fg-color: rgb(0 0 0 / 80%);
+
+    &:not(.flat) > toggle:checked {
+      @include focus-ring($transition: $toggle_transition, $outer: true, $offset: 1px);
+
+      &:focus:focus-visible {
+        outline-color: color-mix(in srgb, #ffffff 25%, transparent);
+      }
+
+      &, &:hover, &:active, &.keyboard-activating {
+        color: $osd_fg_color;
+      }
+
+      &:checked {
+        background-color: $accent_bg_color;
+        color: $accent_fg_color;
+      }
+
+      box-shadow: none;
+
+      &:disabled {
+        box-shadow: none;
+      }
+    }
+  }
+
+  &.vertical > toggle:not(.text-button):not(.image-text-button) {
+    min-width: 34px - $base_padding;
+  }
+
+  > separator {
+    transition: opacity 200ms $ease-out-quad;
+
+    &.horizontal {
+      margin: $base_padding / 2 1px;
+    }
+
+    &.vertical {
+      margin: 1px $base_padding / 2;
+    }
+
+    &.hidden {
+      opacity: 0;
+    }
+
+    &:disabled {
+      filter: Opacity($disabled_opacity);
+    }
+  }
+
+  &.round {
+    border-radius: 17px;
+
+    toggle {
+      border-radius: 17px - $base_padding / 2;
+
+      &.text-button,
+      &.image-text-button {
+        padding-left: 15px - $base_padding;
+        padding-right: 15px - $base_padding;
+      }
+    }
+
+    separator {
+      &.horizontal {
+        margin: $base_padding 1px;
+      }
+
+      &.vertical {
+        margin: 1px $base_padding;
+      }
+    }
+  }
+
+  &.flat {
+    background: none;
+    color: inherit;
+    box-shadow: none;
+    padding: 0;
+
+    > toggle {
+      @include focus-ring($transition: $button_transition);
+      min-height: 34px;
+  
+      &.text-button {
+        min-width: 18px;
+        padding-left: 11px - $base_padding / 2;
+        padding-right: 11px - $base_padding / 2;
+      }
+  
+      &.image-text-button {
+        min-width: 10px + $base_padding;
+        padding-left: 11px;
+        padding-right: 11px;
+      }
+
+      &:checked {
+        background-color: $selected_color;
+        color: inherit;
+        box-shadow: none;
+
+        &:hover {
+          background-color: $selected_hover_color;
+        }
+
+        &:active, &.keyboard-activating {
+          background-color: $selected_active_color;
+        }
+
+        &:disabled {
+          background-color: color-mix(in srgb, $selected_color var(--disabled-opacity), transparent);
+        }
+      }
+    }
+
+    > separator {
+      background: none;
+    }
+  }
+}
+
+/*************************
+ * AdwInlineViewSwitcher *
+ *************************/
+
+inline-view-switcher > toggle-group {
+  &.icons > toggle {
+    min-width: 34px;
+  }
+
+  &.labels > toggle {
+    min-width: calc(18px + var(---group-padding) * 2);
+
+    > widget > indicatorbin {
+      padding-left: calc(11px - var(---group-padding));
+      padding-right: calc(11px - var(---group-padding));
+
+      > label {
+        padding: 0 6px;
+      }
+
+      > indicator, > mask {
+        transform: translateY(2px);
+      }
+    }
+  }
+
+  &.both > toggle {
+    min-width: calc(10px + var(---group-padding) * 2);
+
+    > widget > box {
+      padding-left: calc(15px - var(---group-padding));
+      padding-right: calc(15px - var(---group-padding));
+      border-spacing: 6px;
+    }
+  }
+}

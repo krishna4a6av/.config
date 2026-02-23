@@ -1,0 +1,72 @@
+// Flexoki Light Theme Palette
+
+// Red
+$red-light: #CE5D97;      
+$red-dark: #AF3029;       
+
+// Pink
+$pink-light: #CE5D97;
+$pink-dark: #A02F6F;
+
+// Purple
+$purple-light: #8265c0;
+$purple-dark: #5E409D;
+
+// Blue
+$blue-light: #4385BE;     
+$blue-dark: #205EA6;      
+
+// Teal
+$teal-light: #519ABA;
+$teal-dark: #24837B;      
+
+// Green
+$green-light: #879A39;    
+$green-dark: #66800B;     
+
+// Yellow
+$yellow-light: #D0A215;   
+$yellow-dark: #AD8301;    
+
+// Orange
+$orange-light: #BC5215;
+$orange-dark: #8F3F0A;
+
+// Grey Scale (Warm Paper System)
+$grey-050: #ffffff;
+$grey-100: #FFFCF0;   
+$grey-150: #f7f4e9;
+$grey-200: #f2efe4;
+$grey-250: #ebe8dd;
+$grey-300: #d6d4ca;
+$grey-350: #c7c5bb;
+$grey-400: #b8b5ad;
+$grey-450: #adaba3;
+$grey-500: #a3a19a;
+$grey-550: #94928b;
+$grey-600: #7f7d76;
+$grey-650: #6f6e69;
+$grey-700: #5e5d58;
+$grey-750: #4d4c48;
+$grey-800: #3c3b38;
+$grey-850: #2a2929;   
+$grey-900: #1f1e1c;
+$grey-950: #141312;
+
+// White
+$white: #FFFCF0;
+
+// Black
+$black: #2a2929;
+
+// Buttons
+$button-close: if($variant == 'light', #AF3029, #CE5D97);
+$button-max: if($variant == 'light', #66800B, #879A39);
+$button-min: if($variant == 'light', #AD8301, #D0A215);
+
+// Link
+$links: if($variant == 'light', #205EA6, #4385BE);
+
+// Default Accent
+$default-light: #205EA6;
+$default-dark: #4385BE;

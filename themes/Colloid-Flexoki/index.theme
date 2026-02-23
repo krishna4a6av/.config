@@ -1,0 +1,12 @@
+[Desktop Entry]
+Type=X-GNOME-Metatheme
+Name=Colloid-Flexoki
+Comment=An Flat Gtk+ theme based on Elegant Design
+Encoding=UTF-8
+
+[X-GNOME-Metatheme]
+GtkTheme=Colloid-Flexoki
+MetacityTheme=Colloid-Flexoki
+IconTheme=Colloid-Flexoki
+CursorTheme=Colloid-cursors
+ButtonLayout=close,minimize,maximize:menu

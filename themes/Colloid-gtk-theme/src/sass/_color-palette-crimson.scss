@@ -1,0 +1,72 @@
+// Crimson Noir Theme Palette
+
+// Red
+$red-light: #ff7373;      
+$red-dark: #e63946;       
+
+// Pink
+$pink-light: #c469a2;     
+$pink-dark: #f2545b;      
+
+// Purple
+$purple-light: #c469a2;   
+$purple-dark: #8a3a5c;   
+
+// Blue 
+$blue-light: #b57aa1;     
+$blue-dark: #6e3b52;
+
+// Teal 
+$teal-light: #a77c88;
+$teal-dark: #5c2e3b;
+
+// Green
+$green-light: #a8d8a8;
+$green-dark: #8fc98f;     
+
+// Yellow
+$yellow-light: #ffb27a;
+$yellow-dark: #ff914d;    
+
+// Orange
+$orange-light: #ff9a6a;
+$orange-dark: #ff6b6b;    
+
+// Grey Scale (Wine Depth System)
+$grey-050: #f8eaea;
+$grey-100: #f2dede;   
+$grey-150: #F5A78F;   
+$grey-200: #d48a8a;
+$grey-250: #b26d74;
+$grey-300: #8f4f59;
+$grey-350: #6e3b45;
+$grey-400: #4e242d;
+$grey-450: #3a1a21;
+$grey-500: #2e1218;   
+$grey-550: #261015;
+$grey-600: #1f0d11;
+$grey-650: #1a0a0c;   
+$grey-700: #15080a;
+$grey-750: #120607;
+$grey-800: #100507;   
+$grey-850: #0c0405;
+$grey-900: #080303;
+$grey-950: #050102;
+
+// White
+$white: #f2dede;
+
+// Black
+$black: #100507;
+
+// Buttons
+$button-close: if($variant == 'light', #e63946, #ff1e3c);
+$button-max: if($variant == 'light', #8fc98f, #a8d8a8);
+$button-min: if($variant == 'light', #ff914d, #ffb27a);
+
+// Link
+$links: if($variant == 'light', #f2545b, #ff7373);
+
+// Default Accent
+$default-light: #e63946;
+$default-dark: #ff6b6b;

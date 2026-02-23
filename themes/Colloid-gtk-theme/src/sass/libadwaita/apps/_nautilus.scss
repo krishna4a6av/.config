@@ -1,0 +1,153 @@
+//
+// Nautilus
+//
+.floating-bar {
+  min-height: $small_size;
+  padding: ($medium_size - $small_size) / 2;
+  margin: $base_padding;
+  border-style: none;
+  border-radius: $button_radius;
+  background-color: $accent_bg_color;
+  color: $accent_fg_color;
+  box-shadow: $shadow-z3;
+
+  .nautilus-window & {
+    margin: if($gnome_version =='default', $base_padding, $base_padding / 2);
+  }
+
+  button {
+    margin: 0;
+    color: $accent_fg_color;
+
+    @extend %small_button;
+  }
+}
+
+.nautilus-grid-view {
+  child.activatable {
+    padding: 0;
+
+    #NautilusViewCell {
+      padding: $base_padding;
+
+      clamp box {
+        margin: 0;
+        border-spacing: 0;
+      }
+
+      .icon-ui-labels-box {
+        margin: 0 0 $base_padding * 2;
+        border-spacing: 0;
+      }
+
+      .dim-label {
+        border-spacing: 0;
+      }
+    }
+  }
+}
+
+.nautilus-list-view {
+  padding: 0;
+  margin: 0;
+  border-spacing: 0;
+
+  columnview.view {
+    padding: 0;
+
+    > header > button {
+      &:last-child {
+        padding-right: 24px;
+      }
+    }
+  }
+
+  listview.view {
+    padding: $base_padding;
+    margin: 0;
+    border-spacing: $base_padding / 2;
+
+    > row {
+      padding: 0;
+      margin: 0;
+      border-radius: $button_radius;
+
+      > cell {
+        padding: $base_padding - 2px;
+
+        &:last-child {
+          padding-right: 24px;
+        }
+      }
+
+      &:nth-child(odd):not(:disabled) {
+        background-image: image(gtkalpha(currentColor, 0.015));
+      }
+    }
+
+    #NautilusViewCell {
+      padding: 0;
+
+      button.star.circular {
+        margin: 0;
+        min-height: 24px;
+        min-width: 24px;
+        padding: $base_padding / 2;
+        border-radius: $circular_radius;
+      }
+    }
+  }
+}
+
+#NautilusQueryEditor {
+
+  // search entry
+  > menubutton {
+    margin: 2px 0;
+
+    > button.image-button {
+      min-width: 16px;
+      min-height: 16px;
+      padding: $base_padding / 2;
+    }
+  }
+}
+
+#NautilusPathBar {
+  background-color: $button_color;
+  border-radius: $button_radius;
+  padding: 0;
+
+  @if $colorscheme !='default' or $blackness =='true' or $colortype =='fixed' {
+    color: $window_fg_color;
+  }
+}
+
+#NautilusPathButton {
+  margin: 0;
+  border-radius: $button_radius;
+  @extend %button_basic_flat;
+
+  @if $colorscheme !='default' or $blackness =='true' or $colortype =='fixed' {
+    @extend %header_button_reset;
+  }
+}
+
+list.operations-list {
+  background: none;
+
+  > row {
+    &, &:hover, &:active, &:focus, &:selected {
+      background: none;
+      transition: none;
+      animation: none;
+    }
+  }
+}
+
+button.image-button.star {
+  min-height: 24px;
+  min-width: 24px;
+  padding: ($medium_size - 24px) / 2;
+  border-radius: $button_radius;
+}

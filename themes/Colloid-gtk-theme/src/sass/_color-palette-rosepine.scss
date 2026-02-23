@@ -1,0 +1,72 @@
+// Rose Pine Moon Custom Theme
+
+// Red
+$red-light: #f089a7;
+$red-dark: #eb6f92;      
+
+// Pink
+$pink-light: #eb6f92;
+$pink-dark: #b4637a;     
+
+// Purple
+$purple-light: #c4a7e7;  
+$purple-dark: #a68fd0;
+
+// Blue
+$blue-light: #9ccfd8;    
+$blue-dark: #31748f;     
+
+// Teal
+$teal-light: #9ccfd8;
+$teal-dark: #31748f;
+
+// Green
+$green-light: #4f8fa5;
+$green-dark: #31748f;    
+
+// Yellow
+$yellow-light: #fbd08a;
+$yellow-dark: #f6c177;   
+
+// Orange
+$orange-light: #f6c177;
+$orange-dark: #e0a96d;
+
+// Grey Scale (Rose Pine Moon Depth System)
+$grey-050: #ffffff;
+$grey-100: #f4f2ff;
+$grey-150: #e0def4;   
+$grey-200: #c8c3e0;
+$grey-250: #b5b0cf;
+$grey-300: #9f9ac0;
+$grey-350: #7d78a5;
+$grey-400: #575279;   
+$grey-450: #4c4870;
+$grey-500: #393552;   
+$grey-550: #322f4a;
+$grey-600: #2a273f;   
+$grey-650: #26233b;
+$grey-700: #232136;   
+$grey-750: #1f1d30;
+$grey-800: #1b1928;
+$grey-850: #161421;
+$grey-900: #11101a;
+$grey-950: #0b0a12;
+
+// White
+$white: #e0def4;
+
+// Black
+$black: #232136;
+
+// Buttons
+$button-close: if($variant == 'light', #eb6f92, #f089a7);
+$button-max: if($variant == 'light', #31748f, #4f8fa5);
+$button-min: if($variant == 'light', #f6c177, #fbd08a);
+
+// Link
+$links: if($variant == 'light', #9ccfd8, #c4a7e7);
+
+// Default Accent
+$default-light: #c4a7e7;
+$default-dark: #9ccfd8;

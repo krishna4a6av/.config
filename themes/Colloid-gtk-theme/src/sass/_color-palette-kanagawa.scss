@@ -1,0 +1,72 @@
+// Kanagawa Dark Theme Palette... Based on modified nvchad base 64 kanagawa.nvim palette
+
+// Red
+$red-light: #D27E99;      
+$red-dark: #d8616b;       
+
+// Pink
+$pink-light: #c8748f;
+$pink-dark: #D27E99;
+
+// Purple
+$purple-light: #a48ec7;
+$purple-dark: #9c86bf;
+
+// Blue
+$blue-light: #7E9CD8;     
+$blue-dark: #1f1f28;      
+
+// Teal
+$teal-light: #A3D4D5;     
+$teal-dark: #7AA89F;      
+
+// Green
+$green-light: #a3c677;    
+$green-dark: #98BB6C;     
+
+// Yellow
+$yellow-light: #FFA066;   
+$yellow-dark: #FF9E3B;    
+
+// Orange
+$orange-light: #fa9b61;
+$orange-dark: #dca561;    
+
+// Grey Scale (Kanagawa Ink System)
+$grey-050: #DCD7BA;
+$grey-100: #d2cdb0;
+$grey-150: #c8c3a6;
+$grey-200: #b7b199;
+$grey-250: #a9a48d;
+$grey-300: #8b8893;
+$grey-350: #6f6f7a;
+$grey-400: #5c5c65;
+$grey-450: #4c4c55;
+$grey-500: #43434c;
+$grey-550: #363646;
+$grey-600: #33333c;
+$grey-650: #2f2f38;
+$grey-700: #2a2a37;
+$grey-750: #272730;
+$grey-800: #25252e;
+$grey-850: #1f1f28;   
+$grey-900: #191922;
+$grey-950: #14141b;
+
+// White
+$white: #DCD7BA;
+
+// Black
+$black: #1F1F28;
+
+// Buttons
+$button-close: if($variant == 'light', #d8616b, #D27E99);
+$button-max: if($variant == 'light', #98BB6C, #a3c677);
+$button-min: if($variant == 'light', #FF9E3B, #FFA066);
+
+// Link
+$links: if($variant == 'light', #7FB4CA, #7E9CD8);
+
+// Default Accent
+$default-light: #7E9CD8;
+$default-dark: #a48ec7;

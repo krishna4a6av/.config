@@ -1,0 +1,72 @@
+// Slatemist Theme Palette
+
+// Red
+$red-light: #c3674a;      
+$red-dark: #b84f59;       
+
+// Pink
+$pink-light: #f4679d;     
+$pink-dark: #de3e80;      
+
+// Purple
+$purple-light: #cd9ef7;   
+$purple-dark: #a56de2;    
+
+// Blue
+$blue-light: #8cd5ff;     
+$blue-dark: #81a1c1;      
+
+// Teal
+$teal-light: #43d6b5;     
+$teal-dark: #28bca3;      
+
+// Green
+$green-light: #9bdb4d;    
+$green-dark: #68b723;     
+
+// Yellow
+$yellow-light: #ffe16b;   
+$yellow-dark: #f9c440;    
+
+// Orange
+$orange-light: #ffa154;   
+$orange-dark: #f37329;    
+
+// Grey Scale (Nordic Depth System)
+$grey-050: #ffffff;
+$grey-100: #fefefe;
+$grey-150: #e6e9f0;
+$grey-200: #d8dee9;   
+$grey-250: #c5cbd6;
+$grey-300: #b9bfcb;   
+$grey-350: #a8b0bd;
+$grey-400: #8e95a4;   
+$grey-450: #7e8087;   
+$grey-500: #667885;   
+$grey-550: #55606d;
+$grey-600: #4c566a;   
+$grey-650: #434c5e;   
+$grey-700: #3d4455;   
+$grey-750: #3b4252;   
+$grey-800: #2f3132;
+$grey-850: #262c36;   
+$grey-900: #232831;   
+$grey-950: #1b1f27;
+
+// White
+$white: #d8dee9;
+
+// Black
+$black: #3b4252;
+
+// Buttons
+$button-close: if($variant == 'light', #b84f59, #c3674a);
+$button-max: if($variant == 'light', #68b723, #9bdb4d);
+$button-min: if($variant == 'light', #f9c440, #ffe16b);
+
+// Link
+$links: if($variant == 'light', #81a1c1, #8cd5ff);
+
+// Default Accent
+$default-light: #81a1c1;
+$default-dark: #4c566a;

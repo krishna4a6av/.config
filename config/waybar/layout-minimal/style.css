@@ -29,41 +29,26 @@ tooltip {
 #workspaces button {
     color: @fg-main;
     background: transparent;
-    border-radius: 0.2em;
-    padding: 0 0.33em;
-    margin: 0.22em 0;
-    animation: ws_normal 20s ease-in-out 1;
+    padding: 0 0.35em;
+    margin: 0 0.21em;
+    transition: all 0.3s ease;
 }
 
 #workspaces button.active {
     background: @accent-active;
-    padding: 0 0.35em;
-    margin: 0.21em;
-    transition: all 0.4s cubic-bezier(.55, -0.68, .48, 1.682);
-    animation: ws_active 20s ease-in-out 1;
 }
 
 #workspaces button:hover {
     background: @accent-hover;
-    padding: 0 0.4em;
-    margin: 0.21em;
     color: @fg-strong;
-    transition: all 0.3s cubic-bezier(.55, -0.68, .48, 1.682);
-    animation: ws_hover 20s ease-in-out 1;
 }
 
 /* === Taskbar ===*/
-#taskbar {
-    background: rgba(20, 20, 20, 0.6);
-    padding: 0 0.6em;
-    margin: 0.3em 0em;
-}
-
 #taskbar button {
     padding: 0 0.5em;
     margin: 0 0.15em;
     background: transparent;
-    transition: all 0.2s ease;
+    transition: all 0.3s ease;
 }
 
 #taskbar button:hover {
@@ -124,15 +109,5 @@ tooltip {
     opacity: 1;
     margin: 0.17em 0;  
     padding: 0 0.22em; 
-}
-
-
-/* === Tray menu tweaks === */
-#tray menu * {
-    min-height: 0.89em;
-}
-
-#tray menu separator {
-    min-height: 0.56em;
 }
 

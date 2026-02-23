@@ -1,0 +1,72 @@
+// Graphite Theme Palette
+
+// Red
+$red-light: #d46a60;
+$red-dark: #be5046;      
+
+// Pink
+$pink-light: #b06ab3;
+$pink-dark: #9f5aa3;
+
+// Purple
+$purple-light: #7f848e;  
+$purple-dark: #5c6370;   
+
+// Blue
+$blue-light: #56b6c2;    
+$blue-dark: #4c566a;     
+
+// Teal
+$teal-light: #56b6c2;
+$teal-dark: #3e8c99;
+
+// Green
+$green-light: #a8d38a;
+$green-dark: #98c379;    
+
+// Yellow
+$yellow-light: #e5b07b;
+$yellow-dark: #d19a66;   
+
+// Orange
+$orange-light: #e0a070;
+$orange-dark: #c77d3b;
+
+// Grey Scale (Neutral Depth System)
+$grey-050: #ffffff;
+$grey-100: #f2f2f2;
+$grey-150: #e5e5e5;
+$grey-200: #cfcfcf;   
+$grey-250: #b5b5b5;
+$grey-300: #9e9e9e;
+$grey-350: #8a8a8a;
+$grey-400: #7f848e;   
+$grey-450: #5c6370;   
+$grey-500: #4c566a;   
+$grey-550: #3a3c3d;
+$grey-600: #2f3132;   
+$grey-650: #2a2c2d;
+$grey-700: #242627;   
+$grey-750: #202223;
+$grey-800: #1b1d1e;   
+$grey-850: #171819;
+$grey-900: #121314;
+$grey-950: #0d0e0f;
+
+// White
+$white: #ffffff;
+
+// Black
+$black: #1b1d1e;
+
+// Buttons
+$button-close: if($variant == 'light', #be5046, #d46a60);
+$button-max: if($variant == 'light', #98c379, #a8d38a);
+$button-min: if($variant == 'light', #d19a66, #e5b07b);
+
+// Link
+$links: if($variant == 'light', #56b6c2, #7f848e);
+
+// Default Accent
+$default-light: #5c6370;
+$default-dark: #7f848e;

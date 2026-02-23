@@ -1,0 +1,72 @@
+// Auymn Theme Palette
+
+// Red (Danger)
+$red-light: #c24a4a;      
+$red-dark: #b33939;       
+
+// Pink 
+$pink-light: #C7BCAF;     
+$pink-dark: #AF8D4B;      
+
+// Purple 
+$purple-light: #84925e;   
+$purple-dark: #638B8F;    
+
+// Blue
+$blue-light: #638B8F;     
+$blue-dark: #24373e;      
+
+// Teal
+$teal-light: #638B8F;     
+$teal-dark: #1b2a2f;      
+
+// Green
+$green-light: #9aa876;    
+$green-dark: #84925e;     
+
+// Yellow
+$yellow-light: #f0b429;   
+$yellow-dark: #E09B03;    
+
+// Orange
+$orange-light: #e6a93d;   
+$orange-dark: #AF8D4B;    
+
+// Grey Scale (Forest Depth System)
+$grey-050: #d0dbe0;
+$grey-100: #c7d2d8;
+$grey-150: #A0A39F;
+$grey-200: #8c8f8b;
+$grey-250: #7a7d79;
+$grey-300: #5e676c;
+$grey-350: #4a585d;
+$grey-400: #3a4a50;
+$grey-450: #2f4046;
+$grey-500: #24373e;   
+$grey-550: #1f3137;
+$grey-600: #1b2a2f;   
+$grey-650: #162327;
+$grey-700: #142024;
+$grey-750: #111b1f;
+$grey-800: #0f1b1f;   
+$grey-850: #0c161a;
+$grey-900: #0a1215;
+$grey-950: #070d0f;
+
+// White
+$white: #d0dbe0;
+
+// Black
+$black: #0f1b1f;
+
+// Buttons
+$button-close: if($variant == 'light', #b33939, #c24a4a);
+$button-max: if($variant == 'light', #84925e, #9aa876);
+$button-min: if($variant == 'light', #E09B03, #f0b429);
+
+// Link
+$links: if($variant == 'light', #638B8F, #AF8D4B);
+
+// Default Accent
+$default-light: #AF8D4B;
+$default-dark: #638B8F;

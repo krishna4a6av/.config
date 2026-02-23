@@ -1,0 +1,72 @@
+// Oxocarbon Theme Color Palette... Based on modified oxocarbon.nvim palette
+
+// Red
+$red-light: #ff7eb6;      
+$red-dark: #ee5396;       
+
+// Pink
+$pink-light: #d0a9e5;     
+$pink-dark: #be95ff;      
+
+// Purple
+$purple-light: #c7d1ff;   
+$purple-dark: #be95ff;    
+
+// Blue
+$blue-light: #78a9ff;     
+$blue-dark: #33b1ff;      
+
+// Teal
+$teal-light: #B5E8E0;     
+$teal-dark: #08bdba;      
+
+// Green
+$green-light: #42be65;    
+$green-dark: #08bdba;     
+
+// Yellow
+$yellow-light: #ffe9b6;   
+$yellow-dark: #FAE3B0;    
+
+// Orange
+$orange-light: #F8BD96;   
+$orange-dark: #ee5396;    
+
+// Grey Scale (Carbon Background System)
+$grey-050: #ffffff;
+$grey-100: #f2f4f8;
+$grey-150: #dde1e6;
+$grey-200: #5f5f5f;
+$grey-250: #555555;
+$grey-300: #4c4c4c;
+$grey-350: #464646;
+$grey-400: #3c3c3c;
+$grey-450: #343434;
+$grey-500: #2a2a2a;
+$grey-550: #262626;
+$grey-600: #202020;
+$grey-650: #161616;
+$grey-700: #161616;
+$grey-750: #161616;
+$grey-800: #0f0f0f;
+$grey-850: #0f0f0f;
+$grey-900: #0f0f0f;
+$grey-950: #000000;
+
+// White
+$white: #f2f4f8;
+
+// Black
+$black: #161616;
+
+// Button (Oxocarbon style accent buttons)
+$button-close: if($variant == 'light', #ee5396, #ff7eb6);
+$button-max: if($variant == 'light', #42be65, #08bdba);
+$button-min: if($variant == 'light', #FAE3B0, #ffe9b6);
+
+// Link
+$links: if($variant == 'light', #33b1ff, #78a9ff);
+
+// Theme Default Accent
+$default-light: #33b1ff;
+$default-dark: #78a9ff;
