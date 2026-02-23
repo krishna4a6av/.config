@@ -63,55 +63,61 @@ cd ~/.dotfiles
 * You can see the all keybinds with "SUPER + /"
 
 
-## 🎨 Theme Glossary
+### 🖼️ Screenshots
 
-<p align="center">
-  <img src="./.ss/gruv/20251030_01h45m04s_grim.png" width="700" />
-  <br/>
-  <b>Gruvbox</b>
-</p>
+<details>
+  <summary> Gruvbox</summary>
+  <table>
+    <tr>
+      <td><img src="./.ss/gruv/20251030_01h45m04s_grim.png" width="500" /></td>
+      <td><img src="./.ss/gruv/20251030_01h47m11s_grim.png" width="500" /></td>
+      <td><img src="./.ss/gruv/20251030_01h47m57s_grim.png" width="500" /></td>
+    </tr>
+    <tr>
+      <td><img src="./.ss/gruv/20251030_01h48m10s_grim.png" width="500" /></td>
+      <td><img src="./.ss/gruv/20251030_01h48m19s_grim.png" width="500" /></td>
+    </tr>
+  </table>
+</details>
 
-<p align="center">
-  <img src="./.ss/Flexoki.png" width="700" />
-  <br/>
-  <b>Flexoki</b>
-</p>
+<details>
+  <summary> Flexoki</summary>
+  <img src="./.ss/Flexoki.png" width="500" />
+</details>
 
-<p align="center">
-  <img src="./.ss/graphite.png" width="700" />
-  <br/>
-  <b>Graphite</b>
-</p>
+<details>
+  <summary> Catppuccin</summary>
+  <img src="./.ss/catppuccin.png" width="500" />
+</details>
 
-<p align="center">
-  <img src="./.ss/everforest.png" width="700" />
-  <br/>
-  <b>Everforest</b>
-</p>
+<details>
+  <summary> Graphite</summary>
+  <img src="./.ss/graphite.png" width="500" />
+</details>
 
-<p align="center">
-  <img src="./.ss/autmn.png" width="700" />
-  <br/>
-  <b>Autumn</b>
-</p>
+<details>
+  <summary> Everforest</summary>
+  <img src="./.ss/everforest.png" width="500" />
+</details>
 
-<p align="center">
-  <img src="./.ss/kanagawa.png" width="700" />
-  <br/>
-  <b>Kanagawa</b>
-</p>
 
-<p align="center">
-  <img src="./.ss/catppuccin.png" width="700" />
-  <br/>
-  <b>Catppuccin</b>
-</p>
+<details>
+  <summary> Autmn</summary>
+  <img src="./.ss/autmn.png" width="500" />
+</details>
 
-<p align="center">
-  <img src="./.ss/rosepine.png" width="700" />
-  <br/>
-  <b>Rosé Pine</b>
-</p>
+<details>
+  <summary> Kanagawa</summary>
+  <img src="./.ss/kanagawa.png" width="500" />
+</details>
+
+<details>
+  <summary> Risepine</summary>
+  <img src="./.ss/rosepine.png" width="500" />
+</details>
+
+
+
 
 
 Will add rest of the ss later... someday.
