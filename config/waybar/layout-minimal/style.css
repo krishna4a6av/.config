@@ -29,8 +29,8 @@ tooltip {
 #workspaces button {
     color: @fg-main;
     background: transparent;
-    padding: 0 0.35em;
-    margin: 0 0.21em;
+    padding: 0.1em 0.2em;
+    margin: 0.1em 0.2em;
     transition: all 0.3s ease;
 }
 
@@ -45,8 +45,8 @@ tooltip {
 
 /* === Taskbar ===*/
 #taskbar button {
-    padding: 0 0.5em;
-    margin: 0 0.15em;
+    padding: 0.1em 0.5em;
+    margin: 0.1em 0.15em;
     background: transparent;
     transition: all 0.3s ease;
 }

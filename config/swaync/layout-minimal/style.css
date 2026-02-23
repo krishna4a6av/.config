@@ -18,7 +18,7 @@
 
 /* === Control center === */
 .control-center {
-    background-color: @bg-base;
+    background-color: alpha(@bg-base, 0.85);
     border: 0.14em solid @border-color;
     padding: 0.33em;                   
 }
