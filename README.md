@@ -112,7 +112,7 @@ cd ~/.dotfiles
 </details>
 
 <details>
-  <summary> Risepine</summary>
+  <summary> Rosepine</summary>
   <img src="./.ss/rosepine.png" width="500" />
 </details>
 
@@ -130,22 +130,22 @@ Will add rest of the ss later... someday.
 
   ### 1. Themer Scripts
   
-  The `~/.config/colors/Themer/` directory contains scripts to manage and apply themes.
+  The `/config/colors/Themer/` directory contains scripts to manage and apply themes.
   
   #### `theme.sh`
   This is the main script that ties everything together. It uses Rofi to present a menu of available themes (based on the subdirectories in `~/Pictures/Wallpapers`). Once a theme is selected, it calls the other scripts (`Colors.sh`, `Nvim-Theme-Switcher.sh`, `Setgtk.sh`, and `Wallpaper.sh`) to apply the theme across the system.
   
   #### `Colors.sh`
-  This script manages the color schemes for various applications. It takes a theme name as an argument and creates symbolic links from the corresponding theme files in `~/.config/colors/` to the configuration files for Rofi, Hyprland, and Kitty. It then reloads Waybar and SwayNC to apply the new colors.
+  This script manages the color schemes for various applications. It takes a theme name as an argument and creates symbolic links from the corresponding theme files in `/config/colors/` to the configuration files for Rofi, Hyprland, and Kitty. It then reloads Waybar and SwayNC to apply the new colors.
   
   #### `Wallpaper.sh`
   This script handles changing the desktop wallpaper. It can be run with a theme name to select a wallpaper from that theme's folder. It uses Rofi to display a wallpaper selection menu with thumbnails, which it generates and caches on the fly. Once a wallpaper is selected, it's set using `swww`.
   
   #### `Setgtk.sh`
-  This script is responsible for setting the GTK (Gnome Toolkit) theme, which affects the appearance of many graphical applications. It maps a simple theme name (like "gruvbox") to a full GTK theme name (like "Gruvbox-Dark") and applies it using `gsettings` and by updating GTK configuration files. It also restarts desktop portals to ensure the changes are applied to Flatpak and other sandboxed applications.
+  This script is responsible for setting the GTK theme, which affects the appearance of many graphical applications. It maps a simple theme name (like "gruvbox") to a full GTK theme name (like "Gruvbox-Dark") and applies it using `gsettings` and by updating GTK configuration files. It also restarts desktop portals to ensure the changes are applied to Flatpak and other sandboxed applications.
       The gtk themes are in /themes folder and are handled by setup sctipt.
   
-  ### 2. `~/.config/colors/`
+  ### 2. `/config/colors/`
   
   - This directory contains all your theme color files in multiple formats for different packages.
   - And symlink of these configs manges theme of these packages, through the scripts above.
@@ -162,5 +162,16 @@ Will add rest of the ss later... someday.
   
 </details>
 
+<details>
+<summary>Gtk themes</summary>
 
+ - I have useed the colloid theme as the base for the themes.(https://github.com/vinceliuice/Colloid-gtk-theme)
+ - It has them pre made pallets to generate the themes with different settings. I added new pallets for my themes that allowed me to generate them through it. (Also remember to edit the install.sh to generate them)
+ - The modified colloid-gtk-theme is in the /themes folder. Feel free to add you own pallets in /src/sass/YOUR_THEME and generate your own themes with command like :-
+ ```bash
+  ./install.sh --tweaks everforest --tweaks rimless -c dark -d ~/.themes/
+
+ ```
+  
+</details>
 
