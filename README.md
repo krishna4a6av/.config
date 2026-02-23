@@ -65,82 +65,52 @@ cd ~/.dotfiles
 
 ## 🎨 Theme Glossary
 
----
-
-### 🟫 Gruvbox
-Warm retro tones with strong contrast and earthy colors.
-
 <p align="center">
-  <img src="./.ss/gruv/20251030_01h45m04s_grim.png" width="300" />
-  <img src="./.ss/gruv/20251030_01h47m11s_grim.png" width="300" />
-  <img src="./.ss/gruv/20251030_01h47m57s_grim.png" width="300" />
-</p>
-<p align="center">
-  <img src="./.ss/gruv/20251030_01h48m10s_grim.png" width="300" />
-  <img src="./.ss/gruv/20251030_01h48m19s_grim.png" width="300" />
+  <img src="./.ss/gruv/20251030_01h45m04s_grim.png" width="700" />
+  <br/>
+  <b>Gruvbox</b>
 </p>
 
----
-
-### 🤍 Flexoki
-Soft neutral palette focused on readability and reduced eye strain.
-
 <p align="center">
-  <img src="./.ss/Flexoki.png" width="300" />
+  <img src="./.ss/Flexoki.png" width="700" />
+  <br/>
+  <b>Flexoki</b>
 </p>
 
----
-
-### ⚫ Graphite
-Dark, muted grayscale theme with subtle accents.
-
 <p align="center">
-  <img src="./.ss/graphite.png" width="300" />
+  <img src="./.ss/graphite.png" width="700" />
+  <br/>
+  <b>Graphite</b>
 </p>
 
----
-
-### 🌲 Everforest
-Calm green-based palette inspired by nature.
-
 <p align="center">
-  <img src="./.ss/everforest.png" width="300" />
+  <img src="./.ss/everforest.png" width="700" />
+  <br/>
+  <b>Everforest</b>
 </p>
 
----
-
-### 🍂 Autumn
-Warm seasonal tones with cozy browns and oranges.
-
 <p align="center">
-  <img src="./.ss/autmn.png" width="300" />
+  <img src="./.ss/autmn.png" width="700" />
+  <br/>
+  <b>Autumn</b>
 </p>
 
----
-
-### 🗾 Kanagawa
-Japanese-inspired palette with balanced contrast and soft blues.
-
 <p align="center">
-  <img src="./.ss/kanagawa.png" width="300" />
+  <img src="./.ss/kanagawa.png" width="700" />
+  <br/>
+  <b>Kanagawa</b>
 </p>
 
----
-
-### 🐱 Catppuccin
-Pastel-based modern theme with smooth, pleasant contrast.
-
 <p align="center">
-  <img src="./.ss/catppuccin.png" width="300" />
+  <img src="./.ss/catppuccin.png" width="700" />
+  <br/>
+  <b>Catppuccin</b>
 </p>
 
----
-
-### 🌸 Rosé Pine
-Muted, elegant palette with romantic purple tones.
-
 <p align="center">
-  <img src="./.ss/rosepine.png" width="300" />
+  <img src="./.ss/rosepine.png" width="700" />
+  <br/>
+  <b>Rosé Pine</b>
 </p>
 
 
