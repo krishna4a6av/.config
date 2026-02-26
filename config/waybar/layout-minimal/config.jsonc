@@ -5,7 +5,7 @@
     "output": [ "*" ],
     "position": "bottom",
     "mod": "dock",
-    "height": 43,
+    "height": 46,
     "exclusive": true,
     "passthrough": false,
     "gtk-layer-shell": true,
@@ -121,7 +121,7 @@
 
     "wlr/taskbar": {
     "format": "{icon}",
-    "icon-size": 19,
+    "icon-size": 21,
     "icon-theme": "Gruvbox-Plus-Dark",
     "tooltip-format": "{title}",
     "on-click": "activate",

@@ -34,7 +34,7 @@ sudo pacman -S stow
  I don't use any qt application so no qt support, matugen works with it though.
 
 - To use matugen colors you need to install it from your distros's package manager as well.
-- Also i use grim and satty for the screshot as well as viewing. you can change that in hyprland config.
+- Also i use grim, slurp and satty for the screshot as well as viewing. you can change that in hyprland config.
 
 ---
 

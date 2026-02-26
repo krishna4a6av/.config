@@ -8,7 +8,7 @@
     "control-center-layer": "top",
     "layer-shell": true,
 
-    "control-center-width": 630,
+    "control-center-width": 600,
     "control-center-height": 950,
     "control-center-margin-top": 8,
     "control-center-margin-right": 8,
