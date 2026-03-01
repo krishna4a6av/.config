@@ -1,0 +1,106 @@
+@import "../colors/theme.css";
+
+/* Adjust the height of bar itself in the layout to make the bar smaller/bigger
+* Everythign will scale according once you chage the font-size below
+* due to to how em values work */
+
+
+
+* {
+    border: none;
+    font-family: "CaskaydiaCove Nerd Font", "JetBrainsMono Nerd Font";
+    font-weight: bold;
+    font-size: 19px; /* ← change this to scale everything */
+    box-shadow: none;
+    text-shadow: none;
+}
+
+window#waybar {
+    background-color: @bg-surface;
+    border: 0.1em solid @border-color; 
+    border-radius: 1em;
+}
+
+/* === Tooltips === */
+tooltip {
+    background-color: @bg-overlay;
+    color: @fg-main;
+    border-radius: 0.39em;
+}
+
+/* === Workspaces === */
+#workspaces button {
+    font-size: 1.2em;
+    color: @fg-main;
+    background: transparent;
+    padding: 0 0.2em;
+    margin: 0.2em 0.2em;
+    transition: all 0.3s ease;
+}
+
+#workspaces button.active {
+    background: @accent-active;
+}
+
+#workspaces button:hover {
+    background: @accent-hover;
+    color: @fg-strong;
+}
+
+#workspaces button:not(.empty):not(.active) {
+    border-bottom: 2px solid @accent-primary;
+}
+
+
+
+
+/* === Module container styling === */
+#custom-swaync,
+#backlight,
+#battery,
+#bluetooth,
+#custom-cava,
+#custom-cliphist,
+#clock,
+#custom-cpuinfo,
+#cpu,
+#custom-display,
+#custom-gpuinfo,
+#custom-hyprsunset,
+#idle_inhibitor,
+#custom-keybindhint,
+#language,
+#memory,
+#mpris,
+#network,
+#custom-notifications,
+#custom-power,
+#privacy,
+#pulseaudio,
+#custom-sensorsinfo,
+#custom-spotify,
+#taskbar,
+#taskbar#windows,
+#custom-theme,
+#tray,
+#custom-updates,
+#custom-wallchange,
+#custom-wbar,
+#custom-weather,
+#window,
+#workspaces,
+#custom-l_end,
+#custom-r_end,
+#custom-sl_end,
+#custom-sr_end,
+#custom-rl_end,
+#custom-rr_end {
+    color: @fg-main;
+    opacity: 1;
+    margin: 0.17em 0;  
+    padding: 0 0.22em; 
+}
+
+#custom-spotify {
+    color: @accent-active;
+}

@@ -15,7 +15,7 @@ WAYBAR_STYLE_LINK="$WAYBAR_DIR/style.css"
 SWAYNC_CONFIG_LINK="$SWAYNC_DIR/config.json"
 SWAYNC_STYLE_LINK="$SWAYNC_DIR/style.css"
 
-# --- Collect layouts from Waybar directory (there can be a better way but eh)---
+# --- Collect layouts from Waybar directory (there can be better ways but eh)---
 layouts=()
 for d in "$WAYBAR_DIR"/layout*; do
     [[ -d "$d" ]] && layouts+=("$(basename "$d")")

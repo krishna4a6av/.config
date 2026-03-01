@@ -1,22 +1,17 @@
-
 {
-
     "layer": "top",
     "output": [ "*" ],
     "position": "bottom",
     "mod": "dock",
-    "height": 46,
+    "height": 40,
     "exclusive": true,
     "passthrough": false,
     "gtk-layer-shell": true,
     "reload_style_on_change": true,
 
-
-    "modules-left": ["custom/padd","hyprland/workspaces","custom/padd","custom/div","custom/padd","wlr/taskbar","custom/padd"],
+    "modules-left": ["custom/padd","hyprland/workspaces","custom/spc","custom/div","custom/padd","hyprland/window","custom/padd"],
     "modules-center": ["custom/padd","idle_inhibitor","custom/spc","clock","custom/spc","custom/spotify","custom/padd"],
     "modules-right": ["custom/padd","backlight","custom/spc","custom/div","custom/spc","network","custom/spc","custom/div","custom/spc","memory","custom/spc","custom/div","custom/spc","pulseaudio","custom/spc","custom/div","custom/spc","tray","custom/spc","custom/div","custom/spc","privacy","battery","custom/spc","custom/div","custom/power","custom/padd"],
-
-
 
     "cpu": {
         "interval": 5,
@@ -54,6 +49,7 @@
         "tooltip-format-activated":"Caffeine Mode Active",
         "tooltip-format-deactivated":"Caffeine Mode Inactive"
     },
+    
     "clock": {
         "format": "{:%I:%M %p}",
         "rotate": 0,
@@ -89,34 +85,39 @@
         "on-scroll-up": "hyprctl dispatch workspace -1",
         "on-scroll-down": "hyprctl dispatch workspace +1",
         "persistent-workspaces": {
+            "*": 9
         }
     },
 
     "hyprland/window": {
-        "format": "   {}",
-        "rotate": 0,
+        "format": "  {}",
         "separate-outputs": true,
+        "max-length": 80,
         "rewrite": {
-            "kriahna@cacpc:(.*)": "$1 ",
-            "(.*) — Mozilla Firefox": "$1 󰈹",
-            "(.*)Mozilla Firefox": "Firefox 󰈹",
-            "(.*) - Visual Studio Code": "$1 󰨞",
-            "(.*)Visual Studio Code": "Code 󰨞",
+            "kriahna@cacpc:(.*)": "$1  ",
+            "(.*)fish": " ",
+            "(.*)nvim": " ",
+            "(.*) — Mozilla Firefox": "󰈹 ",
+            "(.*)Zen Browser": "󰈹 ",
+            "(.*)Mozilla Firefox": "Firefox 󰈹 ",
+            "(.*) - Visual Studio Code": "$1 󰨞 ",
+            "(.*)Visual Studio Code": "Code 󰨞 ",
             "(.*) - Code - OSS": "$1 󰨞",
             "(.*)Code - OSS": "Code 󰨞",
-            "(.*) — Dolphin": "$1 󰉋",
-            "(.*)Spotify": "Spotify 󰓇",
-            "(.*)Steam": "Steam 󰓓",
+            "(.*) — Dolphin": "$1 󰉋 ",
+            "(.*)Nautilus": "$1 󰉋 ",
+            "(.*)Thunar": "󰉋 ",
+            "(.*)Spotify": "󰓇 ",
+            "(.*)Steam": "Steam 󰓓 ",
             "(.*) - Discord": "$1  ",
             "(.*)Netflix": "Netflix 󰝆 ",
             "(.*) — Google chrome": "$1  ",
             "(.*)Google chrome": "Google chrome  ",
             "(.*) — Github": "$1  ",
-            "(.*)Github": "Github ",
-            "(.*)Spotify Free": "Spotify 󰓇",
-            "(.*)Spotify Premiun": "Spotify 󰓇",
-        },
-        "max-length": 50
+            "(.*)Github": "Github  ",
+            "(.*)Spotify Free": "Spotify 󰓇 ",
+            "(.*)Spotify Premiun": "Spotify 󰓇 "
+        }
     },
 
     "wlr/taskbar": {
@@ -142,14 +143,14 @@
 
     "network": {
         "tooltip": true,
-        "format-wifi": " ",
+        "format-alt": " ",
         "rotate": 0,
         "format-ethernet": "󰈀 ",
         "tooltip-format": "Network: <big><b>{essid}</b></big>\nSignal strength: <b>{signaldBm}dBm ({signalStrength}%)</b>\nFrequency: <b>{frequency}MHz</b>\nInterface: <b>{ifname}</b>\nIP: <b>{ipaddr}/{cidr}</b>\nGateway: <b>{gwaddr}</b>\nNetmask: <b>{netmask}</b>",
         "format-linked": "󰈀 {ifname} (No IP)",
         "format-disconnected": "󰖪 ",
         "tooltip-format-disconnected": "Disconnected",
-        "format-alt": "<span foreground='#99ffdd'> {bandwidthDownBytes}</span> <span foreground='#ffcc66'> {bandwidthUpBytes}</span>",
+        "format-wifi": "<span foreground='#99ffdd'> {bandwidthDownBytes}</span> <span foreground='#ffcc66'> {bandwidthUpBytes}</span>",
         "interval": 2,
     },
 

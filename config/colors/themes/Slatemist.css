@@ -8,9 +8,9 @@
 
 @define-color accent-primary  #687677;
 @define-color accent-hover    #36454f;
-@define-color accent-active   #748897;
+@define-color accent-active   #A9887C;
 
-@define-color border-color    #4a5353;
+@define-color border-color    #1b3346;
 @define-color shadow-color    rgba(161,172,174,0.4);
 
 @define-color danger-color    #8F5652;

@@ -27,6 +27,7 @@ tooltip {
 
 /* === Workspaces === */
 #workspaces button {
+    font-size: 1.2em;
     color: @fg-main;
     background: transparent;
     padding: 0 0.2em;
@@ -43,22 +44,26 @@ tooltip {
     color: @fg-strong;
 }
 
+#workspaces button:not(.empty):not(.active) {
+    border-bottom: 2px solid @accent-primary;
+}
+
 /* === Taskbar ===*/
 #taskbar button {
     padding: 0 0.5em;
-    margin: 0 0.3em;
+    margin: 0 0.4em;
     background: transparent;
     transition: all 0.3s ease;
 }
 
 #taskbar button:hover {
     background: @accent-hover;
-    margin: 0.2em 0.2em;
+    margin: 0.1em 0.2em;
 }
 
 #taskbar button.active {
     background: @accent-active;
-    margin: 0.2em 0.2em;
+    margin: 0.1em 0.2em;
 }
 
 
