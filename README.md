@@ -16,7 +16,7 @@ It can be installed via your pacakage manager so,
 sudo pacman -S stow
 ```
 
-- The scripts uses and controlsthe themes of the following applications:
+- The scripts uses and controls the themes of the following applications:
 
 | Application | Description                                         |
 |-------------|-----------------------------------------------------|
@@ -34,7 +34,8 @@ sudo pacman -S stow
  I don't use any qt application so no qt support, matugen works with it though.
 
 - To use matugen colors you need to install it from your distros's package manager as well.
-- Also i use grim, slurp and satty for the screshot as well as viewing. you can change that in hyprland config.
+- networkappelet might also need to be installed, if needed that is.
+- Also i use grim, slurp and satty for the screshot as well as viewing. you can change that in hyprland config. 
 
 ---
 
@@ -58,6 +59,7 @@ cd ~/.dotfiles
 # Important stuff
 
 * Display setting is set at 2880x1800 in 14", 120 Hz for me you can adjust it in .config/hypr/config/monitors.conf.
+* Use the theme script to add the symlink of color file for configs as they'll not be present initially.
 * The wallpaper script uses swww by default, You can adjust the wallpaper manager in /config/colors/Themer/Wallpapers.sh. Alternative you can also adjust the file to look for walpaper in the script.
 * Add wallpapers in ~/Pictures/Wallpapers/ in specified theme file, for the wallpaper script to work. (My wallpapers: https://github.com/krishna4a6av/Wallpapers.git)
 * You can see the all keybinds with "SUPER + /"

@@ -3,18 +3,18 @@ set -euo pipefail
 
 # Main theme switcher file controls all the others.
 # Right now this script is reading the theme names from a text file for ease of changing. Maybe i'll change it later.
-THEME_LIST="$HOME/.config/colors/Themer/themes.txt"
+THEME_LIST="$HOME/.config/colors/Theme-Switcher/themes.txt"
 WALLPAPER_ROOT="$HOME/Pictures/Wallpapers"
 ROFI_NOTIF="$HOME/.config/rofi/notify.rasi"
 
 CACHE_DIR="${XDG_CACHE_HOME:-$HOME/.cache}/wall-cache"
 THEME_SYMLINK="$CACHE_DIR/current_theme"
 
-COLOR_SWITCHER="$HOME/.config/colors/Themer/Colors.sh"
+COLOR_SWITCHER="$HOME/.config/colors/Theme-Switcher/Colors.sh"
 NVIM_THEME_SWITCHER="$HOME/.config/nvim/theme-switcher/switch-theme.sh"
-GTK_SWITCHER="$HOME/.config/colors/Themer/Setgtk.sh"
-WALLPAPER_SWITCHER="$HOME/.config/colors/Themer/Wallpaper.sh"
-MATUGEN_GENERATOR="$HOME/.config/colors/Themer/Matugen.sh"
+GTK_SWITCHER="$HOME/.config/colors/Theme-Switcher/Setgtk.sh"
+WALLPAPER_SWITCHER="$HOME/.config/colors/Theme-Switcher/Wallpaper.sh"
+MATUGEN_GENERATOR="$HOME/.config/colors/Theme-Switcher/Matugen.sh"
 
 # Load themes from file
 if [[ ! -f "$THEME_LIST" ]]; then

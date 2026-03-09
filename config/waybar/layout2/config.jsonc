@@ -5,7 +5,7 @@
     "output": [ "*" ],
     "position": "top",
     "mod": "dock",
-    "height": 42, // adjust bar height from here
+    "height": 40, // adjust bar height from here
     "margin-right": 15,
     "margin-left": 15,
     "margin-top": 1,
@@ -16,14 +16,14 @@
 
 
     "modules-left": ["custom/padd","hyprland/workspaces","custom/padd","hyprland/window","custom/padd"],
-    "modules-center": ["custom/padd","idle_inhibitor","clock","custom/spotify","custom/padd"],
-    "modules-right": ["custom/padd","cpu","memory","network","custom/padd","backlight","pulseaudio","tray","custom/padd","privacy","battery","custom/swaync","custom/keybindhint","custom/power","custom/padd"],
+    "modules-center": ["custom/padd","idle_inhibitor","custom/spc","clock","custom/spotify","custom/padd"],
+    "modules-right": ["custom/padd","cpu","custom/spc","memory","custom/spc","network","custom/div","backlight","custom/spc","pulseaudio","custom/div","tray","custom/spc","privacy","battery","custom/spc","custom/swaync","custom/spc","custom/keybindhint","custom/spc","custom/power","custom/padd"],
 
 
 
     "cpu": {
         "interval": 5,
-        "format": "󰍛  {usage}%",
+        "format": "󰍛 {usage}%",
         "rotate": 0,
         "format-alt": "{icon0}{icon1}{icon2}{icon3}",
         "format-icons": ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█"]
@@ -36,7 +36,7 @@
             "m": 30, // medium
         },
         "interval": 30,
-        "format": "󰾆 {used}GB",
+        "format": "󰾆 {used} GB",
         "rotate": 0,
         "format-m": "󰾅 {used}GB",
         "format-h": "󰓅 {used}GB",
@@ -195,23 +195,6 @@
     },
 
 
-    "custom/updates": {
-        "format": "<big>󰮯</big> {}",
-        "interval": 3600,                     // every hour
-        "exec": "checkupdates | wc -l",       // # of updates
-        "exec-if": "exit 0",                  // always run; consider advanced run conditions
-        "on-click": "alacritty -e 'paru'; pkill -SIGRTMIN+8 waybar", // update system
-        "signal": 8,
-        "max-length": 5,
-        "min-length": 3
-    },
-    "custom/keybindhint": {
-        "format": "  ",
-        "tooltip-format": " Keybinds",
-        "rotate": 0,
-        "on-click": "~/Scripts/keybinds_hint.sh"
-    },
-
     "privacy": {
         "icon-size": 12,
         "icon-spacing": 5,
@@ -259,8 +242,15 @@
         "on-scroll-down": "playerctl previous"
     },
 
+    "custom/keybindhint": {
+        "format": "  ",
+        "tooltip-format": " Keybinds",
+        "rotate": 0,
+        "on-click": "~/Scripts/keybinds_hint.sh"
+    },
+
     "custom/power": {
-        "format": "  {}",
+        "format":" {}",
         "rotate": 0,
         "exec": "echo ; echo  logout",
         "on-click": "wlogout",
@@ -269,52 +259,28 @@
     },
     
     "custom/swaync": {
-    "tooltip": true,
-    "tooltip-format":"Open Swaync Center",
-    "format": " ",
-    "return-type": "json",
-    "exec-if": "which swaync-client",
-    "exec": "swaync-client -swb",
-    "on-click": "swaync-client -t -sw",
-    "on-click-right": "swaync-client -d -sw",
-    "escape": true
-  },
+        "tooltip": true,
+        "tooltip-format":"Open Swaync Center",
+        "format": "",
+        "return-type": "json",
+        "exec-if": "which swaync-client",
+        "exec": "swaync-client -swb",
+        "on-click": "swaync-client -t -sw",
+        "on-click-right": "swaync-client -d -sw",
+        "escape": true
+    },
 
 
 // modules for padding //
 
-    "custom/l_end": {
+    "custom/spc": {
         "format": " ",
         "interval" : "once",
         "tooltip": false
     },
 
-    "custom/r_end": {
-        "format": " ",
-        "interval" : "once",
-        "tooltip": false
-    },
-
-    "custom/sl_end": {
-        "format": " ",
-        "interval" : "once",
-        "tooltip": false
-    },
-
-    "custom/sr_end": {
-        "format": " ",
-        "interval" : "once",
-        "tooltip": false
-    },
-
-    "custom/rl_end": {
-        "format": " ",
-        "interval" : "once",
-        "tooltip": false
-    },
-
-    "custom/rr_end": {
-        "format": " ",
+    "custom/div": {
+        "format": " | ",
         "interval" : "once",
         "tooltip": false
     },

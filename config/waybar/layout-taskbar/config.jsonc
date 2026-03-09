@@ -5,7 +5,7 @@
     "output": [ "*" ],
     "position": "bottom",
     "mod": "dock",
-    "height": 44,
+    "height": 46,
     "exclusive": true,
     "passthrough": false,
     "gtk-layer-shell": true,
@@ -14,7 +14,7 @@
 
     "modules-left": ["custom/padd","hyprland/workspaces","custom/spc","custom/spotify","custom/padd",],
     "modules-center": ["custom/padd","wlr/taskbar","custom/padd"],
-    "modules-right": ["custom/padd","idle_inhibitor","custom/spc","clock","custom/spc","custom/div","custom/spc","backlight","custom/spc","custom/div","custom/spc","network","custom/spc","custom/div","custom/spc","memory","custom/spc","custom/div","custom/spc","pulseaudio","custom/spc","custom/div","custom/spc","tray","custom/spc","custom/div","custom/spc","privacy","battery","custom/spc","custom/div","custom/power","custom/padd"],
+    "modules-right": ["custom/padd","clock","custom/div","backlight","custom/div","network","custom/div","memory","custom/div","pulseaudio","custom/div","tray","custom/div","privacy","battery","custom/div","custom/power","custom/padd"],
 
 
 
@@ -48,8 +48,8 @@
         "format": "{icon}",
         "rotate": 0,
         "format-icons": {
-            "activated": "󰅶 ",
-            "deactivated": "󰛊 "
+            "activated": "󰅶",
+            "deactivated": "󰛊"
         },
         "tooltip-format-activated":"Caffeine Mode Active",
         "tooltip-format-deactivated":"Caffeine Mode Inactive"
@@ -150,14 +150,6 @@
         "on-click-right": "amixer sset Master toggle"
     },
 
-
-    "custom/keybindhint": {
-        "format": "  ",
-        "tooltip-format": " Keybinds",
-        "rotate": 0,
-        "on-click": "~/Scripts/keybinds_hint.sh"
-    },
-
     "privacy": {
         "icon-size": 12,
         "icon-spacing": 5,
@@ -206,31 +198,18 @@
     },
 
     "custom/power": {
-        "format": "  {}",
+        "format": " {}",
         "rotate": 0,
         "exec": "echo ; echo  logout",
         "on-click": "wlogout",
         "interval" : 86400, // once every day
         "tooltip": true
     },
-    
-    "custom/swaync": {
-    "tooltip": true,
-    "tooltip-format":"Open Swaync Center",
-    "format": " ",
-    "return-type": "json",
-    "exec-if": "which swaync-client",
-    "exec": "swaync-client -swb",
-    "on-click": "swaync-client -t -sw",
-    "on-click-right": "swaync-client -d -sw",
-    "escape": true
-  },
 
-
-// modules for padding //
+    // modules for padding //
 
     "custom/div": {
-        "format": "|",
+        "format": " | ",
         "interval" : "once",
         "tooltip": false
     },

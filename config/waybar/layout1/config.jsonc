@@ -5,7 +5,7 @@
     "output": [ "*" ],
     "position": "top",
     "mod": "dock",
-    "height": 43,
+    "height": 40,
     "exclusive": true,
     "passthrough": false,
     "gtk-layer-shell": true,
@@ -13,14 +13,14 @@
 
 
     "modules-left": ["custom/padd","custom/l_end","hyprland/workspaces","custom/r_end","custom/l_end","hyprland/window","custom/r_end","custom/padd"],
-    "modules-center": ["custom/padd","custom/l_end","idle_inhibitor","clock","custom/spotify","custom/r_end","custom/padd"],
-    "modules-right": ["custom/padd","custom/l_end","cpu","memory","network","custom/r_end","custom/l_end","backlight","pulseaudio","custom/updates","tray","custom/r_end","custom/l_end","privacy","battery","custom/swaync","custom/keybindhint","custom/power","custom/r_end","custom/padd"],
+    "modules-center": ["custom/padd","custom/l_end","idle_inhibitor","custom/spc","clock","custom/spotify","custom/r_end","custom/padd"],
+    "modules-right": ["custom/padd","custom/l_end","cpu","custom/spc","memory","custom/spc","network","custom/r_end","custom/l_end","backlight","custom/spc","pulseaudio","custom/spc","custom/updates","custom/spc","tray","custom/r_end","custom/l_end","privacy","custom/spc","battery","custom/spc","custom/swaync","custom/spc","custom/keybindhint","custom/spc","custom/power","custom/r_end","custom/padd"],
 
 
 
     "cpu": {
         "interval": 5,
-        "format": "󰍛  {usage}%",
+        "format": "󰍛 {usage}%",
         "rotate": 0,
         "format-alt": "{icon0}{icon1}{icon2}{icon3}",
         "format-icons": ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█"]
@@ -33,7 +33,7 @@
             "m": 30, // medium
         },
         "interval": 30,
-        "format": "󰾆 {used}GB",
+        "format": "󰾆 {used} GB",
         "rotate": 0,
         "format-m": "󰾅 {used}GB",
         "format-h": "󰓅 {used}GB",
@@ -42,16 +42,6 @@
         "max-length": 10,
         "tooltip": true,
         "tooltip-format": "󰾆 {percentage}%\n {used:0.1f}GB/{total:0.1f}GB"
-    },
-
-    "custom/cpuinfo": {
-        "exec": " cpuinfo.sh",
-        "return-type": "json",
-        "format": "{}",
-        "rotate": 0,
-        "interval": 5, // once every 5 seconds
-        "tooltip": true,
-        "max-length": 1000
     },
 
     "idle_inhibitor": {
@@ -210,12 +200,6 @@
         "max-length": 5,
         "min-length": 3
     },
-    "custom/keybindhint": {
-        "format": "  ",
-        "tooltip-format": " Keybinds",
-        "rotate": 0,
-        "on-click": "~/Scripts/keybinds_hint.sh"
-    },
 
     "privacy": {
         "icon-size": 12,
@@ -265,25 +249,32 @@
     },
 
     "custom/power": {
-        "format": "  {}",
+        "format": " {}",
         "rotate": 0,
         "exec": "echo ; echo  logout",
         "on-click": "wlogout",
         "interval" : 86400, // once every day
         "tooltip": true
     },
-    
+
+    "custom/keybindhint": {
+        "format": " ",
+        "tooltip-format": " Keybinds",
+        "rotate": 0,
+        "on-click": "~/Scripts/keybinds_hint.sh"
+    },
+
     "custom/swaync": {
-    "tooltip": true,
-    "tooltip-format":"Open Swaync Center",
-    "format": " ",
-    "return-type": "json",
-    "exec-if": "which swaync-client",
-    "exec": "swaync-client -swb",
-    "on-click": "swaync-client -t -sw",
-    "on-click-right": "swaync-client -d -sw",
-    "escape": true
-  },
+        "tooltip": true,
+        "tooltip-format":"Open Swaync Center",
+        "format": "",
+        "return-type": "json",
+        "exec-if": "which swaync-client",
+        "exec": "swaync-client -swb",
+        "on-click": "swaync-client -t -sw",
+        "on-click-right": "swaync-client -d -sw",
+        "escape": true
+    },
 
 
 // modules for padding //
@@ -300,25 +291,7 @@
         "tooltip": false
     },
 
-    "custom/sl_end": {
-        "format": " ",
-        "interval" : "once",
-        "tooltip": false
-    },
-
-    "custom/sr_end": {
-        "format": " ",
-        "interval" : "once",
-        "tooltip": false
-    },
-
-    "custom/rl_end": {
-        "format": " ",
-        "interval" : "once",
-        "tooltip": false
-    },
-
-    "custom/rr_end": {
+    "custom/spc": {
         "format": " ",
         "interval" : "once",
         "tooltip": false

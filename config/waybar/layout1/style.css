@@ -8,7 +8,6 @@
 
 * {
     border: none;
-    border-radius: 0;
     font-family: "CaskaydiaCove Nerd Font", "JetBrainsMono Nerd Font";
     font-weight: bold;
     font-size: 17px; /* ← change this to scale everything */
@@ -20,64 +19,34 @@ window#waybar {
     background-color: alpha(@bg-surface, 0.6);
 }
 
-/* === Tooltips === */
 tooltip {
-    background: @bg-overlay;
+    background-color: @bg-overlay;
     color: @fg-main;
     border-radius: 0.39em;
 }
 
-/* === Workspaces === */
 #workspaces button {
     color: @fg-main;
     background: transparent;
-    border-radius: 0.74em;
-    padding: 0 0.33em;
-    margin: 0.22em 0;
-    animation: ws_normal 20s ease-in-out 1;
+    border-radius: 0.75em;
+    padding: 0.1em 0.32em;
+    margin: 0.1em;
+    transition: all 0.3s ease;
 }
 
 #workspaces button.active {
     background: @accent-active;
-    padding: 0 0.74em;
-    margin: 0.31em;
+    padding: 0 0.6em;
+    margin: 0.25em;
     transition: all 0.4s cubic-bezier(.55, -0.68, .48, 1.682);
-    animation: ws_active 20s ease-in-out 1;
 }
 
 #workspaces button:hover {
     background: @accent-hover;
-    padding: 0 0.78em;
-    margin: 0.31em;
+    padding: 0 0.6em;
+    margin: 0.25em;
     color: @fg-strong;
     transition: all 0.3s cubic-bezier(.55, -0.68, .48, 1.682);
-    animation: ws_hover 20s ease-in-out 1;
-}
-
-/* === Taskbar === */
-#taskbar button {
-    color: @fg-muted;
-    background: transparent;
-    border-radius: 0.44em;
-    padding: 0 0.11em;    
-    margin: 0.11em 0;     
-    animation: tb_normal 20s ease-in-out 1;
-}
-
-#taskbar button.active {
-    background: @accent-active;
-    color: @fg-main;
-    padding: 0 0.61em;
-    margin: 0.11em;
-    transition: all 0.4s cubic-bezier(.55, -0.68, .48, 1.682);
-    animation: tb_active 20s ease-in-out 1;
-}
-
-#taskbar button:hover {
-    background: @accent-hover;
-    color: @fg-strong;
-    transition: all 0.3s cubic-bezier(.55, -0.68, .48, 1.682);
-    animation: tb_hover 20s ease-in-out 1;
 }
 
 /* === Module container styling === */
@@ -117,10 +86,7 @@ tooltip {
 #workspaces,
 #custom-l_end,
 #custom-r_end,
-#custom-sl_end,
-#custom-sr_end,
-#custom-rl_end,
-#custom-rr_end {
+#custom-spc {
     color: @fg-main;
     background: @bg-surface;
     opacity: 1;
@@ -130,47 +96,14 @@ tooltip {
 
 /* === Ends with rounded corners === */
 #custom-r_end {
-    border-radius: 0 1.06em 1.06em 0;
-    margin-right: 0.44em;            
-    padding-right: 0;
+    border-radius: 0 1em 1em 0;
+    margin-right: 0.4em;            
+    padding-right: 0.2em;
 }
 
 #custom-l_end {
-    border-radius: 1.06em 0 0 1.06em;
-    margin-left: 0.44em;
-    padding-left: 0;
-}
-
-#custom-sr_end {
-    border-radius: 0;
-    margin-right: 0.44em;
-    padding-right: 0;
-}
-
-#custom-sl_end {
-    border-radius: 0;
-    margin-left: 0.44em;
-    padding-left: 0;
-}
-
-#custom-rr_end {
-    border-radius: 0 0.39em 0.39em 0;
-    margin-right: 0.44em;
-    padding-right: 0;
-}
-
-#custom-rl_end {
-    border-radius: 0.39em 0 0 0.39em;
-    margin-left: 0.44em;
-    padding-left: 0;
-}
-
-/* === Tray menu tweaks === */
-#tray menu * {
-    min-height: 0.89em;
-}
-
-#tray menu separator {
-    min-height: 0.56em;
+    border-radius: 1em 0 0 1em;
+    margin-left: 0.4em;
+    padding-left: 0.2em;
 }
 

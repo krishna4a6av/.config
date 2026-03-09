@@ -6,7 +6,6 @@
 
 * {
     border: none;
-    border-radius: 0;
     font-family: "CaskaydiaCove Nerd Font", "JetBrainsMono Nerd Font";
     font-weight: bold;
     font-size: 17px; /* ← change this to scale everything accordingly*/
@@ -14,64 +13,40 @@
     text-shadow: none;
 }
 
-/* === Base Waybar background === */
 window#waybar {
-    background-color: alpha(@bg-surface, 1);
-    border: 0.16em solid @border-color; 
-    border-radius: 0.9em;
+    background-color: @bg-surface;
+    border: 0.1em solid @border-color; 
+    border-radius: 1em;
 }
 
-/* === Workspaces === */
+tooltip {
+    background-color: @bg-overlay;
+    color: @fg-main;
+    border-radius: 0.39em;
+}
+
 #workspaces button {
     color: @fg-main;
     background: transparent;
-    border-radius: 0.75em;   
-    padding: 0 0.32em;       
-    margin: 0.21em 0;        
-    animation: ws_normal 20s ease-in-out 1;
+    border-radius: 0.75em;
+    padding: 0.1em 0.32em;
+    margin: 0.1em;
+    transition: all 0.3s ease;
 }
 
 #workspaces button.active {
     background: @accent-active;
-    padding: 0 0.78em;       
+    padding: 0 0.6em;
     margin: 0.25em;
     transition: all 0.4s cubic-bezier(.55, -0.68, .48, 1.682);
-    animation: ws_active 20s ease-in-out 1;
 }
 
 #workspaces button:hover {
     background: @accent-hover;
-    padding: 0 0.82em;
+    padding: 0 0.6em;
     margin: 0.25em;
     color: @fg-strong;
     transition: all 0.3s cubic-bezier(.55, -0.68, .48, 1.682);
-    animation: ws_hover 20s ease-in-out 1;
-}
-
-/* === Taskbar === */
-#taskbar button {
-    color: @fg-muted;
-    background: transparent;
-    border-radius: 0.42em;
-    padding: 0 0.11em;    
-    margin: 0.11em 0;     
-    animation: tb_normal 20s ease-in-out 1;
-}
-
-#taskbar button.active {
-    background: @accent-active;
-    color: @fg-main;
-    padding: 0 0.58em;
-    margin: 0.11em;
-    transition: all 0.4s cubic-bezier(.55, -0.68, .48, 1.682);
-    animation: tb_active 20s ease-in-out 1;
-}
-
-#taskbar button:hover {
-    background: @accent-hover;
-    color: @fg-strong;
-    transition: all 0.3s cubic-bezier(.55, -0.68, .48, 1.682);
-    animation: tb_hover 20s ease-in-out 1;
 }
 
 /* === Module containers === */
@@ -123,12 +98,4 @@ window#waybar {
 }
 
 
-/* === Tray menu tweaks === */
-#tray menu * {
-    min-height: 0.84em;
-}
-
-#tray menu separator {
-    min-height: 0.53em;
-}
 

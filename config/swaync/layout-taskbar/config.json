@@ -82,6 +82,13 @@
                     "update-command": "sh -c '[[ $(nmcli r wifi) == \"enabled\" ]] && echo true || echo false'"
                 },
                 {
+                    "label": "󰛊",
+                    "type": "toggle",
+                    "active": false,
+                    "command": "sh -c '~/Scripts/caffine.sh'",
+                    "update-command": "sh -c 'pgrep -x hypridle >/dev/null && echo false || echo true'"
+                },
+                {
                     "label": "󰂯",
                     "type": "toggle",
                     "active": true,
@@ -91,7 +98,7 @@
                 {
                     "label": " ",
                     "type": "toggle",
-                    "active": false,
+                    "active": true,
                     "command": "sh -c '[[ $SWAYNC_TOGGLE_STATE == false ]] && pactl set-source-mute @DEFAULT_SOURCE@ 1 || pactl set-source-mute @DEFAULT_SOURCE@ 0'",
                     "update-command": "sh -c '[[ $(pactl get-source-mute @DEFAULT_SOURCE@) == *yes* ]] && echo false || echo true'"
                 },
@@ -104,7 +111,7 @@
                 },
                 {
                   "label": "󰸉 ",
-                  "command": "~/.config/colors/Themer/Wallpaper.sh"
+                  "command": "~/.config/colors/Theme-Switcher/Wallpaper.sh"
                 },
                 {
                   "label": "󰋖 ",

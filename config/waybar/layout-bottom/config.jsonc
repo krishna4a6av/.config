@@ -3,15 +3,15 @@
     "output": [ "*" ],
     "position": "bottom",
     "mod": "dock",
-    "height": 40,
+    "height": 44,
     "exclusive": true,
     "passthrough": false,
     "gtk-layer-shell": true,
     "reload_style_on_change": true,
 
-    "modules-left": ["custom/padd","hyprland/workspaces","custom/spc","custom/div","custom/padd","hyprland/window","custom/padd"],
+    "modules-left": ["custom/padd","hyprland/workspaces","custom/div","custom/spc","hyprland/window","custom/padd"],
     "modules-center": ["custom/padd","idle_inhibitor","custom/spc","clock","custom/spc","custom/spotify","custom/padd"],
-    "modules-right": ["custom/padd","backlight","custom/spc","custom/div","custom/spc","network","custom/spc","custom/div","custom/spc","memory","custom/spc","custom/div","custom/spc","pulseaudio","custom/spc","custom/div","custom/spc","tray","custom/spc","custom/div","custom/spc","privacy","battery","custom/spc","custom/div","custom/power","custom/padd"],
+    "modules-right": ["custom/padd","backlight","custom/div","network","custom/div","memory","custom/div","pulseaudio","custom/div","tray","custom/div","privacy","battery","custom/spc","custom/div","custom/power","custom/padd"],
 
     "cpu": {
         "interval": 5,
@@ -43,8 +43,8 @@
         "format": "{icon}",
         "rotate": 0,
         "format-icons": {
-            "activated": "󰅶 ",
-            "deactivated": "󰛊 "
+            "activated": "󰅶",
+            "deactivated": "󰛊"
         },
         "tooltip-format-activated":"Caffeine Mode Active",
         "tooltip-format-deactivated":"Caffeine Mode Inactive"
@@ -121,13 +121,13 @@
     },
 
     "wlr/taskbar": {
-    "format": "{icon}",
-    "icon-size": 21,
-    "icon-theme": "Gruvbox-Plus-Dark",
-    "tooltip-format": "{title}",
-    "on-click": "activate",
-    "on-click-middle": "close",
-    "ignore-list": [ ],
+        "format": "{icon}",
+        "icon-size": 21,
+        "icon-theme": "Gruvbox-Plus-Dark",
+        "tooltip-format": "{title}",
+        "on-click": "activate",
+        "on-click-middle": "close",
+        "ignore-list": [ ],
     },
 
     "backlight": {
@@ -175,14 +175,6 @@
         },
         "on-click": "pavucontrol",
         "on-click-right": "amixer sset Master toggle"
-    },
-
-
-    "custom/keybindhint": {
-        "format": "  ",
-        "tooltip-format": " Keybinds",
-        "rotate": 0,
-        "on-click": "~/Scripts/keybinds_hint.sh"
     },
 
     "privacy": {
@@ -241,23 +233,10 @@
         "tooltip": true
     },
     
-    "custom/swaync": {
-    "tooltip": true,
-    "tooltip-format":"Open Swaync Center",
-    "format": " ",
-    "return-type": "json",
-    "exec-if": "which swaync-client",
-    "exec": "swaync-client -swb",
-    "on-click": "swaync-client -t -sw",
-    "on-click-right": "swaync-client -d -sw",
-    "escape": true
-  },
-
-
 // modules for padding //
 
     "custom/div": {
-        "format": "|",
+        "format": " | ",
         "interval" : "once",
         "tooltip": false
     },
