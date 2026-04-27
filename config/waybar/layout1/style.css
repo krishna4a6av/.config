@@ -10,7 +10,7 @@
     border: none;
     font-family: "CaskaydiaCove Nerd Font", "JetBrainsMono Nerd Font";
     font-weight: bold;
-    font-size: 17px; /* ← change this to scale everything */
+    font-size: 18px; /* ← change this to scale everything */
     box-shadow: none;
     text-shadow: none;
 }
@@ -28,7 +28,7 @@ tooltip {
 #workspaces button {
     color: @fg-main;
     background: transparent;
-    border-radius: 0.75em;
+    border-radius: 0.90em;
     padding: 0.1em 0.32em;
     margin: 0.1em;
     transition: all 0.3s ease;

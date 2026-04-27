@@ -38,7 +38,7 @@ echo "   $WALL"
 if [[ "$MODE" == "auto" ]]; then
     matugen image "$WALL"
 else
-    matugen image --mode "$MODE" "$WALL"
+    matugen image --mode "$MODE" --prefer saturation "$WALL"
 fi
 
 echo "🔗 Updating Matugen symlinks..."

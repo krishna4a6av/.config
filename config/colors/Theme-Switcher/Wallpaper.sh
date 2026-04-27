@@ -147,8 +147,8 @@ SELECTED="${PATH_MAP[$SELECTED_NAME]}"
 
 
 # Apply wallpaper
-swww-daemon --fork 2>/dev/null || true
-swww img "$SELECTED" --transition-type any --transition-duration 1
+awww-daemon --fork 2>/dev/null || true
+awww img "$SELECTED" --transition-type any --transition-duration 1
 
 ln -sf "$SELECTED" "$SYMLINK"
 echo "✅ Wallpaper set: $SELECTED"

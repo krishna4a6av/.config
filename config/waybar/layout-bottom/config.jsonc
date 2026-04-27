@@ -9,7 +9,7 @@
     "gtk-layer-shell": true,
     "reload_style_on_change": true,
 
-    "modules-left": ["custom/padd","hyprland/workspaces","custom/div","custom/spc","hyprland/window","custom/padd"],
+    "modules-left": ["custom/padd","hyprland/workspaces","custom/div","custom/padd","hyprland/window","custom/padd"],
     "modules-center": ["custom/padd","idle_inhibitor","custom/spc","clock","custom/spc","custom/spotify","custom/padd"],
     "modules-right": ["custom/padd","backlight","custom/div","network","custom/div","memory","custom/div","pulseaudio","custom/div","tray","custom/div","privacy","battery","custom/spc","custom/div","custom/power","custom/padd"],
 
@@ -94,7 +94,6 @@
         "separate-outputs": true,
         "max-length": 80,
         "rewrite": {
-            "kriahna@cacpc:(.*)": "$1  ",
             "(.*)fish": " ",
             "(.*)nvim": " ",
             "(.*) — Mozilla Firefox": "󰈹 ",
@@ -107,6 +106,7 @@
             "(.*) — Dolphin": "$1 󰉋 ",
             "(.*)Nautilus": "$1 󰉋 ",
             "(.*)Thunar": "󰉋 ",
+            "(.*)ranger": "󰉋 ",
             "(.*)Spotify": "󰓇 ",
             "(.*)Steam": "Steam 󰓓 ",
             "(.*) - Discord": "$1  ",

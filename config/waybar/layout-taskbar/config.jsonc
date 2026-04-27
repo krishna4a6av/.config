@@ -12,9 +12,9 @@
     "reload_style_on_change": true,
 
 
-    "modules-left": ["custom/padd","hyprland/workspaces","custom/spc","custom/spotify","custom/padd",],
+    "modules-left": ["custom/padd","idle_inhibitor","custom/spc","clock","custom/div","hyprland/workspaces","custom/spc","custom/spotify","custom/padd",],
     "modules-center": ["custom/padd","wlr/taskbar","custom/padd"],
-    "modules-right": ["custom/padd","clock","custom/div","backlight","custom/div","network","custom/div","memory","custom/div","pulseaudio","custom/div","tray","custom/div","privacy","battery","custom/div","custom/power","custom/padd"],
+    "modules-right": ["custom/padd","backlight","custom/div","network","custom/div","memory","custom/div","pulseaudio","custom/div","tray","custom/div","privacy","battery","custom/div","custom/power","custom/padd"],
 
 
 
@@ -55,7 +55,7 @@
         "tooltip-format-deactivated":"Caffeine Mode Inactive"
     },
     "clock": {
-        "format": "{:%I:%M %p}",
+        "format": "{:%I:%M }",
         "rotate": 0,
         "format-alt": "{:%R | 󰃭 %d·%m·%y}",
         "tooltip-format": "<span>{calendar}</span>",

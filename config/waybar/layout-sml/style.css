@@ -1,106 +1,87 @@
 @import "../colors/theme.css";
 
-/* Adjust the height of bar itself in the layout to make the bar smaller/bigger
-* Everythign will scale according once you chage the font-size below
-* due to to how em values work */
-
-
-
 * {
+    font-family: "JetBrainsMono Nerd Font";
+    font-size: 17px;
+    font-weight: 800;
     border: none;
-    font-family: "CaskaydiaCove Nerd Font", "JetBrainsMono Nerd Font";
-    font-weight: bold;
-    font-size: 19px; /* ← change this to scale everything */
-    box-shadow: none;
-    text-shadow: none;
+    border-radius: 0;
+    padding: 0;
+    margin: 0;
 }
 
 window#waybar {
-    background-color: @bg-surface;
-    border: 0.1em solid @border-color; 
-    border-radius: 1em;
-}
-
-/* === Tooltips === */
-tooltip {
-    background-color: @bg-overlay;
+    background-color: transparent;
     color: @fg-main;
-    border-radius: 0.39em;
+    border: none;
 }
 
-/* === Workspaces === */
+.modules-center {
+    background-color: alpha(@bg-surface, 0.95);
+    border-radius: 20px;
+    padding: 0 16px;
+}
+
+#clock {
+    font-size: 15px;
+    font-weight: 900;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+#mpris {
+    color: @fg-main;
+    padding-left: 8px;
+    padding-right: 12px;
+}
+
+#workspaces {
+    padding: 0;
+    margin: 0;
+}
+
 #workspaces button {
-    font-size: 1.2em;
-    color: @fg-main;
-    background: transparent;
-    padding: 0 0.2em;
-    margin: 0.2em 0.2em;
-    transition: all 0.3s ease;
-}
-
-#workspaces button.active {
-    background: @accent-active;
+    color: @fg-strong;
+    background-color: transparent;
+    margin: 5px 2px;
+    padding: 0 8px;
+    min-width: 16px;
+    border-radius: 16px;
+    transition: all 0.3s cubic-bezier(.55,-0.68,.48,1.68);
 }
 
 #workspaces button:hover {
-    background: @accent-hover;
+    background-color: alpha(@accent-hover, 0.1);
     color: @fg-strong;
 }
 
-#workspaces button:not(.empty):not(.active) {
-    border-bottom: 2px solid @accent-primary;
-}
-
-
-
-
-/* === Module container styling === */
-#custom-swaync,
-#backlight,
-#battery,
-#bluetooth,
-#custom-cava,
-#custom-cliphist,
-#clock,
-#custom-cpuinfo,
-#cpu,
-#custom-display,
-#custom-gpuinfo,
-#custom-hyprsunset,
-#idle_inhibitor,
-#custom-keybindhint,
-#language,
-#memory,
-#mpris,
-#network,
-#custom-notifications,
-#custom-power,
-#privacy,
-#pulseaudio,
-#custom-sensorsinfo,
-#custom-spotify,
-#taskbar,
-#taskbar#windows,
-#custom-theme,
-#tray,
-#custom-updates,
-#custom-wallchange,
-#custom-wbar,
-#custom-weather,
-#window,
-#workspaces,
-#custom-l_end,
-#custom-r_end,
-#custom-sl_end,
-#custom-sr_end,
-#custom-rl_end,
-#custom-rr_end {
+#workspaces button.active {
+    background-color: @accent-active;
     color: @fg-main;
-    opacity: 1;
-    margin: 0.17em 0;  
-    padding: 0 0.22em; 
+    background-image: linear-gradient(to right, @primary, @tertiary);
+    min-width: 25px;
+    padding: 0 12px;
 }
 
-#custom-spotify {
-    color: @accent-active;
+#pulseaudio,
+#network,
+#battery {
+    padding: 0 8px;
+    font-size: 15px;
+}
+
+#pulseaudio {
+    padding-left: 12px;
+}
+
+#network {
+    color: #d3869b;
+}
+
+#battery {
+    padding-right: 8px;
+}
+
+#battery.critical {
+    color: @error;
 }
