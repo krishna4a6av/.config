@@ -1,9 +1,57 @@
-# 🌸 Dotfiles Setup
+# Dotfiles Setup
 
 A modular, theme-aware dotfiles setup for Linux.
 It includes automatic color theming, wallpaper management, and cross-application consistency across Hyprland, GTK, Rofi, Kitty, Swaync and Neovim.
 
-* I am using a 14" laptop with non standard scaling so the sizing of elements might be too big/ too small for other screends. In that case it the scale of the screed can be edited in .config/hypr/config/monitors.conf. Just updated the scale from 1 to higher value(allowed) for bigger res and smaller value for smaller res.
+* I am using a 14" laptop with non standard scaling so the sizing of elements might be too big/ too small for other screends. In that case, the scale of the screen can be edited in .config/hypr/config/monitors.conf. Just updated the scale from 1 to higher value(allowed) for bigger res and smaller value for smaller res.
+
+
+
+###  Gallery
+
+<table>
+  <tr>
+    <th colspan="3">Gruvbox</th>
+  </tr>
+  <tr>
+    <td><img src="./.ss/gruv/20251030_01h45m04s_grim.png" width="320" /></td>
+    <td><img src="./.ss/gruv/20251030_01h47m11s_grim.png" width="320" /></td>
+    <td><img src="./.ss/gruv/20251030_01h47m57s_grim.png" width="320" /></td>
+  </tr>
+  <tr>
+    <td><img src="./.ss/gruv/20251030_01h48m10s_grim.png" width="320" /></td>
+    <td><img src="./.ss/gruv/20251030_01h48m19s_grim.png" width="320" /></td>
+    <td><img src="./.ss/gruv/20260223_23h59m26s_grim.png" width="320" /></td>
+  </tr>
+</table>
+
+<table>
+  <tr>
+    <th>Flexoki</th>
+    <th>Catppuccin</th>
+    <th>Graphite</th>
+    <th>Everforest</th>
+  </tr>
+  <tr>
+    <td><img src="./.ss/Flexoki.png" width="240" /></td>
+    <td><img src="./.ss/catppuccin.png" width="240" /></td>
+    <td><img src="./.ss/graphite.png" width="240" /></td>
+    <td><img src="./.ss/everforest.png" width="240" /></td>
+  </tr>
+  <tr>
+    <th>Autmn</th>
+    <th>Kanagawa</th>
+    <th>Rosepine</th>
+    <th>Oxocarbon</th>
+  </tr>
+  <tr>
+    <td><img src="./.ss/autmn.png" width="240" /></td>
+    <td><img src="./.ss/kanagawa.png" width="240" /></td>
+    <td><img src="./.ss/rosepine.png" width="240" /></td>
+    <td><img src="./.ss/oxocarbon.png" width="240" /></td>
+  </tr>
+</table>
+
 
 ## Prerequisites
 
@@ -64,65 +112,6 @@ cd ~/.dotfiles
 * You can see the all keybinds with "SUPER + /"
 
 
-### 🖼️ Screenshots
-
-<details>
-  <summary> Gruvbox</summary>
-  <table>
-    <tr>
-      <td><img src="./.ss/gruv/20251030_01h45m04s_grim.png" width="500" /></td>
-      <td><img src="./.ss/gruv/20251030_01h47m11s_grim.png" width="500" /></td>
-      <td><img src="./.ss/gruv/20251030_01h47m57s_grim.png" width="500" /></td>
-    </tr>
-    <tr>
-      <td><img src="./.ss/gruv/20251030_01h48m10s_grim.png" width="500" /></td>
-      <td><img src="./.ss/gruv/20251030_01h48m19s_grim.png" width="500" /></td>
-    </tr>
-  </table>
-</details>
-
-<details>
-  <summary> Flexoki</summary>
-  <img src="./.ss/Flexoki.png" width="500" />
-</details>
-
-<details>
-  <summary> Catppuccin</summary>
-  <img src="./.ss/catppuccin.png" width="500" />
-</details>
-
-<details>
-  <summary> Graphite</summary>
-  <img src="./.ss/graphite.png" width="500" />
-</details>
-
-<details>
-  <summary> Everforest</summary>
-  <img src="./.ss/everforest.png" width="500" />
-</details>
-
-
-<details>
-  <summary> Autmn</summary>
-  <img src="./.ss/autmn.png" width="500" />
-</details>
-
-<details>
-  <summary> Kanagawa</summary>
-  <img src="./.ss/kanagawa.png" width="500" />
-</details>
-
-<details>
-  <summary> Rosepine</summary>
-  <img src="./.ss/rosepine.png" width="500" />
-</details>
-
-
-
-
-
-Will add rest of the ss later... someday.
-
 
 ## How it Works
 
@@ -175,4 +164,3 @@ Will add rest of the ss later... someday.
  ```
   
 </details>
-
