@@ -3,8 +3,7 @@
 A modular, theme-aware dotfiles setup for Linux.
 It includes automatic color theming, wallpaper management, and cross-application consistency across Hyprland, GTK, Rofi, Kitty, Swaync and Neovim.
 
-* I am using a 14" laptop so the sizing of elements will likely be too big for most other screens and will need manual configuration.
-      I have used em values in waybar, swaync, wlogout so adjusting the main size in there layout and the adjusting the font value(in px) should adjust all the ui elements accordingly.(If they are too big for you)
+* I am using a 14" laptop with non standard scaling so the sizing of elements might be too big/ too small for other screends. In that case it the scale of the screed can be edited in .config/hypr/config/monitors.conf. Just updated the scale from 1 to higher value(allowed) for bigger res and smaller value for smaller res.
 
 ## Prerequisites
 
@@ -58,7 +57,7 @@ cd ~/.dotfiles
 
 # Important stuff
 
-* Display setting is set at 2880x1800 in 14", 120 Hz for me you can adjust it in .config/hypr/config/monitors.conf.
+* Display setting is set at 2880x1800 in 14", 120 Hz for me you can adjust it in .config/hypr/config/monitors.conf. If everything is too small or too big you can edit here by setting the scale in the last parameter from 1 to 1.12, 1.25 or 0.85 and so on.
 * Use the theme script to add the symlink of color file for configs as they'll not be present initially.
 * The wallpaper script uses swww by default, You can adjust the wallpaper manager in /config/colors/Themer/Wallpapers.sh. Alternative you can also adjust the file to look for walpaper in the script.
 * Add wallpapers in ~/Pictures/Wallpapers/ in specified theme file, for the wallpaper script to work. (My wallpapers: https://github.com/krishna4a6av/Wallpapers.git)
